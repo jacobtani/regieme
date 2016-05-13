@@ -1,0 +1,28 @@
+<div class = 'container level-header guest-page'>
+  <% @guests = locals[:guests] if @guests.nil? %> 
+  <div class= 'pull-right'>
+    <%= link_to fa_icon("plus", text: 'Add Guest'), new_guest_path, class: "btn btn-add hvr-sweep-to-right", id: 'new-guest-link' %>
+  </div>
+  <table class = 'table table-striped'>
+    <thead>
+      <th> First Name </th>
+      <th> Surname </th>
+      <th> Address </th>
+      <th> Attending </th>
+      <th> Food Preference </th>
+      <th> Administration </th>
+    </thead>
+    <% @guests.sort_by(&:"#{'id'}").each do |guest| %>
+      <tr>
+        <td> <%= guest.first_name %> </td>
+        <td> <%= guest.surname %> </td>
+        <td> <%= guest.address %> </td>
+        <td> <%= guest.attending %> </td>
+        <td> <%= guest.food_preference %> </td>
+        <%= link_to fa_icon("pencil", text:'Edit'), edit_guest_path(id: guest.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-guest-link' %> 
+        <%= link_to fa_icon("trash", text: 'Delete'), guest_path(guest), method: :delete,
+                class: "btn btn-danger hvr-sweep-to-right", id: 'delete-guest-link' %>
+      </tr>
+    <%end%>
+  </table>
+</div>
