@@ -26,7 +26,7 @@ class GuestsController < ApplicationController
   
   def update
     respond_to do |format|
-      if @guest.update_attributes pack_params
+      if @guest.update_attributes guest_params
         flash[:success] = "Guest was updated successfully."
         format.html { redirect_to admin_path }
       else
