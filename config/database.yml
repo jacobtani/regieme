@@ -1,0 +1,19 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  username: tania
+  password: password
+  host: localhost
+  pool: 25
+
+development:
+  <<: *defaults
+  database: regieme_dev
+
+test:
+  <<: *defaults
+  database: regieme_test
+
+production:
+  <<: *defaults
+  database: regieme_prod
