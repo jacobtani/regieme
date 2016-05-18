@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
 
-def about_us
+def the_details
+end
+
+def welcome
 end
 
 end

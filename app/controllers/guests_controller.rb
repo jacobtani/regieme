@@ -14,7 +14,7 @@ class GuestsController < ApplicationController
     respond_to do |format|
       if @guest.save
         flash[:success] = "Guest was created successfully."
-        format.html { redirect_to admin_path }
+        format.html { redirect_to guests_path }
       else
         format.html { render :new }
       end
@@ -28,7 +28,7 @@ class GuestsController < ApplicationController
     respond_to do |format|
       if @guest.update_attributes guest_params
         flash[:success] = "Guest was updated successfully."
-        format.html { redirect_to admin_path }
+        format.html { redirect_to guests_path }
       else
         format.html { render :edit }
       end
@@ -37,7 +37,7 @@ class GuestsController < ApplicationController
 
   def destroy
     @guest.destroy
-    redirect_to admin_path
+    redirect_to guests_path
   end
 
   private

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'pages#about_us'
+  root 'pages#welcome'
   resources :guests
   resources :gifts
   controller :pages do
-    get :about_us
+    get :the_details
+    get :welcome
   end
 
 end

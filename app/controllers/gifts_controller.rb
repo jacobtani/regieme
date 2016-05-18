@@ -2,11 +2,11 @@ class GiftsController < ApplicationController
   before_action :set_gift, only: [:edit, :update, :show, :destroy]
   
   def index
-    @guests = Gift.all
+    @gifts = Gift.all
   end
 
   def new
-    @guest  = Gift.new
+    @gift  = Gift.new
   end
 
   def create
@@ -14,7 +14,7 @@ class GiftsController < ApplicationController
     respond_to do |format|
       if @gift.save
         flash[:success] = "Gift was created successfully."
-        format.html { redirect_to admin_path }
+        format.html { redirect_to gifts_path }
       else
         format.html { render :new }
       end
@@ -28,7 +28,7 @@ class GiftsController < ApplicationController
     respond_to do |format|
       if @gift.update_attributes gift_params
         flash[:success] = "Gift was updated successfully."
-        format.html { redirect_to admin_path }
+        format.html { redirect_to gifts_path }
       else
         format.html { render :edit }
       end
@@ -37,7 +37,7 @@ class GiftsController < ApplicationController
 
   def destroy
     @gift.destroy
-    redirect_to admin_path
+    redirect_to gifts_path
   end
 
   private

@@ -1,0 +1,36 @@
+<div class = 'container level-header gift-page'>
+  <h3> Available Gifts </h3>
+  <div class= 'pull-right'>
+    <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn btn-primary hvr-sweep-to-right", id: 'new-gift-link' %>
+  </div>
+  <table class = 'table table-striped'>
+    <thead>
+      <th> Item </th>
+      <th> Description </th>
+      <th> Price </th>
+      <th> Shop Name </th>
+      <th> Administration </th>
+    </thead>
+    <% @gifts.sort_by(&:"#{'id'}").each do |gift| %>
+      <tr>
+        <td> <%= gift.caption %> </td>
+        <td> <%= gift.description %> </td>
+        <td> <%= number_to_currency gift.price %> </td>
+        <td> <%= gift.shop_name %> </td>
+        <td><%= link_to fa_icon("pencil", text:'Edit'), edit_gift_path(id: gift.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-gift-link' %> </td>
+        <td><%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,
+                class: "btn btn-danger hvr-sweep-to-right", id: 'delete-gift-link' %></td>
+      </tr>
+    <%end%>
+  </table>
+  <% @gifts.in_groups_of(3) do |group| %>
+    <div class="row">
+      <% group.compact.each do |gift_a| %>
+        <div class="col-md-4">
+          <%= image_tag gift_a.caption, :width => '100%' %>
+          <%= gift_a.description %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
