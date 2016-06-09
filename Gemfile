@@ -43,6 +43,8 @@ gem 'wicked_pdf' # serve pdf file to user from html
 gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-heroku' # for heroku purposes
 gem "googlecharts", :require => "gchart"
+gem "paperclip", "~> 5.0.0.beta1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
