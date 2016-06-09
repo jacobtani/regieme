@@ -1,5 +1,5 @@
 <div class = 'container level-header rsvp-page'>
-  <h2> Rsvp List </h2>
+  <h2> RSVPS </h2>
   <% @rsvps = locals[:guests] if @rsvps.nil? %> 
   <div class= 'pull-right'>
     <%= link_to fa_icon("plus", text: 'Add RSVP'), new_rsvp_path, class: "btn btn-primary hvr-sweep-to-right", id: 'new-rsvp-link' if current_user && user_signed_in? %>
@@ -10,6 +10,9 @@
       <th> Attending </th>
       <th> Meal Preference </th>
       <th> Dietary Requirements </th>
+      <% if current_user %>
+        <th> Administration </th>
+      <% end %>
     </thead>
     <% @rsvps.sort_by(&:"#{'id'}").each do |rsvp| %>
       <tr>
@@ -18,8 +21,8 @@
         <td> <%= rsvp.meal_preference %> </td>
         <td> <%= rsvp.dietary_requirements %> </td>
         <% if current_user && user_signed_in? %> 
-          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_rsvp_path(id: rsvp.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-rsvp-link' %> </td>
-          <td><%= link_to fa_icon("trash", text: 'Delete'), rsvp_path(rsvp), method: :delete,
+          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_rsvp_path(id: rsvp.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-rsvp-link' %>
+          <%= link_to fa_icon("trash", text: 'Delete'), rsvp_path(rsvp), method: :delete,
                 class: "btn btn-danger hvr-sweep-to-right", id: 'delete-rsvp-link' %></td>
         <%end%>
       </tr>

@@ -17,7 +17,7 @@ class RsvpsController < ApplicationController
     respond_to do |format|
       if @rsvp.save
         flash[:success] = "Rsvp was created successfully."
-        format.html { redirect_to rsvps_path }
+        format.html { redirect_to root_path }
       else
         format.html { render :new }
       end

@@ -9,7 +9,9 @@
       <th> First Name </th>
       <th> Surname </th>
       <th> Address </th>
-      <th> Administration </th>
+      <% if current_user %>
+        <th> Administration </th>
+      <% end %>
     </thead>
     <% @guests.sort_by(&:"#{'id'}").each do |guest| %>
       <tr>
@@ -17,8 +19,8 @@
         <td> <%= guest.surname %> </td>
         <td> <%= guest.address %> </td>
         <% if current_user && user_signed_in? %> 
-          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_guest_path(id: guest.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-guest-link' %> </td>
-          <td><%= link_to fa_icon("trash", text: 'Delete'), guest_path(guest), method: :delete,
+          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_guest_path(id: guest.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-guest-link' %>
+          <%= link_to fa_icon("trash", text: 'Delete'), guest_path(guest), method: :delete,
                 class: "btn btn-danger hvr-sweep-to-right", id: 'delete-guest-link' %></td>
         <%end%>
       </tr>
