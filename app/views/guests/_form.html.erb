@@ -3,8 +3,6 @@
     <%= f.text_field :first_name, placeholder: 'Enter first name', class: 'form-control required' %>  
     <%= f.text_field :surname, placeholder: 'Enter surname', class: 'form-control required' %>
     <%= f.text_field :address, placeholder: 'Enter address', class: 'form-control required' %>
-    <%= f.check_box :attending, placeholder: 'Enter attending', class: 'form-control required' %>
-    <%= f.select :food_preference, Guest.food_preferences.keys.to_a, label: 'Food Preferences' %>
 
     <div class='level-header'>
       <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
