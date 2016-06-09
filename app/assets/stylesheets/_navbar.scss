@@ -1,0 +1,20 @@
+.navbar .nav > li > a {
+  color: $white;
+  font-family: 'Lato', serif;
+}
+
+.navbar-default .navbar-brand {
+  color: $white;
+}
+
+.navbar {
+  border-radius: 0px !important;
+  background-color: $pink !important;
+  font-size: 16px;
+  margin-bottom: 40px;
+  .container-fluid{
+    padding-left: 11%;
+  }
+}
+
+

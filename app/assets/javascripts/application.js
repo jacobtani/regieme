@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require flash_messages
 //= require cocoon
 //= require bootstrap-sprockets
 //= require turbolinks
