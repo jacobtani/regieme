@@ -1,4 +1,5 @@
 class GuestsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_guest, only: [:edit, :update, :show, :destroy]
   
   def index
