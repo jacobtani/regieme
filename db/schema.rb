@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609021955) do
+ActiveRecord::Schema.define(version: 20160609032032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,12 +39,19 @@ ActiveRecord::Schema.define(version: 20160609021955) do
   add_index "gifts", ["guest_id"], name: "index_gifts_on_guest_id", using: :btree
 
   create_table "guests", force: :cascade do |t|
-    t.string  "first_name"
-    t.string  "surname"
-    t.text    "address"
-    t.boolean "attending"
-    t.integer "food_preference"
+    t.string "first_name"
+    t.string "surname"
+    t.text   "address"
   end
+
+  create_table "rsvps", force: :cascade do |t|
+    t.boolean "attending",            null: false
+    t.string  "meal_preference"
+    t.text    "dietary_requirements"
+    t.integer "guest_id",             null: false
+  end
+
+  add_index "rsvps", ["guest_id"], name: "index_rsvps_on_guest_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
