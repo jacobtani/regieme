@@ -44,7 +44,7 @@ class GiftsController < ApplicationController
   private
 
     def gift_params
-      params.require(:gift).permit(:caption, :description, :price, :shop_name, :guest_id, :gift_image, :category_id, :desired_quantity, :remainder_available, :website_link)
+      params.require(:gift).permit(:caption, :description, :price, :guest_id, :category_id, :desired_quantity, :remainder_available, :website_link)
     end
 
     def set_gift

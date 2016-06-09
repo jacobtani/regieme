@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609032032) do
+ActiveRecord::Schema.define(version: 20160609100713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,19 +21,14 @@ ActiveRecord::Schema.define(version: 20160609032032) do
   end
 
   create_table "gifts", force: :cascade do |t|
-    t.string   "caption",                             null: false
-    t.text     "description",                         null: false
-    t.float    "price"
-    t.string   "shop_name"
-    t.integer  "guest_id"
-    t.string   "gift_image_file_name"
-    t.string   "gift_image_content_type"
-    t.integer  "gift_image_file_size"
-    t.datetime "gift_image_updated_at"
-    t.integer  "desired_quantity",        default: 0
-    t.integer  "remainder_available",     default: 0
-    t.text     "website_link"
-    t.integer  "category_id"
+    t.string  "caption",                           null: false
+    t.text    "description",                       null: false
+    t.integer "guest_id"
+    t.integer "desired_quantity",    default: 0
+    t.integer "remainder_available", default: 0
+    t.text    "website_link"
+    t.integer "category_id"
+    t.float   "price",               default: 0.0
   end
 
   add_index "gifts", ["guest_id"], name: "index_gifts_on_guest_id", using: :btree
