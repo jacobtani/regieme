@@ -1,5 +1,5 @@
 class RsvpsController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :authenticate_user!, except: [:new, :create]
   before_action :set_rsvp, only: [:edit, :update, :show, :destroy]
   before_action :find_guest, only: [:create]
 
