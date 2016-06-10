@@ -4,12 +4,12 @@
   <div class="row">
     <% @categories.each do |cat| %>
       <h2 class='gift-categories'><%= cat.name %></h2>
-      <% @gifts.where(category_id: cat.id).each do |gift_a| %>
-        <b><p><%= link_to gift_a.caption, gift_a.website_link %> (x<%=gift_a.desired_quantity%>) - <%= number_to_currency gift_a.price%> </p></b>
-        <p><%= gift_a.description %></p> 
+      <% @gifts.where(category_id: cat.id).each do |gift| %>
+        <b><p><%= link_to gift.caption, gift.website_link %> (x<%=gift.desired_quantity%>) - <%= number_to_currency gift.price%> </p></b>
+        <p><%= gift.description %></p> 
         <% if current_user && user_signed_in? %>
-          <p><%= link_to fa_icon("pencil", text:'Edit'), edit_gift_path(id: gift_a.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-gift-link' %>
-              <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift_a), method: :delete,
+          <p><%= link_to fa_icon("pencil", text:'Edit'), edit_gift_path(id: gift.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-gift-link' %>
+              <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,
                     class: "btn btn-danger hvr-sweep-to-right", id: 'delete-gift-link' %></p>
         <% end %>
       <% end %>
