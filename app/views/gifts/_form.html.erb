@@ -6,7 +6,6 @@
     <%= f.number_field :price, placeholder: 'Enter price', class: 'form-control required' %>
     <%= f.number_field :desired_quantity, placeholder: 'Enter quantity required', class: 'form-control required' %>
     <%= f.text_field :website_link, placeholder: 'Enter link to product', class: 'form-control required' %>
-    <%= f.file_field :gift_image, placeholder: 'Select image', class: 'form-control required' %>
     <div class='level-header'>
       <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save

@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
-  before_action :set_gift, only: [:edit, :update, :show, :destroy]
+  before_action :authenticate_user!, except: [:index, :cross_off_gift]
+  before_action :set_gift, only: [:edit, :update, :show, :destroy, :cross_off_gift]
   
   def index
     @gifts = Gift.all
@@ -12,6 +12,7 @@ class GiftsController < ApplicationController
 
   def create
     @gift = Gift.new gift_params
+    @gift.remainder_available = params[:gift][:desired_quantity]
     respond_to do |format|
       if @gift.save
         flash[:success] = "Gift was created successfully."
@@ -39,6 +40,10 @@ class GiftsController < ApplicationController
   def destroy
     @gift.destroy
     redirect_to gifts_path
+  end
+
+  def cross_off_gift
+  #  @cg = Cg.new(id: @gift.id)
   end
 
   private
