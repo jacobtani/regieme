@@ -1,0 +1,14 @@
+<div class='container form-scrollable'>
+<% @cg = Cg.new %>
+  <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
+    <%= f.text_field :guest_names, placeholder: 'Enter your names', class: 'form-control required', control_col: "col-sm-3" %>  
+    <%= f.text_field :item_name, control_col: "col-sm-3" %>
+    <%#= f.hidden_field :gift_id, value: gift.id %>
+    <div class='level-header'>
+      <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+        <i class="fa fa-save"></i> Save
+      <% end %>      
+      <%= link_to fa_icon("undo", text: 'Cancel'), gifts_path, class: 'btn btn-danger hvr-sweep-to-right' %>
+    </div>
+  <% end %>
+</div>
