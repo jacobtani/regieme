@@ -1,0 +1,14 @@
+<div class="modal" id="myModal-<%=@gift.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title modal-heading-style" id="myModalLabel">Cross off Gift - <%=@gift.caption%> </h4>
+      </div>
+      <div class="modal-body">
+        Great! You've just bought (or you're about to buy) <%= @gift.caption %> for Iain and Tania and want it cross it off their registry. Please enter your name(s) for us to keep track of who bought each item.
+        <%= render 'cgs/form', gift: @gift, cg: Cg.new, data: { behavior: 'modal' } %>
+      </div>
+    </div>
+  </div>
+</div>
