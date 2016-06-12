@@ -46,11 +46,12 @@ class RsvpsController < ApplicationController
   private
 
     def rsvp_params
-      params.require(:rsvp).permit(:guest_id, :attending, :meal_preference, :dietary_requirements, :first_name, :surname)
+      params.require(:rsvp).permit(:guest_id, :attending, :meal_preference, :dietary_requirements, :full_name)
     end
 
     def find_guest
-      @guest=Guest.all.where(first_name: params[:rsvp][:first_name], surname: params[:rsvp][:surname]).first
+      @guest_full_name = params[:rsvp][:full_name].split
+      @guest=Guest.all.where(first_name: @guest_full_name[0], surname: @guest_full_name[1]).first
     end
     
     def set_rsvp
