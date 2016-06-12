@@ -19,6 +19,7 @@
         <% if current_user %>
           <li><%= link_to 'RSVP', rsvps_path, class: 'hvr-sweep-to-right' %></li>
           <li><%= link_to 'Guests', guests_path, class: 'hvr-sweep-to-right'%></li>
+          <li><%= link_to 'Claimed Gifts', cgs_path, class: 'hvr-sweep-to-right'%></li>
         <% end %>
       </ul>
       <div class="nav navbar-right header">
