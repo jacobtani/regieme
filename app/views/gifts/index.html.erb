@@ -6,31 +6,10 @@
       <h2 class='gift-categories'><%= cat.name %></h2>
       <% @gifts.where(category_id: cat.id).each do |gift| %>
         <% if gift.remainder_available > 0 %>
-          <b><p><%= link_to gift.caption, gift.website_link %> (x<%=gift.desired_quantity%>) - <%= number_to_currency gift.price%> </p></b>
+          <b><p><%= link_to gift.caption, gift.website_link %> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> </p></b>
           <p><%= gift.description %></p>
-          <button type="button" class="btn gift-button" data-toggle="modal" data-target="#myModal">Cross Off Gift</button>
-
-            <!-- Modal -->
-            <div id="myModal" class="modal hidden fade" role="dialog">
-              <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Cross off gift - <%=gift.caption%></h4>
-                  </div>
-                  <div class="modal-body">
-                   Great! You've just bought (or you're about to buy) <%= gift.caption %> for Iain and Tania and want it cross it off their registry. Please enter your name(s) for us to keep track of who bought each item.
-                    <%= render 'cgs/form', gift: gift %>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <%= link_to fa_icon("pencil", text:'Cross Off Gift'), cross_off_gift_path(id: gift.id), class: "btn gift-button", id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
+          <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" ></div>
           <% if current_user && user_signed_in? %>
             <p><%= link_to fa_icon("pencil", text:'Edit'), edit_gift_path(id: gift.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-gift-link' %>
                 <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,

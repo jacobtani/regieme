@@ -43,7 +43,10 @@ class GiftsController < ApplicationController
   end
 
   def cross_off_gift
-  #  @cg = Cg.new(id: @gift.id)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

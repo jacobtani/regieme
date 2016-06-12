@@ -19,7 +19,9 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() { 
+
   $('.gift-button').on('click', function () {
-    $('#myModal').removeClass('hidden');
+    $('#modal-window').removeClass('hidden');
   });
+
 });

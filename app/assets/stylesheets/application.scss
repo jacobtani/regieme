@@ -35,7 +35,7 @@ body {
 
 .modal-heading-style {
   font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   color: $pink; 
 }
 .flash{
@@ -78,4 +78,8 @@ body {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
+}
+
+.tj-modal {
+  background-color: $white
 }

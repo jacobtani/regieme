@@ -1,0 +1,9 @@
+<div class='container tj-modal'>
+  <div class="modal-header modal-heading-style">
+    <h3 id="myModalLabel">Cross Off Gift - <%=@gift.caption%></h3>
+  </div>
+  <div class="modal-body">
+    <p>Great! You've just bought (or you're about to buy) <%= gift.caption %> for Iain and Tania and want it cross it off their registry. Please enter your name(s) for us to keep track of who bought each item.</p>
+    <%= render 'cgs/form', gift: @gift %>
+  </div>
+</div>
