@@ -1,5 +1,5 @@
 class CgsController < ApplicationController
-  before_action :set_cg, only: [:edit, :update, :show, :destroy]
+  before_action :set_cg, only: [:destroy]
   before_action :set_gift, only: [:create]
   before_action :authenticate_user!, except: [:new, :create]
 
@@ -24,29 +24,17 @@ class CgsController < ApplicationController
     end
   end
 
-  def edit
-  end
-  
-  def update
-    respond_to do |format|
-      if @cg.update_attributes cg_params
-        flash[:success] = "Cg was updated successfully."
-        format.html { redirect_to gifts_path }
-      else
-        format.html { render :edit }
-      end
-    end
-  end
-
   def destroy
+    @gift = Gift.find(@cg.gift_id)
+    @gift.increment!(:remainder_available)
     @cg.destroy
-    redirect_to gifts_path
+    redirect_to cgs_path
   end
 
   private
 
     def cg_params
-      params.require(:cg).permit(:guest_names, :item_name)
+      params.require(:cg).permit(:guest_names, :item_name, :gift_id)
     end
 
     def set_cg
