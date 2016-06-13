@@ -24,4 +24,9 @@ $(document).ready(function() {
     $('#modal-window').removeClass('hidden');
   });
 
+    $("#rsvp_attending").change(function(){
+        if($("#rsvp_attending").val() == "Yes"){
+          $('.optional-elements').removeClass('hidden');
+        }
+    });
 });

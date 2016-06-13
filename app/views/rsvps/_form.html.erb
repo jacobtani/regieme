@@ -2,10 +2,11 @@
   <%= bootstrap_form_for(@rsvp, layout: :horizontal)  do |f| %>
     <%= @rsvp.errors.full_messages.first if @rsvp.errors.any? %>
     <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required' %>
-    <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?' %>
-    <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel, Not attending' ], :prompt => 'Select Preference' %>
-    <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control required' %>
-
+    <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
+    <div class='optional-elements hidden'>
+      <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel' ], :prompt => 'Select Preference', class: 'form-control' %>
+      <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control' %>
+    </div>
     <div class='level-header'>
       <%= button_tag(type: 'submit', class: "btn gift-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
