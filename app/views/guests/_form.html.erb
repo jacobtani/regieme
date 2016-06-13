@@ -5,10 +5,10 @@
     <%= f.text_field :address, placeholder: 'Enter address', class: 'form-control required' %>
 
     <div class='level-header'>
-      <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+      <%= button_tag(type: 'submit', class: "btn gift-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
       <% end %>      
-      <%= link_to fa_icon("undo", text: 'Cancel'), guests_path, class: 'btn btn-danger hvr-sweep-to-right' %>
+      <%= link_to fa_icon("undo", text: 'Cancel'), guests_path, class: 'btn gift-button command-button cancel-button hvr-sweep-to-right' %>
     </div>
   <% end %>
 </div>

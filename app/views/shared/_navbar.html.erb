@@ -25,9 +25,9 @@
       <div class="nav navbar-right header">
         <% if user_signed_in? %>
           Logged in as <%= current_user.email %>
-          <%= link_to fa_icon("sign-out", text: "Logout"), destroy_user_session_path, :method => :delete, class: 'btn btn-danger hvr-sweep-to-right navbar-btn' %>
+          <%= link_to fa_icon("sign-out", text: "Logout"), destroy_user_session_path, :method => :delete, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right navbar-btn' %>
         <% else %>
-          <%= link_to fa_icon("lock", text: 'Login'), new_user_session_path, class: "btn btn-primary navbar-btn hvr-sweep-to-right"  %>  
+          <%= link_to fa_icon("lock", text: 'Login'), new_user_session_path, class: "btn generic-button command-button cancel-button navbar-btn hvr-sweep-to-right"  %>
         <% end %>
       </div>
     </div>

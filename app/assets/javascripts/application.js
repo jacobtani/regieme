@@ -20,7 +20,7 @@
 //= require_tree .
 $(document).ready(function() { 
 
-  $('.gift-button').on('click', function () {
+  $('.cross-off-gift-button').on('click', function () {
     $('#modal-window').removeClass('hidden');
   });
 
