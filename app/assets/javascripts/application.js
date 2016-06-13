@@ -29,4 +29,9 @@ $(document).ready(function() {
           $('.optional-elements').removeClass('hidden');
         }
     });
+
+ setTimeout(function(){
+    $('.flash').remove();
+  }, 3000);
+
 });
