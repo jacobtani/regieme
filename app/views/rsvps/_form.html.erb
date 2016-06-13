@@ -8,10 +8,10 @@
       <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control' %>
     </div>
     <div class='level-header'>
-      <%= button_tag(type: 'submit', class: "btn gift-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+      <%= button_tag(type: 'submit', class: "btn generic-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
       <% end %>      
-      <%= link_to fa_icon("undo", text: 'Cancel'), root_path, class: 'btn gift-button command-button cancel-button hvr-sweep-to-right' %>
+      <%= link_to fa_icon("undo", text: 'Cancel'), new_rsvp_path, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right' %>
     </div>
   <% end %>
 </div>
