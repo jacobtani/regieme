@@ -1,7 +1,7 @@
 <div class='container'>
   <% @cg = Cg.new %>
   <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
-    <%= f.text_field :guest_names, placeholder: 'Enter your names', class: 'form-control required', control_col: "col-sm-8" %>
+    <%= f.text_field :guest_names, placeholder: 'Enter your names', class: 'form-control required', control_col: "col-sm-8", autofocus: true %>
     <%= f.hidden_field :item_name, value: @gift.caption %>
     <%= f.hidden_field :gift_id, value: @gift.id %>
 
