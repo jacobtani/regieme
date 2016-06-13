@@ -2,7 +2,7 @@
   <h2> Guest List </h2>
   <% @guests = locals[:guests] if @guests.nil? %> 
   <div class= 'pull-right'>
-    <%= link_to fa_icon("plus", text: 'Add Guest'), new_guest_path, class: "btn btn-primary hvr-sweep-to-right", id: 'new-guest-link' if current_user && user_signed_in? %>
+    <%= link_to fa_icon("plus", text: 'Add Guest'), new_guest_path, class: "btn gift-button command-button save-button hvr-sweep-to-right", id: 'new-guest-link' if current_user && user_signed_in? %>
   </div>
   <table class = 'table table-striped'>
     <thead>
@@ -19,9 +19,9 @@
         <td> <%= guest.surname %> </td>
         <td> <%= guest.address %> </td>
         <% if current_user && user_signed_in? %> 
-          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_guest_path(id: guest.id), class: "btn btn-success hvr-sweep-to-right", id: 'edit-guest-link' %>
+          <td><%= link_to fa_icon("pencil", text:'Edit'), edit_guest_path(id: guest.id), class: "btn gift-button command-button save-button hvr-sweep-to-right", id: 'edit-guest-link' %>
           <%= link_to fa_icon("trash", text: 'Delete'), guest_path(guest), method: :delete,
-                class: "btn btn-danger hvr-sweep-to-right", id: 'delete-guest-link' %></td>
+                class: "btn gift-button command-button cancel-button hvr-sweep-to-right", id: 'delete-guest-link' %></td>
         <%end%>
       </tr>
     <%end%>

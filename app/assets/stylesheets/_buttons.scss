@@ -1,0 +1,52 @@
+a:link { 
+  color: $blue;
+}
+a:visited { 
+  color: $blue;
+}
+a:hover { 
+  color: $blue;
+}
+a:active { 
+  color: $blue;
+}
+
+.generic-button {
+  float: right;
+  margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  height: 2.3rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  color: #555;
+  text-transport: uppercase;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.command-button {
+  color: $white;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  background-color: $pink;
+  float: left;
+  height: 3.5rem;
+  width: 10.5rem;
+}
+
+.save-button {
+  background-color: $blue;
+}
+
+.cancel-button {
+  background-color: $orange;
+}
+
+
+login-button {
+  color: $white;
+}
