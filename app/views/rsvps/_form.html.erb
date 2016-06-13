@@ -1,7 +1,7 @@
 <div class='container form-scrollable'>
   <%= bootstrap_form_for(@rsvp, layout: :horizontal)  do |f| %>
     <%= @rsvp.errors.full_messages.first if @rsvp.errors.any? %>
-    <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required' %>
+    <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required', autofocus: true %>
     <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
     <div class='optional-elements hidden'>
       <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel' ], :prompt => 'Select Preference', class: 'form-control' %>
