@@ -1,20 +1,29 @@
 .navbar .nav > li > a {
-  color: $white;
-  font-family: 'Lato', serif;
+  color: $black;
+  font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  border: 3px solid transparent;
+  padding: 9px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .navbar-default .navbar-brand {
-  color: $white;
+  color: $black;
 }
 
 .navbar {
   border-radius: 0px !important;
-  background-color: $pink !important;
+  background-color: $white !important;
   font-size: 16px;
+  font-family: "futura-pt",sans-serif;
   margin-bottom: 40px;
   .container-fluid{
     padding-left: 11%;
   }
 }
 
-
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+}
