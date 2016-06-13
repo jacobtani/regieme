@@ -29,17 +29,23 @@ a:active {
 
 .command-button {
   color: $white;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-right: 1rem;
   margin-left: 0rem;
   background-color: $pink;
   float: left;
-  height: 3.5rem;
+  height: 3.1rem;
   width: 10.5rem;
 }
 
 .save-button {
   background-color: $blue;
+}
+
+#cross-gift-link{
+ width: 9.0rem;
+ height: 3.0rem;
+ font-size: 1.3rem;
 }
 
 .cancel-button {
