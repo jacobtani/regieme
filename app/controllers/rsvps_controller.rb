@@ -16,8 +16,8 @@ class RsvpsController < ApplicationController
     @rsvp.guest_id = @guest.id if @guest.present?
     respond_to do |format|
       if @rsvp.save
-        flash[:success] = "Rsvp was created successfully."
-        format.html { redirect_to root_path }
+        flash[:success] = "Thankyou for RSVPing #{@guest.first_name}! Would you like to RSVP for more fiends?"
+        format.html { render :new }
       else
         format.html { render :new }
       end
@@ -26,7 +26,7 @@ class RsvpsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     respond_to do |format|
       if @rsvp.update_attributes rsvp_params
@@ -53,7 +53,7 @@ class RsvpsController < ApplicationController
       @guest_full_name = params[:rsvp][:full_name].split
       @guest=Guest.all.where(first_name: @guest_full_name[0], surname: @guest_full_name[1]).first
     end
-    
+
     def set_rsvp
       @rsvp = Rsvp.find params[:id] rescue nil
       return not_found! unless @rsvp

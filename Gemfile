@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'whenever', :require => false
 gem "cocoon"
-gem 'rmagick'
+# gem 'rmagick'
 #Maintain seed data
 gem 'seed-fu', '~> 2.3'   
 gem 'bootstrap_form'
