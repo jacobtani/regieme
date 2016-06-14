@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get :welcome
     get :our_story
     get :accomodation
+    get :people
   end
 
 end
