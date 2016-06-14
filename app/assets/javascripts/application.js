@@ -33,8 +33,8 @@ $(document).ready(function() {
         }
     });
 
- setTimeout(function(){
-    $('.flash').remove();
-  }, 3000);
+ // setTimeout(function(){
+ //    $('.flash').remove();
+ //  }, 3000);
 
 });

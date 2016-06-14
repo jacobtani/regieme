@@ -218,7 +218,6 @@ GEM
       json (~> 1.4)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
-    rmagick (2.15.4)
     ruby-progressbar (1.8.0)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -312,7 +311,6 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.4)
   rails_12factor
-  rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed-fu (~> 2.3)
@@ -325,3 +323,9 @@ DEPENDENCIES
   wicked_pdf
   wkhtmltopdf-binary
   wkhtmltopdf-heroku
+
+RUBY VERSION
+   ruby 2.2.1p85
+
+BUNDLED WITH
+   1.12.5
