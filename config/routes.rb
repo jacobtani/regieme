@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get :the_details
     get :welcome
     get :our_story
+    get :accomodation
   end
 
 end

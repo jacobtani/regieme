@@ -1,8 +1,8 @@
 defaults: &defaults
   adapter: postgresql
   encoding: unicode
-  username: tania
-  password: password
+  username: docker
+  password: docker
   host: localhost
   pool: 25
 

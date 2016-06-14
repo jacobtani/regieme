@@ -1,5 +1,5 @@
 .gift-categories {
-  font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "JLynn";
   font-size: 2.5rem;
   color: $pink;
   letter-spacing: -.1rem;
@@ -11,7 +11,9 @@
 .modal-heading-style {
   font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
   font-size: 40px;
-  color: $pink; 
+  color: $pink;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .caption-style{
@@ -21,3 +23,24 @@
 h2 {
   color: $pink;
 }
+
+.our-story{
+  font-size: 2.688em;
+  font-weight: bold;
+  color: $pink;
+  text-transform: uppercase;
+}
+
+.mym-header {
+  font-size: 40px;
+}
+
+.hr {
+  display: block;
+  height: 40px;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  background-position: center;
+  background-image: url('../images/divider.png');
+}
+

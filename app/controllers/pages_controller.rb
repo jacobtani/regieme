@@ -1,3 +1,5 @@
+include Magick
+
 class PagesController < ApplicationController
 
   def the_details
@@ -7,6 +9,9 @@ class PagesController < ApplicationController
   end
 
   def details
+  end
+
+  def welcome
   end
 
 end
