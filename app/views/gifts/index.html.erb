@@ -1,7 +1,8 @@
 <div class = 'container level-header gift-page'>
   <div class='row'>
-    <h2> Gift Registry </h2>
-    <i> If you would like to give us a gift for our wedding, please choose a gift from the following that you would like to buy. Once you have decided to buy it/bought it please click 'Cross Off Gift' to avoid duplicate gifts. We really appreciate your generosity and look forward to seeing you at our big day. </i>
+    <h2 align='center'> GIFT REGISTRY </h2>
+    <div class="hr"></div>
+    <i> If you would like to give us a gift for our wedding, please choose a gift from the following that you would like to buy. Once you have decided to buy it/bought it please click 'Cross Off' to avoid duplicate gifts. We really appreciate your generosity and look forward to seeing you at our big day. </i>
   </div>
   <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn generic-button command-button save-button hvr-sweep-to-right", id: 'new-gift-link' if current_user && user_signed_in? %>
   <% @categories = Category.all %>

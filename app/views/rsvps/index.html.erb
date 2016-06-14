@@ -1,5 +1,5 @@
 <div class = 'container level-header rsvp-page'>
-  <h2> RSVPS </h2>
+  <h2 align='center'> RSVPS </h2>
   <% @rsvps = locals[:guests] if @rsvps.nil? %> 
   <div class= 'pull-right'>
     <%= link_to fa_icon("plus", text: 'Add RSVP'), new_rsvp_path, class: "btn generic-button command-button save-button hvr-sweep-to-right", id: 'new-rsvp-link' if current_user && user_signed_in? %>

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   controller :pages do
     get :the_details
     get :welcome
+    get :our_story
+    get :accomodation
   end
 
 end

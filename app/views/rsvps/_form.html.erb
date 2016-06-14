@@ -1,17 +1,16 @@
 <div class='container form-scrollable'>
   <%= bootstrap_form_for(@rsvp, layout: :horizontal)  do |f| %>
     <%= @rsvp.errors.full_messages.first if @rsvp.errors.any? %>
-    <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required', autofocus: true %>
+    <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required', autofocus: true, label: 'Full Name' %>
     <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
     <div class='optional-elements hidden'>
-      <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel' ], :prompt => 'Select Preference', class: 'form-control' %>
-      <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control' %>
+      <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel' ], :prompt => 'Select Preference', class: 'form-control', label: 'Meal Preference' %>
+      <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control', label: 'Dietary Requirements' %>
     </div>
     <div class='level-header'>
       <%= button_tag(type: 'submit', class: "btn generic-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
       <% end %>      
-      <%= link_to fa_icon("undo", text: 'Cancel'), new_rsvp_path, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right' %>
     </div>
   <% end %>
 </div>

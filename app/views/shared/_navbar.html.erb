@@ -1,9 +1,6 @@
 <nav class = "navbar navbar-default navbar-fixed-top uppernav" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        <p> TJIW </p>
-      </a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -12,24 +9,20 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapsable">
-      <ul class="nav navbar-nav foo" id="menu">
-        <li><%= link_to 'The Deetz', the_details_path, class: 'hvr-sweep-to-right'%></li>
+      <ul class="nav navbar-nav foo pull-right" id="menu">
+        <li><%= link_to 'HOME', welcome_path, class: 'hvr-sweep-to-right'%></li>
+        <li><%= link_to 'OUR STORY', our_story_path, class: 'hvr-sweep-to-right'%></li>
+        <li><%= link_to 'PEOPLE', the_details_path, class: 'hvr-sweep-to-right'%></li>
+        <li><%= link_to 'THE WEDDING', the_details_path, class: 'hvr-sweep-to-right'%></li>
+        <li><%= link_to 'ACCOMODATION', accomodation_path, class: 'hvr-sweep-to-right'%></li>
+        <li><%= link_to 'GIFTS', gifts_path, class: 'hvr-sweep-to-right'%></li>
         <li><%= link_to 'RSVP', new_rsvp_path, class: 'hvr-sweep-to-right' if !current_user %></li>
-        <li><%= link_to 'Gift Registry', gifts_path, class: 'hvr-sweep-to-right'%></li>
         <% if current_user %>
           <li><%= link_to 'RSVP', rsvps_path, class: 'hvr-sweep-to-right' %></li>
-          <li><%= link_to 'Guests', guests_path, class: 'hvr-sweep-to-right'%></li>
-          <li><%= link_to 'Claimed Gifts', cgs_path, class: 'hvr-sweep-to-right'%></li>
+          <li><%= link_to 'GUESTS', guests_path, class: 'hvr-sweep-to-right'%></li>
+          <li><%= link_to 'CLAIMED GIFTS', cgs_path, class: 'hvr-sweep-to-right'%></li>
         <% end %>
       </ul>
-      <div class="nav navbar-right header">
-        <% if user_signed_in? %>
-          Logged in as <%= current_user.email %>
-          <%= link_to fa_icon("sign-out", text: "Logout"), destroy_user_session_path, :method => :delete, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right navbar-btn' %>
-        <% else %>
-          <%= link_to fa_icon("lock", text: 'Login'), new_user_session_path, class: "btn generic-button command-button cancel-button navbar-btn hvr-sweep-to-right"  %>
-        <% end %>
-      </div>
-    </div>
+   </div>
   </div>
 </nav>

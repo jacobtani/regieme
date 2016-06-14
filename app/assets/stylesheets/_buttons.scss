@@ -1,14 +1,14 @@
 a:link { 
-  color: $blue;
+  color: $black;
 }
 a:visited { 
-  color: $blue;
+  color: $black;
 }
 a:hover { 
-  color: $blue;
+  color: $black;
 }
 a:active { 
-  color: $blue;
+  color: $black;
 }
 
 .generic-button {
@@ -49,10 +49,5 @@ a:active {
 }
 
 .cancel-button {
-  background-color: $orange;
-}
-
-
-.login-button {
-  color: $white;
+  background-color: $white;
 }
