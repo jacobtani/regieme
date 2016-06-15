@@ -15,10 +15,18 @@
 //= require jquery_ujs
 //= require flash_messages
 //= require cocoon
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() { 
+
+  $("#owl-demo").owlCarousel({
+       autoPlay: 6000, //Set AutoPlay to 3 seconds
+       items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+   });
 
   $('.cross-off-gift-button').on('click', function () {
     $('#modal-window').removeClass('hidden');
