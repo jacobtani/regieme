@@ -20,13 +20,14 @@
 @import "buttons";
 @import "headings";
 @import "forms";
+@import "fonts";
 
 .body-style{
   padding-top: 90px;
 }
 
 body {
-  font-family: 'Lato', serif;
+  font-family: 'Lato', serif; 
   font-size: 16px;
   color: $black;
 }
