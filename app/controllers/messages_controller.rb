@@ -6,36 +6,24 @@ class MessagesController < ApplicationController
   end
 
   def create
-    binding.pry
     @message = Message.new message_params
     if @message.valid?
-      send_message(@guest, @message)
-      flash[:success] = "Message sent successfully"
+      AdminMailer.send_enquiry(@guest, @message).deliver_now if @guest.email != '""'
+      flash[:success] = "Message has been successfully sent to Iain & Tania"
+      redirect_to contact_us_path
     else
       render "new"
     end
   end
 
-  def send_message(guest, message)
-    AdminMailer.send_enquiry(guest, message).deliver_now   
-  end
-
-  def confirm_rsvp
-  end
-
   private 
 
     def find_guest
-      @guest = Guest.all.where(first_name: params[:message][:first_name]).first
+      @guest = Guest.all.where(email: params[:message][:email]).first
     end
 
     def message_params
-      params.require(:message).permit(:content, :message_subject, :first_name, :email)
-    end
-
-    def set_user
-      @user = User.find params[:user_id] rescue nil
-      return not_found! unless @user
+      params.require(:message).permit(:content, :message_subject, :email)
     end
 
 end

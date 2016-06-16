@@ -4,7 +4,7 @@ class AdminMailer < ApplicationMailer
   def send_enquiry(guest, message)
     @message = message
     @guest = guest
-    mail(from: @guest.email, to: 'tjterminator@gmail.com', subject: @message.subject)
+    mail(from: @guest.email, to: 'tjterminator.dev@gmail.com', subject: @message.message_subject)
   end
 
 end
