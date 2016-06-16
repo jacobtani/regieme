@@ -1,0 +1,13 @@
+Dear Iain and Tania,
+
+A new RSVP has been created: 
+
+Guest Name: <%= @guest.full_name %>
+Attending: <%= @rsvp.attending %>
+<% if @rsvp.attending == 'Yes'%>
+Meal Preference: <%=@rsvp.meal_preference %>
+<% if @rsvp.dietary_requirements != """" %>
+Dietary Requirements: <%= @rsvp.dietary_requirements %>
+<% end %>
+<% end%>
+

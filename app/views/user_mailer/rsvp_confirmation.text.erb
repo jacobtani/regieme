@@ -1,0 +1,24 @@
+Dear <%= @guest.first_name %>,
+
+Thank you for RSVPing for Iain and Tania's wedding. This email is to confirm the RSVP that you placed. If any details are incorrect, please let us know ASAP:
+
+Attending: <%= @rsvp.attending %>
+<% if @rsvp.attending == 'Yes'%>
+Meal Preference: <%=@rsvp.meal_preference %>
+<% if @rsvp.dietary_requirements != """" %>
+Dietary Requirements: <%= @rsvp.dietary_requirements %>
+<% end %>
+
+We look forward to seeing you on the 25th April.
+
+Love,
+Iain and Tania
+
+<% else %>
+
+We hope to see you sometime in the future.
+
+Love,
+Iain and Tania
+<% end%>
+
