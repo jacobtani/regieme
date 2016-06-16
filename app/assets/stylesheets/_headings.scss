@@ -10,16 +10,16 @@
 }
 
 .modal-heading-style {
-  font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
-  font-size: 40px;
+  font-family: "Avenir", sans-serif;
   color: $pink;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .caption-style{
   color: $green;
   font-size: 16px;
+  font-family: "Avenir", sans-serif;
   text-transform: uppercase;
 }
 
@@ -42,10 +42,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.mym-header {
-  font-size: 40px;
-}
-
 .hr {
   display: block;
   height: 40px;
@@ -55,3 +51,6 @@ h2 {
   background-image: url('../images/divider.png');
 }
 
+h3 {
+  font-size: 50px;
+}
