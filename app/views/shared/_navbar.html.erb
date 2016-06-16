@@ -17,6 +17,7 @@
         <li><%= link_to 'ACCOMODATION', accomodation_path, class: 'hvr-sweep-to-right'%></li>
         <li><%= link_to 'GIFTS', gifts_path, class: 'hvr-sweep-to-right'%></li>
         <li><%= link_to 'RSVP', new_rsvp_path, class: 'hvr-sweep-to-right' if !current_user %></li>
+        <li><%= link_to 'CONTACT', contact_us_path, class: 'hvr-sweep-to-right' %></li>
         <% if current_user %>
           <li><%= link_to 'RSVP', rsvps_path, class: 'hvr-sweep-to-right' %></li>
           <li><%= link_to 'GUESTS', guests_path, class: 'hvr-sweep-to-right'%></li>
