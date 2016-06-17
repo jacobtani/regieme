@@ -16,7 +16,7 @@ class CgsController < ApplicationController
     @gift.decrement!(:remainder_available)
     respond_to do |format|
       if @cg.save
-        flash[:success] = "Cg was created successfully."
+        flash[:success] = "#{@gift.name} was crossed off successfully."
         format.html { redirect_to gifts_path }
       else
         format.html { render :new }
