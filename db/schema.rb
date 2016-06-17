@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160616103940) do
+ActiveRecord::Schema.define(version: 20160617024316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20160616103940) do
   add_index "cgs", ["gift_id"], name: "index_cgs_on_gift_id", using: :btree
 
   create_table "gifts", force: :cascade do |t|
-    t.string  "caption",                           null: false
     t.text    "description",                       null: false
     t.integer "guest_id"
     t.integer "desired_quantity",    default: 0
@@ -37,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160616103940) do
     t.text    "website_link"
     t.integer "category_id"
     t.float   "price",               default: 0.0
+    t.string  "name"
   end
 
   add_index "gifts", ["guest_id"], name: "index_gifts_on_guest_id", using: :btree
