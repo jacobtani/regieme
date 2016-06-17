@@ -11,7 +11,7 @@
       <h3 class='gift-categories'><%= cat.name %></h3>
       <% @gifts.where(category_id: cat.id).each do |gift| %>
         <% if gift.remainder_available > 0 %>
-          <b><p><%= link_to gift.caption, gift.website_link, class: 'caption-style' %></b> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> </p>
+          <b><p><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> </p>
           <p><%= gift.description %></p>
           <%= link_to fa_icon("pencil", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button cancel-button", id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
           <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" ></div>
