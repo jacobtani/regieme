@@ -1,11 +1,11 @@
 <% @message = Message.new %>
 <div class='container level-header'>
-  <h2> Send Message </h2>
+  <h2> Contact Us </h2>
   <p> Feel free to get in touch with us below if you have any questions or something to share </p>
   <%= bootstrap_form_for(@message, layout: :horizontal)  do |f| %>
     <%= f.hidden_field :message_subject, value: 'QUESTION ABOUT THE WEDDING'%>
     <%= f.text_area :email, label: 'Your Email' %>
-    <%= f.text_area :content, label: 'Message Content' %>
+    <%= f.text_area :content, label: 'Message Content', rows: '10' %>
     <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending..."}) do %>
       <i class="fa fa-save"></i> Send
     <% end %>
