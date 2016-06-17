@@ -1,0 +1,35 @@
+waffle_maker:
+  name: 'Waffle Maker'
+  description: 'We both love waffles'
+  category: kitchen
+  price: 69.99
+  desired_quantity: 1
+  remainder_available: 1
+  website_link: 'http://www.briscoes.co.nz/kitchen/appliances/breville-bwm250-crisp-control-waffle-maker-1058036'
+
+baking_bowl:
+  name: 'Baking Bowl'
+  description: 'TJ needs a bowl to mix her baking mixtures'
+  category: kitchen
+  price: 49.99
+  desired_quantity: 1
+  remainder_available: 1
+  website_link: 'http://www.stevens.co.nz/product/Mixing-Bowl-Set/?p=5716856'
+
+ps4:
+  name: 'PS4'
+  description: 'Iain really wants a PS4'
+  category: entertainment
+  price: 599.99
+  desired_quantity: 1
+  remainder_available: 1
+  website_link: 'http://shop.jbhifi.co.nz/game/ps4/ps4-playstation-4-1tb-console-black/92302'
+
+coffee_table:
+  name: 'Coffee table'
+  description: 'Need a second coffee table'
+  category: decor
+  price: 599.99
+  desired_quantity: 1
+  remainder_available: 1
+  website_link: 'http://www.harveynorman.co.nz/furniture/lounge/coffee-and-lamp-tables/stix-coffee-table-by-debonaire-furniture.html'
