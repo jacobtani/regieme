@@ -1,3 +1,4 @@
 cg_one:
   guest_names: 'Person One'
   item_name: 'Waffle Maker'
+  gift_id: waffle_maker
