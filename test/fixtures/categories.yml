@@ -1,0 +1,14 @@
+kitchen:
+  name: 'kitchen'
+
+decor:
+  name: 'decor'
+
+entertainment:
+  name: 'entertainment'
+
+outdoor:
+  name: 'outdoor'
+
+bathroom:
+  name: 'bathroom'
