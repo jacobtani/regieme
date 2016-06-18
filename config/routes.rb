@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'pages#welcome'
   resources :guests
   resources :gifts
+  resources :categories
   resources :cgs
   resources :messages
   get '/gifts/:id/cross_off_gift' => "gifts#cross_off_gift", as: :cross_off_gift
