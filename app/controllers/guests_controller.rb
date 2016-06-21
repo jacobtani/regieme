@@ -41,10 +41,6 @@ class GuestsController < ApplicationController
     redirect_to guests_path
   end
 
-  def send_enquiry 
-    AdminMailer.send_enquiry(@guest).deliver
-  end
-
   private
 
     def guest_params
@@ -54,11 +50,6 @@ class GuestsController < ApplicationController
     def set_guest
       @guest = Guest.find params[:id] rescue nil
       return not_found! unless @guest
-    end
-
-    def find_guest
-      @guest_full_name = params[:rsvp][:full_name].split
-      @guest=Guest.all.where(first_name: @guest_full_name[0], surname: @guest_full_name[1]).first
     end
 
 end
