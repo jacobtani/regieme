@@ -12,6 +12,7 @@ class CategoriesControllerTest < ActionController::TestCase
       it "doesn't allow category to be created when not logged in" do
         post :create, category: { name: 'Electronics' }
         assert_response 302
+        assert_redirected_to new_user_session_path
         @controller.instance_variable_get('@category').must_equal nil
       end
 
@@ -24,6 +25,7 @@ class CategoriesControllerTest < ActionController::TestCase
       it "redirect user when trying to update a category" do
         patch :update, id: kitchen, category: { category_id: kitchen.id, name: 'Le Kitchen'}
         assert_response 302
+        assert_redirected_to new_user_session_path
         @controller.instance_variable_get('@category').must_equal nil
       end
 
@@ -31,7 +33,8 @@ class CategoriesControllerTest < ActionController::TestCase
         assert_difference ->{ Category.all.count }, 0 do
           delete :destroy, id: entertainment
         end
-        assert_response :redirect
+        assert_response 302
+        assert_redirected_to new_user_session_path
       end
      
    end
@@ -46,12 +49,14 @@ class CategoriesControllerTest < ActionController::TestCase
        post :create, category: { name: 'Electronics' }
        assert flash[:success].must_equal 'Category was created successfully.'
        assert_response 302
+        assert_redirected_to root_path
        @controller.instance_variable_get('@category').name.must_equal 'Electronics'
      end
 
      it "logged on user can update a category" do
        patch :update, id: kitchen, category: { category_id: kitchen.id, name: 'Le Kitchen'}
        assert_response 302
+       assert_redirected_to root_path
        @controller.instance_variable_get('@category').name.must_equal 'Le Kitchen'
      end
 
@@ -59,7 +64,8 @@ class CategoriesControllerTest < ActionController::TestCase
        assert_difference ->{ Category.all.count }, -1 do
         delete :destroy, id: entertainment
        end
-       assert_response :redirect
+       assert_response 302
+       assert_redirected_to root_path
      end
     
    end
