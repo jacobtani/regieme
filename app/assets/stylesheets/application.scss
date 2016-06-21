@@ -34,12 +34,9 @@ body {
 
 .flash{
   background-color: rgba(0, 75, 109, 0.17);
+  font-family: 'Avenir', serif; 
+  font-size: 18px;
   color: $pink;
-  font: {
-    family: "Tangerin Next";
-    size: 1.3em;
-    weight: 500;
-  }
   border-radius: 1px;
   text-align: center;
   padding-bottom: 5px;
@@ -53,6 +50,11 @@ body {
     background-color: lighten($pink, 5%);
     color: #008000;
   }
+  &.success-alert{
+    background-color: lighten($green, 5%);
+    color: $white;
+  }
+
 }
 
 .cross-off-gift-modal {
