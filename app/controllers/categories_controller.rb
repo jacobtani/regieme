@@ -2,10 +2,6 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_category, only: [:edit, :update, :show, :destroy]
   
-  def index
-    @categories = Category.all
-  end
-
   def new
     @category  = Category.new
   end
