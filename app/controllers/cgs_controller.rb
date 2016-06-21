@@ -19,7 +19,9 @@ class CgsController < ApplicationController
         flash[:success] = "#{@gift.name} was crossed off successfully."
         format.html { redirect_to gifts_path }
       else
-        format.html { render :new }
+        @gift.increment!(:remainder_available)
+        flash[:error] = "Unable to cross off #{@gift.name} as you did not provide guest names. Please try again"
+        format.html { redirect_to gifts_path }
       end
     end
   end
