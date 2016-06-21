@@ -18,11 +18,25 @@ class CgsControllerTest < ActionController::TestCase
        @controller.instance_variable_get('@cg').guest_names.must_equal 'Mr Smith'
       end
 
+      it "does not allows cg to be created when invalid data and not logged in" do
+       post :create, cg: { item_name: 'Baking Bowl', gift_id: baking_bowl.id, guest_names: nil }
+       assert_response 200
+       @controller.instance_variable_get('@cg').item_name.must_equal 'Baking Bowl'
+       @controller.instance_variable_get('@cg').gift_id.must_equal baking_bowl.id
+       @controller.instance_variable_get('@cg').guest_names.must_equal nil
+      end
+
       it "redirect user when trying to delete a cg" do
         assert_difference ->{ Cg.all.count }, 0 do
           delete :destroy, id: cg_one
         end
         assert_response :redirect
+      end
+
+      it "should not display all cgs if not logged in" do
+        get :index
+        assert_response 302
+        assert_nil assigns(:cgs)
       end
      
    end
@@ -47,6 +61,12 @@ class CgsControllerTest < ActionController::TestCase
         delete :destroy, id: cg_one
        end
        assert_response :redirect
+     end
+
+     it "should display all cgs if logged in" do
+       get :index
+       assert_response 200
+       assert_not_nil assigns(:cgs)
      end
     
    end

@@ -50,10 +50,23 @@ class GiftsControllerTest < ActionController::TestCase
        @controller.instance_variable_get('@gift').description.must_equal 'Need a second 8 inch cake tin'
      end
 
+     it "a logged on user can't add new gift if mandatory field missing" do
+       post :create, gift: { price: 10.99, description: 'Need a second 8 inch cake tin' }
+       assert flash[:success].must_equal nil
+       assert_response 200
+       @controller.instance_variable_get('@gift').price.must_equal 10.99
+       @controller.instance_variable_get('@gift').description.must_equal 'Need a second 8 inch cake tin'
+     end
+
      it "a logger on user can update a gift" do
        patch :update, id: baking_bowl, gift: { gift_id: baking_bowl.id, price: 250 }
        assert_response 302
        @controller.instance_variable_get('@gift').price.must_equal 250
+     end
+
+     it "a logged on user can't update a gift with invalid price" do
+       patch :update, id: baking_bowl, gift: { gift_id: baking_bowl.id, price: -5 }
+       assert_response 200
      end
 
      it "admin can delete a gift" do

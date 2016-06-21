@@ -15,7 +15,13 @@ class CategoriesControllerTest < ActionController::TestCase
         @controller.instance_variable_get('@category').must_equal nil
       end
 
-      it "rredirect user when trying to update a category" do
+      it "doesn't allow category to be created when invalid data and not logged in" do
+        post :create, category: { }
+        assert_response 302
+        @controller.instance_variable_get('@category').must_equal nil
+      end
+
+      it "redirect user when trying to update a category" do
         patch :update, id: kitchen, category: { category_id: kitchen.id, name: 'Le Kitchen'}
         assert_response 302
         @controller.instance_variable_get('@category').must_equal nil

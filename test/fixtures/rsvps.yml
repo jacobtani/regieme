@@ -1,11 +1,5 @@
 rsvp_one:
-  guest: 'gen'
+  guest: gw
   attending: 'yes'
-  meal_preference: 'steak'
-  dietary_requirements: 'i dont like carrots'
-
-rsvp_two:
-  guest: 'gen'
-  attending: 'yes'
-  meal_preference: 'steak'
+  meal_preference: 'Steak'
   dietary_requirements: 'i dont like carrots'
