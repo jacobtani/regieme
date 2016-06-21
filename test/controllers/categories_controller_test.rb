@@ -16,7 +16,7 @@ class CategoriesControllerTest < ActionController::TestCase
       end
 
       it "doesn't allow category to be created when invalid data and not logged in" do
-        post :create, category: { }
+        post :create, category: { name: 1212 }
         assert_response 302
         @controller.instance_variable_get('@category').must_equal nil
       end

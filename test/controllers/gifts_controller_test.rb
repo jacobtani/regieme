@@ -28,11 +28,17 @@ class GiftsControllerTest < ActionController::TestCase
         assert_response :redirect
       end
      
-     it "should display all gifts if not logged in" do
+      it "should display all gifts if not logged in" do
         get :index
         assert_response 200
         assert_not_nil assigns(:gifts)
+      end
+
+     it "should be able to cross off gifts not logged in " do
+       xhr :get, :cross_off_gift, format: :js, id: baking_bowl.id
+       assert_response 200
      end
+
    end
 
    describe "actions by logged in user" do
