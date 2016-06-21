@@ -6,8 +6,8 @@
     <%= f.hidden_field :message_subject, value: 'QUESTION ABOUT THE WEDDING'%>
     <%= f.text_area :email, label: 'Your Email' %>
     <%= f.text_area :content, label: 'Message Content', rows: '10' %>
-    <%= button_tag(type: 'submit', class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending..."}) do %>
-      <i class="fa fa-save"></i> Send
+    <%= button_tag(type: 'submit', class: "btn generic-button command-button ", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending..."}) do %>
+      <i class="fa fa-paper-plane"></i> Send
     <% end %>
   <% end %>
 </div>
