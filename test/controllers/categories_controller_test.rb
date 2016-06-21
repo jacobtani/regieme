@@ -49,7 +49,7 @@ class CategoriesControllerTest < ActionController::TestCase
        post :create, category: { name: 'Electronics' }
        assert flash[:success].must_equal 'Category was created successfully.'
        assert_response 302
-        assert_redirected_to root_path
+       assert_redirected_to root_path
        @controller.instance_variable_get('@category').name.must_equal 'Electronics'
      end
 

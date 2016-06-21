@@ -41,6 +41,7 @@ class CgsControllerTest < ActionController::TestCase
       it "should not display all cgs if not logged in" do
         get :index
         assert_response 302
+        assert_redirected_to new_user_session_path
         assert_nil assigns(:cgs)
       end
      
