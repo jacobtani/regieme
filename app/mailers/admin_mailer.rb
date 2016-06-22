@@ -10,7 +10,7 @@ class AdminMailer < ApplicationMailer
   def rsvp_confirmation(rsvp, guest)
     @rsvp = rsvp
     @guest = guest
-    mail(from: @guest.email, to: 'tjterminator.dev@gmail.com', subject: 'RSVP from #{@guest.full_name}')
+    mail(from: @guest.email, to: 'tjterminator.dev@gmail.com', subject: 'RSVP from #{guest.full_name}')
   end
 
 end
