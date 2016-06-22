@@ -19,7 +19,7 @@ class RsvpsController < ApplicationController
         flash[:success] = "Thankyou for RSVPing #{@guest.first_name}! Would you like to RSVP for more fiends?"
         UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now if @guest.email != '""'
         AdminMailer.rsvp_confirmation(@rsvp, @guest).deliver_now if @guest.email != '""'
-        format.html { redirect_to root_path }
+        format.html { render :new }
       else
         format.html { render :new }
       end
