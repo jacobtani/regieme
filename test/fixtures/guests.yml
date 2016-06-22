@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: guests
+#
+#  id         :integer          not null, primary key
+#  first_name :string
+#  surname    :string
+#  address    :text
+#  email      :string
+#
+
 aj:
   first_name: 'Anita'
   surname: 'Troll' 

@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: rsvps
+#
+#  id                   :integer          not null, primary key
+#  meal_preference      :string
+#  dietary_requirements :text
+#  guest_id             :integer          not null
+#  attending            :string           not null
+#
+
 class Rsvp < ActiveRecord::Base
   belongs_to :guest
   validates_presence_of :attending

@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: rsvps
+#
+#  id                   :integer          not null, primary key
+#  meal_preference      :string
+#  dietary_requirements :text
+#  guest_id             :integer          not null
+#  attending            :string           not null
+#
+
 require 'test_helper'
 
 class RsvpTest < ActiveSupport::TestCase
