@@ -23,7 +23,7 @@ class CgsControllerTest < ActionController::TestCase
 
       it "does not allows cg to be created when invalid data and not logged in" do
         post :create, cg: { item_name: 'Baking Bowl', gift_id: baking_bowl.id, guest_names: nil }
-        assert_response 200
+        assert_response 302
         @controller.instance_variable_get('@cg').item_name.must_equal 'Baking Bowl'
         @controller.instance_variable_get('@cg').gift_id.must_equal baking_bowl.id
         @controller.instance_variable_get('@cg').guest_names.must_equal nil
