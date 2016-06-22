@@ -1,15 +1,16 @@
 <div class='container'>
   <% @cg = Cg.new %>
   <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
+    <%= f.alert_message "Please fix the errors below." %>
     <%= f.text_field :guest_names, placeholder: 'Enter your names', class: 'form-control required', control_col: "col-sm-8", autofocus: true, label: 'Guest Names' %>
     <%= f.hidden_field :item_name, value: @gift.name %>
     <%= f.hidden_field :gift_id, value: @gift.id %>
 
     <div class='level-header'>
-      <%= button_tag(type: 'submit', class: "btn generic-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+      <%= button_tag(type: 'submit', class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
       <% end %>      
-      <%= link_to fa_icon("undo", text: 'Cancel'), gifts_path, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right' %>
+      <%= link_to fa_icon("undo", text: 'Cancel'), gifts_path, class: 'btn generic-button command-button hvr-sweep-to-right' %>
     </div>
   <% end %>
 </div>

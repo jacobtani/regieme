@@ -4,21 +4,24 @@
     <div class="hr"></div>
     <i> If you would like to give us a gift for our wedding, please choose a gift from the following that you would like to buy. Once you have decided to buy it/bought it please click 'Cross Off' to avoid duplicate gifts. We really appreciate your generosity and look forward to seeing you at our big day. </i>
   </div>
-  <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn generic-button command-button save-button hvr-sweep-to-right", id: 'new-gift-link' if current_user && user_signed_in? %>
+  <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn generic-button command-button hvr-sweep-to-right pull-right", id: 'new-gift-link' if current_user && user_signed_in? %>
   <% @categories = Category.all %>
   <div class="row">
     <% @categories.each do |cat| %>
       <h3 class='gift-categories'><%= cat.name %></h3>
       <% @gifts.where(category_id: cat.id).each do |gift| %>
         <% if gift.remainder_available > 0 %>
-          <b><p><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> </p>
+          <p>
+            <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %>
+            </b> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> 
+              <%= link_to fa_icon("check", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button" , id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
+          </p>
           <p><%= gift.description %></p>
-          <%= link_to fa_icon("pencil", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button cancel-button", id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
           <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" ></div>
           <% if current_user && user_signed_in? %>
             <p><%= link_to fa_icon("pencil", text:'Edit'), edit_gift_path(id: gift.id), class: "btn generic-button command-button hvr-sweep-to-right", id: 'edit-gift-link' %>
                 <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,
-                      class: "btn generic-button command-button cancel-button hvr-sweep-to-right", id: 'delete-gift-link' %></p>
+                      class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-gift-link' %></p>
           <% end %>
         <% end %>
       <% end %>

@@ -7,10 +7,10 @@
     <%= f.number_field :desired_quantity, placeholder: 'Enter quantity required', class: 'form-control required' %>
     <%= f.text_field :website_link, placeholder: 'Enter link to product', class: 'form-control required' %>
     <div class='level-header'>
-      <%= button_tag(type: 'submit', class: "btn generic-button command-button save-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+      <%= button_tag(type: 'submit', class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
       <% end %>      
-      <%= link_to fa_icon("undo", text: 'Cancel'), gifts_path, class: 'btn generic-button command-button cancel-button hvr-sweep-to-right' %>
+      <%= link_to fa_icon("undo", text: 'Cancel'), gifts_path, class: 'btn generic-button command-button hvr-sweep-to-right' %>
     </div>
   <% end %>
 </div>
