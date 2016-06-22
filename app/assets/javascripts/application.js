@@ -14,7 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require flash_messages
-//= require cocoon
 //= require owl.carousel
 //= require bootstrap-sprockets
 //= require turbolinks
