@@ -13,8 +13,6 @@
 
 * Seed the database: ```rake db:seed```
 
-* Update the cron jobs: ```whenever --update-crontab```
-
 * Run application server: ```rails s```
 
 ### Database
