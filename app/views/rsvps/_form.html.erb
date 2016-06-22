@@ -11,7 +11,7 @@
     <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
     <div class='optional-elements'>
       <%= f.select :meal_preference, [ 'Chicken', 'Steak', 'Falafel' ], :prompt => 'Select Preference', class: 'form-control', label: 'Meal Preference' %>
-      <%= f.text_field :dietary_requirements, placeholder: 'Enter dietary requirements', class: 'form-control', label: 'Dietary Requirements' %>
+      <%= f.text_field :dietary_requirements, placeholder: 'Enter any special dietary requirements', class: 'form-control', label: 'Dietary Requirements' %>
     </div>
     <div class='level-header'>
       <%= button_tag(type: 'submit', class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending..."}) do %>
