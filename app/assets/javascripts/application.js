@@ -41,7 +41,7 @@ $(document).ready(function() {
     });
 
 //Months is zero-based, so April being the fourth month uses 3.
-var date = new Date(2017, 3, 25);
+var date = new Date(2017, 3, 22);
 var now = new Date();
 var diff = (date.getTime()/1000) - (now.getTime()/1000);
 var clock = $('.your-clock').FlipClock(diff, {
