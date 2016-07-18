@@ -107,7 +107,7 @@ p {
   margin-top: 20px;
   bottom: 0;
   left: 0;
-  height: 400px;
+  height: 450px;
 }
 
 .rating{
@@ -134,7 +134,7 @@ p {
 
 .people-item {
   display: block;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   color: #6a6a6a;
 }
 
@@ -143,6 +143,17 @@ p {
 }
 
 #owl-demo .item, .people-item, .bs {
+  margin: 15px;
+  border: 1px solid #f5f5f5;
+  background-color: #fafafa;
+  text-align: left;
+}
+
+.people-carousel .item .description, .people-item .description, .bs .description {
+ padding: 26px 0 30px 35px;
+}
+
+.people-carousel .item, .people-item, .bs {
   margin: 15px;
   border: 1px solid #f5f5f5;
   background-color: #fafafa;
@@ -160,6 +171,11 @@ p {
     content: " ";
     height: 100%;
   }
+}
+
+.image-size {
+  width: 180px;
+  height: 180px;
 }
 
 .cross-off-gift-modal {
