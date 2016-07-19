@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
   private 
 
     def find_guest
-      @guest = Guest.all.where(email: params[:message][:email]).first
+      @guest = Guest.where("email = ?", params[:message][:email]).first
     end
 
     def message_params
