@@ -10,8 +10,18 @@
     <%= f.text_field :full_name, placeholder: 'Enter full name', class: 'form-control required', autofocus: true, label: 'Full Name' %>
     <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
     <div class='optional-elements'>
-      <%= f.select :main_meal_preference, [ 'Beef Fillet on Spring Onion Potato Cake w/ Parmesan Herb Mushroom, Cherry Tomatoes, Spinach & Pinot Noir Jus', 'Chicken Roulade filled w/ Spinach, Pistachio Nuts, White Wine Sauce, Green Bean, Almond Salad & Potatoes', 'Herb Roasted Lamb Rump served on Kumara Cake w/ Pan Tossed Green Beans, Vine Tomatoes & Pinot Noir Glaze', 'Seared Salmon Teriyaki with Lemon Confit and Wasabi Aioli, served w/ Asian Greens w/ Ginger and Oyster Sauce', 'Grilled Mediterranean Vegetable Stacks w/ Haloumi and Olive Tapenade (V/Gluten Free)', 'Margherita Pizza w/ Hand Cut Fries and Crunchy Coleslaw (for kids aged 5 -12 only)'], :prompt => 'Select Mains Preference', class: 'form-control col-md-12', label: 'Mains Preference', cols: '15' %>
-      <%= f.select :dessert_preference, [ 'Warm Date, Honey, Rhubarb and Apple Crumble with Cream', 'Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit' ], :prompt => 'Select Dessert Preference', class: 'form-control col-md-12', label: 'Dessert Preference' %>
+      <%= f.form_group :main_meal_preference, label: { text: "Main Preference" } do %>
+        <%= f.radio_button :main_meal_preference, 'Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus', label: "Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus", checked: true %>
+        <%= f.radio_button :main_meal_preference, 'Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes', label: "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes" %>
+        <%= f.radio_button :main_meal_preference, 'Herb Roasted Lamb Rump served on Kumara Cake with Pan Tossed Green Beans, Roasted Vine Tomatoes and Pinot Noir Demi Glaze', label: "Herb Roasted Lamb Rump served on Kumara Cake with Pan Tossed Green Beans, Roasted Vine Tomatoes and Pinot Noir Demi Glaze" %>
+        <%= f.radio_button :main_meal_preference, 'Seared Salmon Teriyaki with Lemon Confit and Wasabi Aioli, served with Asian Greens with Ginger and Oyster Sauce', label: "Seared Salmon Teriyaki with Lemon Confit and Wasabi Aioli, served with Asian Greens with Ginger and Oyster Sauce" %>
+        <%= f.radio_button :main_meal_preference, 'Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade', label: "Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade" %>
+        <%= f.radio_button :main_meal_preference, 'Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw', label: "Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw" %>
+      <% end %>
+      <%= f.form_group :dessert_preference, label: { text: "Dessert Preference" } do %>
+        <%= f.radio_button :dessert_preference, 'Warm Date, Honey, Rhubarb and Apple Crumble with Cream', label: "Warm Date, Honey, Rhubarb and Apple Crumble with Cream", checked: true %>
+        <%= f.radio_button :dessert_preference, 'Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit', label: "Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit" %>
+      <% end %>
       <%= f.text_field :dietary_requirements, placeholder: 'Enter any special dietary requirements', class: 'form-control', label: 'Dietary Requirements' %>
     </div>
     <div class='level-header'>
