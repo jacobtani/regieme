@@ -22,7 +22,7 @@ class AdminMailerTest < ActionMailer::TestCase
     assert_not ActionMailer::Base.deliveries.empty? 
     assert_equal [guest.email], email.from
     assert_equal ['tjterminator.dev@gmail.com'], email.to
-    assert_equal 'RSVP from #{@guest.full_name}', email.subject
+    assert_equal "RSVP from #{guest.full_name}", email.subject
   end
 
  end

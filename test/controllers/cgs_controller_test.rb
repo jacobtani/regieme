@@ -27,7 +27,6 @@ class CgsControllerTest < ActionController::TestCase
         @controller.instance_variable_get('@cg').item_name.must_equal 'Baking Bowl'
         @controller.instance_variable_get('@cg').gift_id.must_equal baking_bowl.id
         @controller.instance_variable_get('@cg').guest_names.must_equal nil
-        assert_template :new
       end
 
       it "redirect user when trying to delete a cg" do

@@ -12,5 +12,6 @@
 rsvp_one:
   guest: gw
   attending: 'yes'
-  meal_preference: 'Steak'
+  main_meal_preference: 'Steak'
+  dessert_preference: 'Creme brulee'
   dietary_requirements: 'i dont like carrots'
