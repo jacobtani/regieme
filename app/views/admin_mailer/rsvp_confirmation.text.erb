@@ -5,7 +5,8 @@ A new RSVP has been created:
 Guest Name: <%= @guest.full_name %>
 Attending: <%= @rsvp.attending %>
 <% if @rsvp.attending == 'Yes'%>
-Meal Preference: <%=@rsvp.meal_preference %>
+Main Meal Preference: <%=@rsvp.main_meal_preference %>
+Dessert Preference: <%=@rsvp.dessert_preference %>
 <% if @rsvp.dietary_requirements != """" %>
 Dietary Requirements: <%= @rsvp.dietary_requirements %>
 <% end %>

@@ -4,7 +4,8 @@ Thank you for RSVPing for Iain and Tania's wedding. This email is to confirm the
 
 Attending: <%= @rsvp.attending %>
 <% if @rsvp.attending == 'Yes'%>
-Meal Preference: <%=@rsvp.meal_preference %>
+Main Meal Preference: <%=@rsvp.main_meal_preference %>
+Dessert Preference: <%=@rsvp.dessert_preference %>
 <% if @rsvp.dietary_requirements != """" %>
 Dietary Requirements: <%= @rsvp.dietary_requirements %>
 <% end %>

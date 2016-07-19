@@ -8,7 +8,8 @@
     <thead>
       <th> Guest </th>
       <th> Attending </th>
-      <th> Meal Preference </th>
+      <th> Mains Preference </th>
+      <th> Dessert Preference </th>
       <th> Dietary Requirements </th>
       <% if current_user %>
         <th> Administration </th>
@@ -18,7 +19,8 @@
       <tr>
         <td> <%= Guest.find(rsvp.guest_id).full_name %> </td>
         <td> <%= rsvp.attending %> </td>
-        <td> <%= rsvp.meal_preference %> </td>
+        <td> <%= rsvp.main_meal_preference %> </td>
+        <td> <%= rsvp.dessert_preference %> </td>
         <td> <%= rsvp.dietary_requirements %> </td>
         <% if current_user && user_signed_in? %> 
           <td><%= link_to fa_icon("pencil", text:'Edit'), edit_rsvp_path(id: rsvp.id), class: "btn generic-button command-button hvr-sweep-to-right", id: 'edit-rsvp-link' %>
