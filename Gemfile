@@ -1,8 +1,8 @@
-ruby '2.2.1'
+ruby '2.3.1'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.6'
 # Use pg as the database for Active Record
 gem 'pg' #-- --with-pg-config=/usr/local/bin/pg_config
 #authentication
@@ -59,6 +59,7 @@ group :development do
     # jazz hands gems
   gem 'awesome_print'
   gem 'coolline'
+  gem 'brakeman', :require => false
   gem 'hirb'
   gem 'bullet'
    # Access an IRB console on exception pages or by using <%= console %> in views
