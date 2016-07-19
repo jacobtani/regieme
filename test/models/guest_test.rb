@@ -21,7 +21,7 @@ class GuestTest < ActiveSupport::TestCase
       it "doesn't allow invalid guests to be created - missing surname " do
         @guest = Guest.create(first_name: 'Rachel', address: '5 Ring Lane, Newlands', email: 'rachel@gmail.com')
         @guest.valid?.must_equal false
-        assert_equal [:surname], @guest.errors.keys
+        assert_equal [:surname, :age_category], @guest.errors.keys
       end
 
     end
@@ -29,7 +29,7 @@ class GuestTest < ActiveSupport::TestCase
     describe "valid guests" do 
 
       it "creates valid guests to be created" do
-        @guest = Guest.create(first_name: 'Rachel', surname: 'Bro', address: '5 Ring Lane, Newlands', email: 'rachel@gmail.com')
+        @guest = Guest.create(first_name: 'Rachel', surname: 'Bro', address: '5 Ring Lane, Newlands', email: 'rachel@gmail.com', age_category: 'adult')
         @guest.valid?.must_equal true
       end
 

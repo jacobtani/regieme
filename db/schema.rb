@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719023940) do
+ActiveRecord::Schema.define(version: 20160719043352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20160719023940) do
     t.string "surname"
     t.text   "address"
     t.string "email"
+    t.string "age_category"
   end
 
   create_table "rsvps", force: :cascade do |t|
