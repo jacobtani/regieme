@@ -2,7 +2,9 @@
   <div class='row'>
     <h2 align='center'> Gift Registry </h2>
     <div class="hr"></div>
-    <i> If you would like to give us a gift for our wedding, please choose a gift from the following that you would like to buy. Once you have decided to buy it/bought it please click 'Cross Off' to avoid duplicate gifts. We really appreciate your generosity and look forward to seeing you at our big day. </i>
+    <p>We’ve been asked what we’d like for a gift and the answer is simple: you, at our wedding, having a great time. But if you insist then we’ll say what we’d also love is the most amazing honeymoon. We are off to the Cook Islands for our honeymoon. We plan to enjoy a mix of sipping cocktails by the pool and beach, going on some tours, being pampered at the spa and having lots of yummy food. If you’d like to help us with that then read on! There are also a few wonderful things we would love for our new home to give us a little bit of luxury to start off our life together as newlyweds.</p>
+    <p>Here’s how our gift list works. Just pick the item you’d most like to give us and click Cross Off. You’ll be asked to leave your name and the contribution amount or quantity contributed if applicable. By doing so we’ll know what to thank you for. You can then simply make a bank transfer via your personal Online Banking to our special honeymoon account. Please record the item name(s) in the Reference field whilst paying. We really appreciate your generosity and look forward to seeing you on February 25th. </p>
+    <p> Love Iain and Tania </p>
   </div>
   <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn generic-button command-button hvr-sweep-to-right pull-right", id: 'new-gift-link' if current_user && user_signed_in? %>
   <% @categories = Category.all %>
@@ -12,9 +14,13 @@
       <% @gifts.where(category_id: cat.id).each do |gift| %>
         <% if gift.remainder_available > 0 %>
           <p>
-            <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %>
-            </b> (x<%=gift.remainder_available%>) - <%= number_to_currency gift.price%> 
-              <%= link_to fa_icon("check", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button" , id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
+            <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b>
+            <% if gift.contributable %>
+             - <%= number_to_currency gift.remainder_contribution_required if gift.remainder_contribution_required > 0 %>
+            <% else %>
+               (x<%=gift.remainder_available %>)- <%= number_to_currency gift.price%>
+            <% end%>
+            <%= link_to fa_icon("check", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button" , id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
           </p>
           <p><%= gift.description %></p>
           <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" ></div>

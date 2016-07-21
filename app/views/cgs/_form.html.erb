@@ -3,6 +3,8 @@
   <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
     <%= f.alert_message "Please fix the errors below." %>
     <%= f.text_field :guest_names, placeholder: 'Enter your names', class: 'form-control required', control_col: "col-sm-8", autofocus: true, label: 'Guest Names' %>
+    <%= f.number_field :contribution_amount, placeholder: 'Enter Contribution Amount', label: 'Contribution Amount', control_col: "col-sm-8" if @gift.contributable %>
+    <%= f.number_field :quantity_contributed, placeholder: 'Enter Quantity', label: 'Quantity', control_col: "col-sm-8", min: 1, max: @gift.remainder_available if !@gift.contributable && @gift.remainder_available > 1 %>
     <%= f.hidden_field :item_name, value: @gift.name %>
     <%= f.hidden_field :gift_id, value: @gift.id %>
 

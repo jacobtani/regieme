@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719043352) do
+ActiveRecord::Schema.define(version: 20160721023213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,20 +23,24 @@ ActiveRecord::Schema.define(version: 20160719043352) do
   create_table "cgs", force: :cascade do |t|
     t.string  "guest_names"
     t.string  "item_name"
-    t.integer "gift_id",     null: false
+    t.integer "gift_id",                          null: false
+    t.float   "contribution_amount"
+    t.integer "quantity_contributed", default: 1
   end
 
   add_index "cgs", ["gift_id"], name: "index_cgs_on_gift_id", using: :btree
 
   create_table "gifts", force: :cascade do |t|
-    t.text    "description",                       null: false
+    t.text    "description",                                     null: false
     t.integer "guest_id"
-    t.integer "desired_quantity",    default: 0
-    t.integer "remainder_available", default: 0
+    t.integer "desired_quantity",                default: 0
+    t.integer "remainder_available",             default: 0
     t.text    "website_link"
     t.integer "category_id"
-    t.float   "price",               default: 0.0
+    t.float   "price",                           default: 0.0
     t.string  "name"
+    t.boolean "contributable",                   default: false
+    t.float   "remainder_contribution_required", default: 0.0
   end
 
   add_index "gifts", ["guest_id"], name: "index_gifts_on_guest_id", using: :btree

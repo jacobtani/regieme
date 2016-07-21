@@ -1,18 +1,24 @@
 <div class = 'container level-header cg-page'>
-  <h2> Claimed Gifts </h2>
-  <table class = 'table table-striped'>
-    <thead>
-      <th> Guest </th>
-      <th> Gift </th>
-      <th> Administration </th>
-    </thead>
-    <% @cgs.sort_by(&:"#{'id'}").each do |cg| %>
-      <tr>
-        <td> <%= cg.guest_names %> </td>
-        <td> <%= cg.item_name %> </td>
-        <td><%= link_to fa_icon("trash", text: 'Delete'), cg_path(cg), method: :delete,
-                class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-cg-link' %></td>
-      </tr>
-    <%end%>
-  </table>
+	<h2> Claimed Gifts </h2>
+	<table class = 'table table-striped'>
+		<thead>
+			<th> Guest </th>
+			<th> Gift </th>
+			<th> Gift Value </th>
+			<th> Contribution Amount </th>
+			<th> Quantity Contributed </th>
+			<th> Administration </th>
+		</thead>
+		<% @cgs.sort_by(&:"#{'id'}").each do |cg| %>
+			<tr>
+				<td> <%= cg.guest_names %> </td>
+				<td> <%= cg.item_name %> </td>
+				<td> <%= number_to_currency (cg.quantity_contributed * Gift.all.where(name: cg.item_name).first.price) %>
+				<td> <%= cg.contribution_amount.present? ? (number_to_currency cg.contribution_amount) : (number_to_currency 0) %> </td>
+				<td> <%= cg.quantity_contributed %> </td>
+				<td><%= link_to fa_icon("trash", text: 'Delete'), cg_path(cg), method: :delete,
+								class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-cg-link' %></td>
+			</tr>
+		<%end%>
+	</table>
 </div>

@@ -3,7 +3,11 @@
     <h3 id="myModalLabel modal-heading-style">Cross Off Gift - <%=@gift.name%></h3>
   </div>
   <div class="modal-body">
-    <p>Great! You've just bought (or you're about to buy) <b><%= gift.name %></b> for Iain and Tania and want it cross it off their registry. Please enter your name(s) for us to keep track of who bought each item.</p>
+    <% if @gift.contributable %>
+      <p>Great! Thank you for choosing to contribute towards <b><%= gift.name %></b> for Iain and Tania. Please enter your name(s) and the amount you wish to contribute so that we can have a written record of everyone's gifts.</p>
+    <% else %>
+      <p>Great! You want to help Iain and Tania with <b><%= gift.name %></b> and want it cross it off their registry. Please enter your name(s) and the relevant quantity (if applicable) of this item that you wish to buy us so that we can keep track of everyone's gifts. </p>
+    <% end %>
     <%= render 'cgs/form', gift: @gift %>
   </div>
 </div>

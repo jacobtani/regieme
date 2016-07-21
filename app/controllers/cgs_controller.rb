@@ -13,7 +13,8 @@ class CgsController < ApplicationController
 
   def create
     @cg = Cg.new cg_params
-    @gift.decrement!(:remainder_available)
+    @gift.decrement!(:remainder_contribution_required, @cg.contribution_amount) if @cg.contribution_amount.present?
+    @gift.decrement!(:remainder_available, @cg.quantity_contributed) unless @gift.contributable
     respond_to do |format|
       if @cg.save
         flash.now[:success] = "#{@gift.name} was crossed off successfully. Thank you for your generosity."
@@ -36,7 +37,7 @@ class CgsController < ApplicationController
   private
 
     def cg_params
-      params.require(:cg).permit(:guest_names, :item_name, :gift_id)
+      params.require(:cg).permit(:guest_names, :item_name, :gift_id, :contribution_amount, :quantity_contributed)
     end
 
     def set_cg
