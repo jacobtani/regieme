@@ -11,10 +11,14 @@
   <div class="row">
     <% @categories.each do |cat| %>
       <h3 class='gift-categories'><%= cat.name %></h3>
-      <% @gifts.where(category_id: cat.id).each do |gift| %>
+      <% @gifts.where(category_id: cat.id).sort_by(&:"#{'name'}").each do |gift| %>
         <% if gift.remainder_available > 0 %>
           <p>
-            <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b>
+            <% if gift.website_link.present? %>
+              <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b>
+            <% else %>
+              <b><%= gift.name.upcase %></b>
+            <% end %>
             <% if gift.contributable %>
              - <%= number_to_currency gift.remainder_contribution_required if gift.remainder_contribution_required > 0 %>
             <% else %>
