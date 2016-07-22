@@ -1,12 +1,12 @@
 <div class='container cross-off-gift-modal'>
   <div class="modal-header modal-heading-style">
-    <h3 id="myModalLabel modal-heading-style">Cross Off Gift - <%=@gift.name%></h3>
+    <h3 id="myModalLabel modal-heading-style">Contribute <%=@gift.name%></h3>
   </div>
   <div class="modal-body">
     <% if @gift.contributable %>
       <p>Great! Thank you for choosing to contribute towards <b><%= gift.name %></b> for Iain and Tania. Please enter your name(s) and the amount you wish to contribute so that we can have a written record of everyone's gifts.</p>
     <% else %>
-      <p>Great! You want to help Iain and Tania with <b><%= gift.name %></b> and want it cross it off their registry. Please enter your name(s) and the relevant quantity (if applicable) of this item that you wish to buy us so that we can keep track of everyone's gifts. </p>
+      <p>Great! You want to give Iain and Tania <b><%= gift.name %></b> and want to claim it. Please enter your name(s) and the relevant quantity you are giving (if applicable) of this item that you wish to give us. By doing this way we can keep track of everyone's gifts and match up with Online Banking. </p>
     <% end %>
     <%= render 'cgs/form', gift: @gift %>
   </div>
