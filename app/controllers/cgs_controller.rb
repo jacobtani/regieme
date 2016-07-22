@@ -17,6 +17,7 @@ class CgsController < ApplicationController
     @gift.decrement!(:remainder_available, @cg.quantity_contributed) unless @gift.contributable
     respond_to do |format|
       if @cg.save
+        AdminMailer.gift_crossed(@cg).deliver_now
         flash.now[:success] = "#{@gift.name} was crossed off successfully. Thank you for your generosity."
         format.html { redirect_to gifts_path }
       else
