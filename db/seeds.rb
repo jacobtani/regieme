@@ -4,7 +4,6 @@
 @dining=Category.create(name: 'Dining')
 @house_items=Category.create(name: 'House Items')
 User.create(email: 'tanzjacob@gmail.com', password: 'password')
-Gift.create(name: 'Return Flights to Rarotonga', description: 'Return flights for 2 from Wellington to Rarotonga. You can contribute any amount less than or equal to $1200.00 for this gift.', contributable: true, category_id: @transport.id, price: 1200, remainder_contribution_required: 1200.00, desired_quantity: 1, remainder_available: 1 )
 Gift.create(name: 'Return Flights to Aitutaki', description: 'Return flights for 2 from Rarotonga to Aitutaki. You can contribute any amount less than or equal to $800.00 for this gift.', contributable: true, category_id: @transport.id, price: 800, remainder_contribution_required: 1200.00, desired_quantity: 1, remainder_available: 1)
 Gift.create(name: 'Weekly Scooter Rentals for 2', description: 'We plan to get around the island using a scooter.', category_id: @transport.id, price: 110, desired_quantity: 1,contributable: true, remainder_contribution_required: 110, remainder_available: 1, website_link: 'http://www.adventurecookislands.com/hire-pricelist/' )
 Gift.create(name: 'Scooter License', description: 'We need to sit skills test and get scooters license to get around ', category_id: @transport.id, price: 60, desired_quantity: 1, remainder_available: 1, website_link: 'http://www.adventurecookislands.com/hire-pricelist/' )
