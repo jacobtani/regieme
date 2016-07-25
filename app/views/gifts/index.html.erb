@@ -13,6 +13,7 @@
       <h3 class='gift-categories'><%= cat.name %></h3>
       <% @gifts.where(category_id: cat.id).sort_by(&:"#{'name'}").each do |gift| %>
         <% if gift.remainder_available > 0 %>
+          <% if gift.remainder_contribution_required > 0.00 %>
           <p>
             <% if gift.website_link.present? %>
               <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b>
@@ -20,7 +21,7 @@
               <b><%= gift.name.upcase %></b>
             <% end %>
             <% if gift.contributable %>
-             - <%= number_to_currency gift.remainder_contribution_required if gift.remainder_contribution_required > 0 %>
+             - <%= number_to_currency gift.remainder_contribution_required %>
             <% else %>
                (x<%=gift.remainder_available %>)- <%= number_to_currency gift.price%>
             <% end%>
@@ -33,6 +34,17 @@
                 <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,
                       class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-gift-link' %></p>
           <% end %>
+          <%else %>
+            <div class='lined-gift'>
+              <b><p><%= gift.name.upcase %></b> - <%= number_to_currency gift.price %></p>
+              <p><%= gift.description %></p>
+            </div>
+          <% end%>
+        <% else %>
+          <div class='lined-gift'>
+            <b><p><%= gift.name.upcase %></b> (x<%= gift.desired_quantity%>) - <%= number_to_currency gift.price %></p>
+            <p><%= gift.description %></p>
+          </div>
         <% end %>
       <% end %>
     <%end%>
