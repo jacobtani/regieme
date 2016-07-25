@@ -2,12 +2,13 @@ Dear Iain and Tania,
 
 The following gift has been crossed off/contributed towards:
 
-Gift: <%= @cg.item_name %>
+Gift: <%= @gift.name %>
 Guest Names: <%= @cg.guest_names %>
 <%if @gift.contributable %>
-Contribution Amount: <%= @cg.contribution_amount %>
+Contribution Amount: <%= number_to_currency @cg.contribution_amount %>
 <% else %>
 Quantity: <%= @cg.quantity_contributed %>
+Value: <%= @gift.price %>
 <% end %>
 
 Cheers,
