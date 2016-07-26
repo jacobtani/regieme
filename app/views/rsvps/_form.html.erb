@@ -11,23 +11,23 @@
     <%= f.select :attending, [ 'Yes', 'No' ], :prompt => 'Are you attending?', class: 'form-control required' %>
     <div class='optional-elements'>
       <%= f.form_group :main_meal_preference, label: { text: "Main Preference" } do %>
-        <%= f.radio_button :main_meal_preference, "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes", label: "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes" %>
+        <%= f.radio_button :main_meal_preference, "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes", label: "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes", checked: true %>
         <%= f.radio_button :main_meal_preference, "Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade", label: "Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade (V/Gf)" %>
         <%= f.radio_button :main_meal_preference, "Herb Roasted Lamb Rump served on Kumara Cake with Pan Tossed Green Beans, Roasted Vine Tomatoes and Pinot Noir Demi Glaze", label: "Herb Roasted Lamb Rump served on Kumara Cake with Pan Tossed Green Beans, Roasted Vine Tomatoes and Pinot Noir Demi Glaze" %>
         <%= f.radio_button :main_meal_preference, "Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw", label: "Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw (Kids aged 5 -12 only)" %>
         <%= f.radio_button :main_meal_preference, 'No Meal Required for Toddler', label: 'No Meal Required for Toddler' %>
-        <%= f.radio_button :main_meal_preference, "Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus", label: "Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus", checked: true %>
+        <%= f.radio_button :main_meal_preference, "Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus", label: "Seared Beef Fillet on Spring Onion Potato Cake with a Parmesan Herb Portobello Mushroom, Roasted Cherry Tomatoes, Wilted Spinach and Pinot Noir Jus" %>
         <%= f.radio_button :main_meal_preference, "Seared Salmon Teriyaki with Lemon Confit and Wasabi Aioli, served with Asian Greens with Ginger and Oyster Sauce", label: "Seared Salmon Teriyaki with Lemon Confit and Wasabi Aioli, served with Asian Greens with Ginger and Oyster Sauce" %>
       <% end %>
       <%= f.form_group :dessert_preference, label: { text: "Dessert Preference" } do %>
-        <%= f.radio_button :dessert_preference, "Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit", label: "Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit" %>
-         <%= f.radio_button :dessert_preference, "Warm Date, Honey, Rhubarb and Apple Crumble with Cream", label: "Warm Date, Honey, Rhubarb and Apple Crumble with Cream", checked: true %>
+        <%= f.radio_button :dessert_preference, "Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit", label: "Creme Brulee (smooth and creamy vanilla custard) with Caramelised Sugar and Shortbread Biscuit", checked: true %>
+         <%= f.radio_button :dessert_preference, "Warm Date, Honey, Rhubarb and Apple Crumble with Cream", label: "Warm Date, Honey, Rhubarb and Apple Crumble with Cream" %>
       <% end %>
       <%= f.text_field :dietary_requirements, placeholder: 'Enter any special dietary requirements', class: 'form-control', label: 'Dietary Requirements' %>
     </div>
     <div class='level-header'>
-      <%= button_tag(type: 'submit', class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sending..."}) do %>
-        <i class="fa fa-save"></i> Save
+      <%= button_tag(type: 'submit', class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting..."}) do %>
+        <i class="fa fa-save"></i> Submit
       <% end %>
     </div>
   <% end %>
