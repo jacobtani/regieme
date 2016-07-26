@@ -3,7 +3,7 @@
     <h2 align='center'> Gift Registry </h2>
     <div class="hr"></div>
     <p>We’ve been asked what we’d like for a gift and the answer is simple: you, at our wedding, having a great time. But if you insist then we’ll say what we’d also love is the most amazing honeymoon. We are off to the Cook Islands for our honeymoon. We plan to enjoy a mix of sipping cocktails by the pool and beach, going on some tours, being pampered at the spa and having lots of yummy food. If you’d like to help us with that then read on! There are also a few wonderful things we would love for our new home to give us a little bit of luxury to start off our life together as newlyweds.</p>
-    <p>Here’s how our gift list works. Just pick the item you’d most like to give us and click Cross Off. You’ll be asked to leave your name and the contribution amount or quantity contributed if applicable. By doing so we’ll know what to thank you for. You can then simply make a bank transfer via your personal Online Banking to our special honeymoon account. Our account number is <i> 03-0515-0011251-00 (IAIN RHODES WALKER & TANIA LILIAN JACOB) </i>. Please record the item name(s) in the Reference field whilst transferring your contribution. We really appreciate your generosity and look forward to seeing you on February 25th. Feel free to get in touch via the Contact page if you have any questions. </p>
+    <p>Here’s how our gift list works. Just pick the item you’d most like to give us and click Choose Gift. You’ll be asked to leave your name and the contribution amount or quantity contributed if applicable. By doing so we’ll know what to thank you for. You can then simply make a bank transfer via your personal Online Banking to our special honeymoon account. Our account number is <i> 03-0515-0011251-00 (IAIN RHODES WALKER & TANIA LILIAN JACOB) </i>. Please record the item name(s) in the Reference field whilst transferring your contribution. We really appreciate your generosity and look forward to seeing you on February 25th. Feel free to get in touch via the Contact page if you have any questions. </p>
     <p> Love Iain and Tania </p>
   </div>
   <%= link_to fa_icon("plus", text: 'Add Gift'), new_gift_path, class: "btn generic-button command-button hvr-sweep-to-right pull-right", id: 'new-gift-link' if current_user && user_signed_in? %>
@@ -12,8 +12,7 @@
     <% @categories.each do |cat| %>
       <h3 class='gift-categories'><%= cat.name %></h3>
       <% @gifts.where(category_id: cat.id).sort_by(&:"#{'name'}").each do |gift| %>
-        <% if gift.remainder_available > 0 %>
-          <% if gift.remainder_contribution_required > 0.00 %>
+        <% if gift.remainder_available > 0 || gift.remainder_contribution_required && gift.contributable %>
           <p>
             <% if gift.website_link.present? %>
               <b><%= link_to gift.name, gift.website_link, class: 'caption-style' %></b>
@@ -21,11 +20,11 @@
               <b><%= gift.name.upcase %></b>
             <% end %>
             <% if gift.contributable %>
-             - <%= number_to_currency gift.remainder_contribution_required %>
+             - <%= number_to_currency gift.remainder_contribution_required if gift.remainder_contribution_required > 0.00 %>
             <% else %>
                (x<%=gift.remainder_available %>)- <%= number_to_currency gift.price%>
             <% end%>
-            <%= link_to fa_icon("check", text:'Cross Off'), cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button" , id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
+            <%= link_to 'Choose Gift', cross_off_gift_path(id: gift.id), class: "btn cross-off-gift-button generic-button" , id: 'cross-gift-link', remote: :true, data: { toggle: "modal", target: '#modal-window' } %>
           </p>
           <p><%= gift.description %></p>
           <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" ></div>
@@ -34,12 +33,6 @@
                 <%= link_to fa_icon("trash", text: 'Delete'), gift_path(gift), method: :delete,
                       class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-gift-link' %></p>
           <% end %>
-          <%else %>
-            <div class='lined-gift'>
-              <b><p><%= gift.name.upcase %></b> - <%= number_to_currency gift.price %></p>
-              <p><%= gift.description %></p>
-            </div>
-          <% end%>
         <% else %>
           <div class='lined-gift'>
             <b><p><%= gift.name.upcase %></b> (x<%= gift.desired_quantity%>) - <%= number_to_currency gift.price %></p>
