@@ -17,8 +17,8 @@ class RsvpsController < ApplicationController
     @guest.update(email: @rsvp.email) if @guest.present?
     respond_to do |format|
       if @rsvp.save
-        UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now if @guest.email != '""'
-        AdminMailer.rsvp_confirmation(@rsvp, @guest).deliver_now if @guest.email != '""'
+        UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
+        AdminMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
         format.html { render :new }
         flash.now[:success] = "Thankyou for RSVPing #{@guest.first_name}! Would you like to RSVP for more guests?"
       else
