@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721023213) do
+ActiveRecord::Schema.define(version: 20160728043325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160721023213) do
     t.string  "attending",            null: false
     t.string  "main_meal_preference"
     t.string  "dessert_preference"
+    t.string  "email",                null: false
   end
 
   add_index "rsvps", ["guest_id"], name: "index_rsvps_on_guest_id", using: :btree

@@ -10,11 +10,7 @@ class AdminMailer < ApplicationMailer
   def rsvp_confirmation(rsvp, guest)
     @rsvp = rsvp
     @guest = guest
-    if @guest.email!= "NULL"
-      mail(from: @guest.email, to: 'tjterminator.dev@gmail.com', subject: 'RSVP from ' + @guest.full_name)
-    else
-      mail(from: 'noemail', to: 'tjterminator.dev@gmail.com', subject: 'RSVP from ' + @guest.full_name)
-    end
+    mail(from: @rsvp.email, to: 'tjterminator.dev@gmail.com', subject: 'RSVP from ' + @guest.full_name)
   end
 
   def gift_crossed (cg, gift)

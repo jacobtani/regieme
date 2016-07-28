@@ -14,6 +14,7 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new rsvp_params
     @rsvp.guest_id = @guest.id if @guest.present?
+    @guest.update(email: @rsvp.email) if @guest.present?
     respond_to do |format|
       if @rsvp.save
         UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now if @guest.email != '""'
@@ -48,7 +49,7 @@ class RsvpsController < ApplicationController
   private
 
     def rsvp_params
-      params.require(:rsvp).permit(:guest_id, :attending, :main_meal_preference, :dessert_preference, :dietary_requirements, :full_name)
+      params.require(:rsvp).permit(:guest_id, :email, :attending, :main_meal_preference, :dessert_preference, :dietary_requirements, :full_name)
     end
 
     def find_guest

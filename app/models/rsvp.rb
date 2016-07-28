@@ -11,7 +11,7 @@
 
 class Rsvp < ActiveRecord::Base
   belongs_to :guest
-  validates_presence_of :attending
+  validates_presence_of :attending, :email
   validates_presence_of :guest_id, :message => "Your name was not recognised - please enter your full name"
   validates_presence_of :main_meal_preference, :if => 'attending == "Yes"', :message => "You need to select a main meal preference from the dropdown"
   validates_presence_of :dessert_preference, :if => 'attending == "Yes"', :message => "You need to select a dessert preference from the dropdown"

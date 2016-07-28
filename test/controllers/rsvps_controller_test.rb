@@ -10,11 +10,12 @@ class RsvpsControllerTest < ActionController::TestCase
     describe "actions by a non logged in user" do
 
       it "allows rsvp to be created when not logged in" do
-        post :create, rsvp: { full_name: 'Anita Troll', attending: 'Yes', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
+        post :create, rsvp: { full_name: 'Anita Troll', attending: 'Yes', email: 'anita@gmail.com', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
         assert_response 200
         assert_template :new
         assert_select "h2", "Rsvp"
         @controller.instance_variable_get('@guest').full_name.must_equal 'Anita Troll'
+        @controller.instance_variable_get('@rsvp').email.must_equal 'anita@gmail.com'
         @controller.instance_variable_get('@rsvp').attending.must_equal 'Yes'
         @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal 'Steak'
         @controller.instance_variable_get('@rsvp').dessert_preference.must_equal 'Creme brulee'
@@ -57,16 +58,18 @@ class RsvpsControllerTest < ActionController::TestCase
      end
 
      it "logged on user can add new rsvp" do
-        post :create, rsvp: { full_name: 'Anita Jacob', attending: 'Yes', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
+        post :create, rsvp: { full_name: 'Anita Jacob', attending: 'Yes', email: 'anita@gmail.com', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
         assert_response 200
         assert_template :new
         assert_select "h2", "Rsvp"
+        @controller.instance_variable_get('@rsvp').email.must_equal 'anita@gmail.com'
         @controller.instance_variable_get('@rsvp').attending.must_equal 'Yes'
         @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal 'Steak'
+        @controller.instance_variable_get('@rsvp').dessert_preference.must_equal 'Creme brulee'
      end
 
      it "logged on user can add new rsvp catches false name" do
-        post :create, rsvp: { full_name: 'Test Ererer', attending: 'Yes', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
+        post :create, rsvp: { full_name: 'Test Ererer', attending: 'Yes', email: 'anita@gmail.com', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
         assert_response 200
         assert_template :new
         assert_select "h2", "Rsvp"

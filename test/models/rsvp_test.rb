@@ -18,8 +18,8 @@ class RsvpTest < ActiveSupport::TestCase
 
     describe "invalid rsvps" do
 
-      it "doesn't allow invalid rsvps to be created - missing price " do
-        @rsvp = Rsvp.create(attending: 'Yes', guest_id: anita.id)
+      it "doesn't allow invalid rsvps to be created - missing main meal and dessert preference " do
+        @rsvp = Rsvp.create(attending: 'Yes', guest_id: anita.id, email: 'anita@gmail.com')
         @rsvp.valid?.must_equal false
         assert_equal [:main_meal_preference, :dessert_preference], @rsvp.errors.keys
       end
@@ -29,7 +29,7 @@ class RsvpTest < ActiveSupport::TestCase
     describe "valid categories" do 
 
       it "creates valid categories to be created" do
-        @rsvp = Rsvp.create(attending: 'Yes', guest_id: anita.id, main_meal_preference: 'Chicken', dessert_preference: 'Creme brulee')
+        @rsvp = Rsvp.create(attending: 'Yes', email: 'anita@gmail.com', guest_id: anita.id, main_meal_preference: 'Chicken', dessert_preference: 'Creme brulee')
         @rsvp.valid?.must_equal true
       end
 
