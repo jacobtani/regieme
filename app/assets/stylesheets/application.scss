@@ -87,7 +87,7 @@ p {
   font-size: 22px;
   font-weight: 700;
   color: $pink;
-  margin: 20px 0 0 20px;
+  margin: 0 auto;
   text-transform: uppercase;
   text-align: left;
   background-color: #fafafa;
@@ -219,4 +219,8 @@ time {
 
 .lined-gift {
   text-decoration: line-through
+}
+
+.all-details {
+  padding-left: 180px;
 }
