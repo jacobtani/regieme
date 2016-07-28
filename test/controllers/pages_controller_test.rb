@@ -43,6 +43,12 @@ class PagesControllerTest < ActionController::TestCase
         assert_select "h2", "Contact Us"
       end
 
+      it "renders the faq page" do
+        get :faq
+        assert_response 200
+        assert_select "h2", "FAQ"
+      end
+
     end
 
   end

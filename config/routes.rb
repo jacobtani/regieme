@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get :accomodation
     get :people
     get :contact_us
+    get :faq
   end
   match "/401", :to => "errors#missing_authentication", :via => :all
   match "/404", :to => "errors#not_found", :via => :all

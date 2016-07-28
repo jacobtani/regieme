@@ -24,6 +24,7 @@
           <li class=<%= 'active' if current_page?(accomodation_path) %>><%= link_to 'Accomodation', accomodation_path, class: 'hvr-sweep-to-right'%></li>
           <li class=<%= 'active' if current_page?(gifts_path) %>><%= link_to 'Gifts', gifts_path, class: 'hvr-sweep-to-right'%></li>
           <li class=<%= 'active' if current_page?(new_rsvp_path) %>><%= link_to 'Rsvp', new_rsvp_path, class: 'hvr-sweep-to-right' if !current_user %></li>
+          <li class=<%= 'active' if current_page?(faq_path) %>><%= link_to 'FAQ', faq_path, class: 'hvr-sweep-to-right' %></li>
           <li class=<%= 'active' if current_page?(contact_us_path) %>><%= link_to 'Contact', contact_us_path, class: 'hvr-sweep-to-right' %></li>
         <% end %>
       </ul>
