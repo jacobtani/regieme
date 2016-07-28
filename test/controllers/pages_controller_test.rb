@@ -46,7 +46,7 @@ class PagesControllerTest < ActionController::TestCase
       it "renders the faq page" do
         get :faq
         assert_response 200
-        assert_select "h2", "FAQ"
+        assert_select "h2", "Faq"
       end
 
     end
