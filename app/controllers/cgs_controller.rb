@@ -13,11 +13,11 @@ class CgsController < ApplicationController
 
   def create
     @cg = Cg.new cg_params
-    @gift.decrement!(:remainder_contribution_required, @cg.contribution_amount) if @cg.contribution_amount.present?
-    @gift.decrement!(:remainder_available, @cg.quantity_contributed) unless @gift.contributable
     respond_to do |format|
       if @cg.save
         AdminMailer.gift_crossed(@cg, @gift).deliver_now
+        @gift.decrement!(:remainder_contribution_required, @cg.contribution_amount) if @cg.contribution_amount.present?
+        @gift.decrement!(:remainder_available, @cg.quantity_contributed) unless @gift.contributable
         flash.now[:success] = "#{@gift.name} was crossed off successfully. Thank you for your generosity."
         format.html { redirect_to gifts_path }
       else

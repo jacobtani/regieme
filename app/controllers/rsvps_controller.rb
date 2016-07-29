@@ -13,10 +13,10 @@ class RsvpsController < ApplicationController
 
   def create
     @rsvp = Rsvp.new rsvp_params
-    @rsvp.guest_id = @guest.id if @guest.present?
-    @guest.update(email: @rsvp.email) if @guest.present?
     respond_to do |format|
       if @rsvp.save
+        @rsvp.guest_id = @guest.id
+        @guest.update(email: @rsvp.email)
         UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
         AdminMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
         format.html { render :new }
