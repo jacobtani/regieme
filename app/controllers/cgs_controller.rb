@@ -43,11 +43,10 @@ class CgsController < ApplicationController
 
     def set_cg
       @cg = Cg.find params[:id] rescue nil
-      return not_found! unless @cg
     end
 
     def set_gift
-      @gift = Gift.find params[:cg][:gift_id] rescue nil
+      @gift = Gift.find params[:cg][:gift_id]
       return not_found! unless @gift
     end
 

@@ -21,8 +21,9 @@ class MessagesController < ApplicationController
     def find_guest
      @guest_full_name = params[:message][:full_name].split
      @guest=Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
+     return not_found! unless @guest
      if @guest.email == 'NULL'
-      @guest.update(email: params[:message][:email])
+        @guest.update(email: params[:message][:email])
      end
     end
 

@@ -56,7 +56,7 @@ class GiftsController < ApplicationController
     end
 
     def set_gift
-      @gift = Gift.find params[:id] rescue nil
+      @gift = Gift.find params[:id]
       return not_found! unless @gift
     end
 

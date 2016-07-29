@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def not_found!
+    render template: "errors/not_found", status: :not_found, layout: "errors"
+  end
+
 end
