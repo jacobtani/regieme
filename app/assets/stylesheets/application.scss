@@ -233,3 +233,8 @@ time {
 .each-q {
   padding-bottom: 14px;
 }
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
