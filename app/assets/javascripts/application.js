@@ -73,4 +73,225 @@ window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
 $(".our-story-button").on('click', callbackFunc ());
 
+$('.a1').addClass('hidden');
+$('.a2').addClass('hidden');
+$('.a3').addClass('hidden');
+$('.a4').addClass('hidden');
+$('.a5').addClass('hidden');
+$('.a6').addClass('hidden');
+$('.a7').addClass('hidden');
+$('.a8').addClass('hidden');
+$('.a9').addClass('hidden');
+$('.a10').addClass('hidden');
+$('.a11').addClass('hidden');
+$('.a12').addClass('hidden');
+$('.a13').addClass('hidden');
+
+ $('.q1').on("click", function() {
+    $('.a1').removeClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+ });
+
+ $('.q2').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').removeClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').addClass('hidden')
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+ });
+
+  $('.q3').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').removeClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q4').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').removeClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q5').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').removeClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q6').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').removeClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q7').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').removeClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q8').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').removeClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden'); 
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q9').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').removeClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q10').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').removeClass('hidden');
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q11').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').removeClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+
+  $('.q12').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').addClass('hidden');
+    $('.a12').removeClass('hidden');
+    $('.a13').addClass('hidden');
+  });
+    $('.q13').on("click", function() {
+    $('.a1').addClass('hidden');
+    $('.a2').addClass('hidden');
+    $('.a3').addClass('hidden');
+    $('.a4').addClass('hidden');
+    $('.a5').addClass('hidden');
+    $('.a6').addClass('hidden');
+    $('.a7').addClass('hidden');
+    $('.a8').addClass('hidden');
+    $('.a9').addClass('hidden');
+    $('.a10').addClass('hidden');
+    $('.a11').addClass('hidden');
+    $('.a12').addClass('hidden');
+    $('.a13').removeClass('hidden');
+  });
+
 });
