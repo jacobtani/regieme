@@ -1,5 +1,11 @@
-<div class = 'container level-header'>
-  <h2> Page cannot be found </h2>
-  <p> Looks like you went to the wrong page. </p>
-  <%= link_to 'Home', root_path, class: 'btn generic-button command-button' %>
+<div class = "container level-header">
+  <% if params[:controller] == "messages" %>
+    <h2> Your name was not recognised in the guest list </h2>
+    <p> Please try resending the message using your full name </p>
+    <%= link_to "Resend Message", contact_us_path, class: "btn generic-button command-button" %>
+  <% else %>
+    <h2> Page cannot be found </h2>
+    <p> Looks like you went to the wrong page. </p>
+    <%= link_to "Home", root_path, class: "btn generic-button command-button" %>
+  <% end %>
 </div>
