@@ -20,7 +20,7 @@ class RsvpsController < ApplicationController
         UserMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
         AdminMailer.rsvp_confirmation(@rsvp, @guest).deliver_now
         format.html { render :new }
-        flash.now[:success] = "Thankyou for RSVPing #{@guest.first_name}! Would you like to RSVP for more guests?"
+        flash.now[:success] = "Thank you for RSVPing #{@guest.first_name}! Would you like to RSVP for more guests?"
       else
         format.html { render :new }
       end

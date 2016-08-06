@@ -20,7 +20,7 @@
 //= require_tree .
 $(document).ready(function() { 
 
-  $("#owl-demo").owlCarousel({
+  $('#owl-demo').owlCarousel({
        autoPlay: 6000, //Set AutoPlay to 3 seconds
        items : 4,
       itemsDesktop : [1199,3],
@@ -31,11 +31,11 @@ $(document).ready(function() {
     $('#modal-window').removeClass('hidden');
   });
 
-    $("#rsvp_attending").change(function(){
-        if($("#rsvp_attending").val() == "Yes"){
+    $('#rsvp_attending').change(function(){
+        if($('#rsvp_attending').val() == 'Yes'){
           $('.optional-elements').removeClass('hidden');
         }
-        else if($("#rsvp_attending").val() == "No"){
+        else if($('#rsvp_attending').val() == 'No'){
           $('.optional-elements').addClass('hidden');
         }
     });
@@ -49,7 +49,7 @@ var clock = $('.your-clock').FlipClock(diff, {
  countdown: true
 });
 
-var items = document.querySelectorAll(".timeline li");
+var items = document.querySelectorAll('.timeline li');
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -64,14 +64,14 @@ function isElementInViewport(el) {
 function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
     if (isElementInViewport(items[i])) {
-      items[i].classList.add("in-view");
+      items[i].classList.add('in-view');
     }
   }
 }
 
-window.addEventListener("load", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
-$(".our-story-button").on('click', callbackFunc ());
+window.addEventListener('load', callbackFunc);
+window.addEventListener('scroll', callbackFunc);
+$('.our-story-button').on('click', callbackFunc ());
 
 $('.a1').addClass('hidden');
 $('.a2').addClass('hidden');
@@ -87,7 +87,7 @@ $('.a11').addClass('hidden');
 $('.a12').addClass('hidden');
 $('.a13').addClass('hidden');
 
- $('.q1').on("click", function() {
+ $('.q1').on('click', function() {
     $('.a1').removeClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -103,7 +103,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
  });
 
- $('.q2').on("click", function() {
+ $('.q2').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').removeClass('hidden');
     $('.a3').addClass('hidden');
@@ -119,7 +119,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
  });
 
-  $('.q3').on("click", function() {
+  $('.q3').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').removeClass('hidden');
@@ -135,7 +135,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q4').on("click", function() {
+  $('.q4').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -151,7 +151,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q5').on("click", function() {
+  $('.q5').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -167,7 +167,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q6').on("click", function() {
+  $('.q6').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -183,7 +183,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q7').on("click", function() {
+  $('.q7').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -199,7 +199,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q8').on("click", function() {
+  $('.q8').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -215,7 +215,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q9').on("click", function() {
+  $('.q9').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -231,7 +231,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q10').on("click", function() {
+  $('.q10').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -247,7 +247,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q11').on("click", function() {
+  $('.q11').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -263,7 +263,7 @@ $('.a13').addClass('hidden');
     $('.a13').addClass('hidden');
   });
 
-  $('.q12').on("click", function() {
+  $('.q12').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');
@@ -278,7 +278,7 @@ $('.a13').addClass('hidden');
     $('.a12').removeClass('hidden');
     $('.a13').addClass('hidden');
   });
-    $('.q13').on("click", function() {
+    $('.q13').on('click', function() {
     $('.a1').addClass('hidden');
     $('.a2').addClass('hidden');
     $('.a3').addClass('hidden');

@@ -3,21 +3,21 @@
   <head>
     <title>IWTJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= favicon_link_tag 'heart.ico' %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag "heart.ico" %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <link rel="stylesheet" href="assets/flipclock.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
     <script src="assets/flipclock.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body class = "body-style">
-    <div id = 'navbar' >
-      <%= render 'shared/navbar' %>
+    <div id = "navbar" >
+      <%= render "shared/navbar" %>
     </div>
-    <div class = 'row'>
-      <%= render 'shared/flash_messages', flash: flash %>
+    <div class = "row">
+      <%= render "shared/flash_messages", flash: flash %>
     </div>
     <div id = "container">
       <%= yield %>

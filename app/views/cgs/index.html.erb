@@ -1,6 +1,6 @@
-<div class = 'container level-header cg-page'>
+<div class = "container level-header cg-page">
 	<h2> Claimed Gifts </h2>
-	<table class = 'table table-striped'>
+	<table class = "table table-striped">
 		<thead>
 			<th> Guest </th>
 			<th> Gift </th>
@@ -16,8 +16,8 @@
 				<td> <%= number_to_currency (cg.quantity_contributed * Gift.all.where(name: cg.item_name).first.price) %>
 				<td> <%= cg.contribution_amount.present? ? (number_to_currency cg.contribution_amount) : (number_to_currency 0) %> </td>
 				<td> <%= cg.quantity_contributed %> </td>
-				<td><%= link_to fa_icon("trash", text: 'Delete'), cg_path(cg), method: :delete,
-								class: "btn generic-button command-button hvr-sweep-to-right", id: 'delete-cg-link' %></td>
+				<td><%= link_to fa_icon("trash", text: "Delete"), cg_path(cg), method: :delete,
+								class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-cg-link" %></td>
 			</tr>
 		<%end%>
 	</table>
