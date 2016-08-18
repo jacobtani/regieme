@@ -12,14 +12,14 @@
     <script src="assets/flipclock.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
-  <body class = "body-style">
-    <div id = "navbar" >
+  <body class="body-style">
+    <div id="navbar" >
       <%= render "shared/navbar" %>
     </div>
-    <div class = "row">
+    <div class="row">
       <%= render "shared/flash_messages", flash: flash %>
     </div>
-    <div id = "container">
+    <div id="container">
       <%= yield %>
     </div>
   </body>

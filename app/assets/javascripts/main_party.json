@@ -1,0 +1,32 @@
+[
+  {
+          "name": "Jeco Jacob",
+          "photo": "jeco.jpg",
+          "title": "Brides's Father"
+  },
+  {
+          "name": "Beena Jacob",
+          "photo": "beena.jpg",
+          "title": "Brides's Mother"
+  },
+  {
+           "name": "Tania Jacob",
+          "photo": "tania.jpg",
+          "title": "Bride"
+  },
+  {
+          "name": "Iain Walker",
+          "photo": "iain.jpg",
+          "title": "Groom"
+  },
+  {
+          "name": "Lynn Walker",
+          "photo": "lynn.jpg",
+          "title": "Groom's Mother"
+  },
+  {
+          "name": "David Walker",
+          "photo": "david.jpg",
+          "title": "Groom's Father"
+  }
+]
