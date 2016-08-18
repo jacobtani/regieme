@@ -3,15 +3,15 @@
     <h2 align="center">Bridesmaids</h2>
     <div class="hr"></div>
     <% @bridesmaids.each do |b| %>
-     <div class="col-md-3 col-md-2">
-          <a href="../images/gen.jpg" data-rel="lightcase:mw-bridesmaid" class="people-item">
-             <% @photo = b["photo"] %>
-             <%= image_tag(@photo, class: "img-responsive") %>
-            <div class="description">
-              <h3><%=b["name"]%></h3>
-            </div>
-          </a>
+      <div class="col-lg-3 col-lg-1">
+        <div class="people-item">
+          <% @photo = b["photo"] %>
+          <%= image_tag(@photo, class: "img-responsive") %>
+          <div class="description">
+            <h3><%=b["name"]%></h3>
+          </div>
         </div>
+      </div>
     <% end%>
   </div> 
 </div>
