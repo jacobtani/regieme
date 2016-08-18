@@ -1,0 +1,22 @@
+[
+  {
+          "name": "Alex Purcell",
+          "photo": "alex.jpg"
+  },
+  {
+          "name": "Connor Scott",
+          "photo": "connor.jpg"
+  },
+  {
+          "name": "Eddie Stevens",
+          "photo": "eddie.jpg"
+  },
+  {
+          "name": "Farshid Shokoohi",
+          "photo": "farshid.jpg"
+  },
+  {
+          "name": "Matt van der Velden",
+          "photo": "matt.jpg"
+  }
+]

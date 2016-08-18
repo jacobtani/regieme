@@ -1,0 +1,32 @@
+[
+  {
+          "name": "Anita Jacob",
+          "photo": "anita.jpg",
+          "title": "Maid of Honour"
+  },
+  {
+          "name": "Annie Jacob",
+          "photo": "annie.jpg",
+          "title": "Flower Girl"
+  },
+  {
+          "name": "Fraser Berry",
+          "photo": "fraser.jpg",
+          "title": "Best Man"
+  },
+  {
+          "name": "John Tharakan",
+          "photo": "john.jpg",
+          "title": "Ring Bearer"
+  },
+  {
+          "name": "Nina Jacob",
+          "photo": "nina.jpg",
+          "title": "Flower Girl"
+  },
+  {
+          "name": "Ria Kulathinal",
+          "photo": "ria.jpg",
+          "title": "Flower Girl"
+  }
+]
