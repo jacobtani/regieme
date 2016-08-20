@@ -1,13 +1,3 @@
-.navbar .nav > li > a {
-  color: $white;
-  font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  border: 3px solid transparent;
-  padding: 9px 15px;
-  font-size: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 // Outer navigation wrapper
 .navigation {
   height: $nav-height;
@@ -16,13 +6,14 @@
 }
 
 .navbar-default .navbar-brand {
-  color: $black;
+  color: $white;
 }
 
 // Container with no padding for navbar
 .nav-container {
   max-width: $content-width;
   margin: 0 auto;
+  color: $white;
 }
 
 // Navigation 
@@ -120,6 +111,7 @@ nav {
     display: block !important;
     width: 100%;
     padding: 0;
+    border-radius: 0px;
     color: $white;
   }
 }
@@ -133,7 +125,6 @@ nav {
   span:before,
   span:after {
     cursor: pointer;
-    border-radius: 1px;
     height: 5px;
     width: 35px;
     background: $white;
@@ -175,4 +166,13 @@ nav {
   .container-fluid {
     padding-left: 11%;
   }
+}
+
+.navbar .nav > li > a {
+  color: $white;
+  font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 9px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
