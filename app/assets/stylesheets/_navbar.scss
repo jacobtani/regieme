@@ -92,6 +92,7 @@ nav {
   nav {
    width: 100%;
     padding: $nav-height 0 15px;
+    color: $white;
     ul {
       display: none;
       li {
@@ -162,6 +163,7 @@ nav {
   background-color: $pink !important;
   font-size: 16px;
   color: $white;
+  font-weight: bold;
   font-family: "futura-pt",sans-serif;
   margin-bottom: 10px;
   border-bottom: 0px;
