@@ -37,6 +37,7 @@ nav {
     margin: 0;
     padding: 0;
     width: 100%;
+    color: $white;
     li {
       float: left;
       position: relative;
@@ -96,8 +97,10 @@ nav {
     color: $white;
     ul {
       display: none;
+      color: $white;
       li {
         float: none;
+        color: $white;
         a {
           padding: 15px;
           line-height: 20px;
