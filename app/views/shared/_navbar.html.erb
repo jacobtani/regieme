@@ -1,15 +1,8 @@
-<nav class = "navbar navbar-default navbar-fixed-top uppernav" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapsable">
-      <ul class="nav navbar-nav foo pull-right" id="menu">
+  <div class="nav-container container-fluid">
+
+<nav class="navbar navbar-fixed-top">
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list navbar-nav pull-right">
         <% if current_user %>
           <li class=<%= "active" if current_page?(rsvps_path) %>><%= link_to "Rsvp", rsvps_path, class: "hvr-sweep-to-right" %></li>
           <li class=<%= "active" if current_page?(guests_path) %>><%= link_to "Guests", guests_path, class: "hvr-sweep-to-right"%></li>
@@ -20,9 +13,9 @@
           <li class=<%= "active" if current_page?(welcome_path) %>><%= link_to "Home", welcome_path, class: "hvr-sweep-to-right"%></li>
           <li class=<%= "active" if current_page?(gifts_path) %>><%= link_to "Gift Registry", gifts_path, class: "hvr-sweep-to-right"%></li>
           <li class=<%= "active" if current_page?(new_rsvp_path) %>><%= link_to "Rsvp", new_rsvp_path, class: "hvr-sweep-to-right" if !current_user %></li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">The Details <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+          <li>
+            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">The Details </a>
+            <ul class="nav-dropdown">
               <li><%= link_to "Accomodation", accomodation_path, class: 'dropdown-link' %></li>
               <li><%= link_to "Contact Us", contact_us_path, class: 'dropdown-link' %></li>
               <li><%= link_to "FAQ", faq_path, class: 'dropdown-link' %></li>
@@ -33,6 +26,6 @@
           </li>
         <% end %>
       </ul>
-   </div>
+
+    </nav>
   </div>
-</nav>
