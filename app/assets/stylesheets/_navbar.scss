@@ -12,6 +12,11 @@
 .navigation {
   height: $nav-height;
   background: $pink;
+  color: $white;
+}
+
+.navbar-default .navbar-brand {
+  color: $black;
 }
 
 // Container with no padding for navbar
