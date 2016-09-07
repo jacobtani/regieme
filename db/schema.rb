@@ -16,29 +16,10 @@ ActiveRecord::Schema.define(version: 20160728043325) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name", null: false
-  end
-
   create_table "cgs", force: :cascade do |t|
     t.string  "guest_names"
     t.decimal "contribution_amount"
   end
-
-  create_table "gifts", force: :cascade do |t|
-    t.text    "description",                                     null: false
-    t.integer "guest_id"
-    t.integer "desired_quantity",                default: 0
-    t.integer "remainder_available",             default: 0
-    t.text    "website_link"
-    t.integer "category_id"
-    t.float   "price",                           default: 0.0
-    t.string  "name"
-    t.boolean "contributable",                   default: false
-    t.float   "remainder_contribution_required", default: 0.0
-  end
-
-  add_index "gifts", ["guest_id"], name: "index_gifts_on_guest_id", using: :btree
 
   create_table "guests", force: :cascade do |t|
     t.string "first_name"

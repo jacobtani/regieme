@@ -26,4 +26,14 @@ class PagesController < ApplicationController
     @wedding_party = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/wedding_party.json")))
   end
 
+  def gift_registry
+  end
+
+  def cross_off_gift
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
 end

@@ -16,10 +16,10 @@ class CgsController < ApplicationController
       if @cg.save
         AdminMailer.gift_crossed(@cg).deliver_now
         flash.now[:success] = "Thank you for your generosity in contributing towards our honeymoon."
-        format.html { redirect_to gifts_path }
+        format.html { redirect_to gift_registry_path }
       else
         flash[:error] = "Unable to save contribution details as you did not provide guest names. Please try again"
-        format.html { redirect_to gifts_path }
+        format.html { redirect_to gift_registry_path }
       end
     end
   end

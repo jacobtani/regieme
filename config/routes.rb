@@ -7,11 +7,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#welcome'
   resources :guests
-  resources :gifts
   resources :categories
   resources :cgs
   resources :messages
-  get '/cross_off_gift' => "gifts#cross_off_gift", as: :cross_off_gift
+# get '/cross_off_gift' => "gifts#cross_off_gift", as: :cross_off_gift
   get '/messages/send_enquiry' => "messages#send_enquiry", as: :send_enquiry
   resources :rsvps
   controller :pages do
@@ -22,6 +21,8 @@ Rails.application.routes.draw do
     get :people
     get :contact_us
     get :faq
+    get :gift_registry
+    get :cross_off_gift, as: :cross_off_gift
   end
   match "/401", :to => "errors#missing_authentication", :via => :all
   match "/404", :to => "errors#not_found", :via => :all

@@ -6,12 +6,12 @@
         <% if current_user %>
           <li class=<%= "active" if current_page?(rsvps_path) %>><%= link_to "Rsvp", rsvps_path, class: "hvr-sweep-to-right" %></li>
           <li class=<%= "active" if current_page?(guests_path) %>><%= link_to "Guests", guests_path, class: "hvr-sweep-to-right"%></li>
-          <li class=<%= "active" if current_page?(gifts_path) %>><%= link_to "Gifts", gifts_path, class: "hvr-sweep-to-right"%></li>
+          <li class=<%= "active" if current_page?(gift_registry_path) %>><%= link_to "Gifts", gift_registry_path, class: "hvr-sweep-to-right"%></li>
           <li class=<%= "active" if current_page?(cgs_path) %>><%= link_to "Claimed Gifts", cgs_path, class: "hvr-sweep-to-right"%></li>
           <li><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "hvr-sweep-to-right" %></li>
         <% else %>
           <li class=<%= "active" if current_page?(welcome_path) %>><%= link_to "Home", welcome_path, class: "hvr-sweep-to-right"%></li>
-          <li class=<%= "active" if current_page?(gifts_path) %>><%= link_to "Gift Registry", gifts_path, class: "hvr-sweep-to-right"%></li>
+          <li class=<%= "active" if current_page?(gift_registry_path) %>><%= link_to "Gift Registry", gift_registry_path, class: "hvr-sweep-to-right"%></li>
           <li class=<%= "active" if current_page?(new_rsvp_path) %>><%= link_to "Rsvp", new_rsvp_path, class: "hvr-sweep-to-right" if !current_user %></li>
           <li>
             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">The Details </a>

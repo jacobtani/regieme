@@ -11,7 +11,7 @@ class CgsControllerTest < ActionController::TestCase
       it "allows cg to be created when not logged in" do
         post :create, cg: { guest_names: 'Mr Smith', contribution_amount: 0 }
         assert_response 302
-        assert_redirected_to gifts_path
+        assert_redirected_to gift_registry_path
         @controller.instance_variable_get('@cg').contribution_amount.must_equal 0      
         @controller.instance_variable_get('@cg').guest_names.must_equal 'Mr Smith'
       end
@@ -48,7 +48,7 @@ class CgsControllerTest < ActionController::TestCase
      it "logged on user can add new cg" do
        post :create, cg: { guest_names: 'Mr Smith', contribution_amount: 10 }
        assert_response 302
-       assert_redirected_to gifts_path
+       assert_redirected_to gift_registry_path
        @controller.instance_variable_get('@cg').guest_names.must_equal 'Mr Smith'
        @controller.instance_variable_get('@cg').contribution_amount.must_equal 10
      end
