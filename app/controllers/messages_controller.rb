@@ -18,17 +18,16 @@ class MessagesController < ApplicationController
 
   private 
 
-    def find_guest
-     @guest_full_name = params[:message][:full_name].split
-     @guest=Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
-     return not_found! unless @guest
-     if @guest.email == "NULL"
-        @guest.update(email: params[:message][:email])
-     end
-    end
+  def find_guest
+   @guest_full_name = params[:message][:full_name].split
+   @guest=Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
+   return not_found! unless @guest
+   if @guest.email == "NULL"
+      @guest.update(email: params[:message][:email])
+   end
+  end
 
-    def message_params
-      params.require(:message).permit(:content, :message_subject, :full_name, :email)
-    end
-
+  def message_params
+    params.require(:message).permit(:content, :message_subject, :full_name, :email)
+  end
 end

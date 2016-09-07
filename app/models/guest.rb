@@ -11,7 +11,7 @@
 
 class Guest < ActiveRecord::Base
   has_one :rsvp
-  validates_presence_of :first_name, :surname, :address, :age_category
+  validates :first_name, :surname, :address, :age_category, presence: true
 
   def full_name
     "#{first_name} #{surname}"

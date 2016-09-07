@@ -31,11 +31,11 @@ class CgsController < ApplicationController
 
   private
 
-    def cg_params
-      params.require(:cg).permit(:guest_names, :contribution_amount)
-    end
+  def cg_params
+    params.require(:cg).permit(:guest_names, :contribution_amount)
+  end
 
-    def set_cg
-      @cg = Cg.find params[:id] rescue nil
-    end
+  def set_cg
+    @cg = Cg.find params[:id] rescue nil
+  end
 end

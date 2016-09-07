@@ -43,13 +43,12 @@ class GuestsController < ApplicationController
 
   private
 
-    def guest_params
-      params.require(:guest).permit(:first_name, :surname, :address, :email, :age_category)
-    end
+  def guest_params
+    params.require(:guest).permit(:first_name, :surname, :address, :email, :age_category)
+  end
 
-    def set_guest
-      @guest = Guest.find params[:id] rescue nil
-      return not_found! unless @guest
-    end
-
+  def set_guest
+    @guest = Guest.find params[:id] rescue nil
+    return not_found! unless @guest
+  end
 end
