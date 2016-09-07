@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :cross_off_gift]
-  before_action :set_gift, only: [:edit, :update, :show, :destroy, :cross_off_gift]
+  before_action :set_gift, only: [:edit, :update, :show, :destroy]
   
   def index
     @gifts = Gift.all
@@ -51,14 +51,12 @@ class GiftsController < ApplicationController
 
   private
 
-    def gift_params
-      params.require(:gift).permit(:name, :description, :price, :guest_id, :category_id, :desired_quantity, :remainder_available, :website_link)
-    end
+  def gift_params
+    params.require(:gift).permit(:name, :description, :price, :guest_id, :category_id, :desired_quantity, :remainder_available, :website_link)
+  end
 
-    def set_gift
-      @gift = Gift.find params[:id]
-      return not_found! unless @gift
-    end
-
-
+  def set_gift
+    @gift = Gift.find params[:id]
+    return not_found! unless @gift
+  end
 end
