@@ -1,11 +1,11 @@
 class CreateGuests < ActiveRecord::Migration
   def change
     create_table :guests do |t|
-        t.string :first_name
-        t.string :surname
-        t.text :address
-        t.boolean :attending
-        t.integer :food_preference
+      t.string :first_name
+      t.string :surname
+      t.text :address
+      t.string :email, :default => nil
+      t.string :age_category
     end
   end
 end
