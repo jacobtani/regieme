@@ -19,7 +19,6 @@ class RsvpsControllerTest < ActionController::TestCase
         @controller.instance_variable_get('@rsvp').attending.must_equal 'Yes'
         @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal 'Steak'
         @controller.instance_variable_get('@rsvp').dessert_preference.must_equal 'Creme brulee'
-
       end
 
       it "doesnt allow rsvp to be created when required fields missing when not logged in" do
@@ -55,26 +54,6 @@ class RsvpsControllerTest < ActionController::TestCase
 
      before do
        sign_in user
-     end
-
-     it "logged on user can add new rsvp" do
-        post :create, rsvp: { full_name: 'Anita Jacob', attending: 'Yes', email: 'anita@gmail.com', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
-        assert_response 200
-        assert_template :new
-        assert_select "h2", "Rsvp"
-        @controller.instance_variable_get('@rsvp').email.must_equal 'anita@gmail.com'
-        @controller.instance_variable_get('@rsvp').attending.must_equal 'Yes'
-        @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal 'Steak'
-        @controller.instance_variable_get('@rsvp').dessert_preference.must_equal 'Creme brulee'
-     end
-
-     it "logged on user can add new rsvp catches false name" do
-        post :create, rsvp: { full_name: 'Test Ererer', attending: 'Yes', email: 'anita@gmail.com', main_meal_preference: 'Steak', dessert_preference: 'Creme brulee' }
-        assert_response 200
-        assert_template :new
-        assert_select "h2", "Rsvp"
-        @controller.instance_variable_get('@rsvp').attending.must_equal 'Yes'
-        @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal 'Steak'
      end
 
      it "logged on user can update a rsvp" do

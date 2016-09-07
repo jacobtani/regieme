@@ -13,10 +13,9 @@ class AdminMailer < ApplicationMailer
     mail(from: @rsvp.email, to: "tjterminator.dev@gmail.com", subject: "RSVP from #{guest.full_name}")
   end
 
-  def gift_crossed (cg, gift)
+  def gift_crossed (cg)
     @cg = cg
-    @gift = gift
-    mail(from: cg.guest_names, to: "tjterminator.dev@gmail.com", subject: "#{gift.name} crossed off by #{cg.guest_names}")
+    mail(from: cg.guest_names, to: "tjterminator.dev@gmail.com", subject: "Gift contributed by #{cg.guest_names}")
   end
 
 end

@@ -22,13 +22,8 @@ ActiveRecord::Schema.define(version: 20160728043325) do
 
   create_table "cgs", force: :cascade do |t|
     t.string  "guest_names"
-    t.string  "item_name"
-    t.integer "gift_id",                          null: false
-    t.float   "contribution_amount"
-    t.integer "quantity_contributed", default: 1
+    t.decimal "contribution_amount"
   end
-
-  add_index "cgs", ["gift_id"], name: "index_cgs_on_gift_id", using: :btree
 
   create_table "gifts", force: :cascade do |t|
     t.text    "description",                                     null: false
