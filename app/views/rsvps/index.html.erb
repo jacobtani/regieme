@@ -1,5 +1,5 @@
 <div class = "container level-header rsvp-page">
-  <h2 align="center"> Rsvps </h2>
+  <h2> Rsvps </h2>
   <% @rsvps = locals[:guests] if @rsvps.nil? %> 
   <div class= "pull-right">
     <%= link_to fa_icon("plus", text: "Add RSVP"), new_rsvp_path, class: "btn generic-button command-button hvr-sweep-to-right", id: "new-rsvp-link" if current_user && user_signed_in? %>
@@ -19,7 +19,7 @@
     <% @rsvps.sort_by(&:"#{"id"}").each do |rsvp| %>
       <tr>
         <td> <%= Guest.find(rsvp.guest_id).full_name %> </td>
-        <td> <%= rsvp.email %> </td>
+        <td> "<%= rsvp.email %>" </td>
         <td> <%= rsvp.attending %> </td>
         <td> <%= rsvp.main_meal_preference %> </td>
         <td> <%= rsvp.dessert_preference %> </td>
