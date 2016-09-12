@@ -2,11 +2,12 @@
 #
 # Table name: guests
 #
-#  id         :integer          not null, primary key
-#  first_name :string
-#  surname    :string
-#  address    :text
-#  email      :string
+#  id           :integer          not null, primary key
+#  first_name   :string
+#  surname      :string
+#  address      :text
+#  email        :string
+#  age_category :string
 #
 
 aj:

@@ -2,10 +2,9 @@
 #
 # Table name: cgs
 #
-#  id          :integer          not null, primary key
-#  guest_names :string
-#  item_name   :string
-#  gift_id     :integer          not null
+#  id                  :integer          not null, primary key
+#  guest_names         :string
+#  contribution_amount :decimal(, )
 #
 
 cg_one:

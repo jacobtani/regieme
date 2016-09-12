@@ -3,10 +3,12 @@
 # Table name: rsvps
 #
 #  id                   :integer          not null, primary key
-#  meal_preference      :string
+#  attending            :string           not null
+#  main_meal_preference :string
+#  dessert_preference   :string
 #  dietary_requirements :text
 #  guest_id             :integer          not null
-#  attending            :string           not null
+#  email                :string           not null
 #
 
 class Rsvp < ActiveRecord::Base
