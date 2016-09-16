@@ -4,7 +4,9 @@
   <% @faqs.each do |faq| %>
     <div class="each-q">
       <p class="question <%= faq["q_class"]%>"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <%= faq["question"] %></p>
-      <p class=<%= faq["a_class"]%>> <%= faq["answer"] %></p>
+    </div>
+    <div class="each-a">
+      <p class="answer hidden <%= faq["a_class"]%>"> <%= faq["answer"] %></p>
     </div>
   <% end %>
  </div>

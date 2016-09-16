@@ -18,7 +18,16 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-$(document).ready(function() { 
+$(document).ready(function() {
+
+  $(".question").click(function (e) {
+       e.preventDefault();
+       var content_id = $(this).attr("class");
+       $(".answer").addClass("hidden");
+       var numb = content_id.match(/\d/g).join("");
+       var total = ".a" + numb;
+       $(total).removeClass("hidden");
+   });
 
   $('#owl-demo').owlCarousel({
        autoPlay: 3000,
@@ -74,246 +83,24 @@ window.addEventListener('scroll', callbackFunc);
 
 $('.our-story-button').on('click', callbackFunc ());
 
-$('.a1').addClass('hidden');
-$('.a2').addClass('hidden');
-$('.a3').addClass('hidden');
-$('.a4').addClass('hidden');
-$('.a5').addClass('hidden');
-$('.a6').addClass('hidden');
-$('.a7').addClass('hidden');
-$('.a8').addClass('hidden');
-$('.a9').addClass('hidden');
-$('.a10').addClass('hidden');
-$('.a11').addClass('hidden');
-$('.a12').addClass('hidden');
-$('.a13').addClass('hidden');
-
- $('.q1').on('click', function() {
-    $('.a1').removeClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
- });
-
- $('.q2').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').removeClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').addClass('hidden')
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
- });
-
-  $('.q3').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').removeClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
+  // If a link has a dropdown, add sub menu toggle.
+  $('nav ul li a:not(:only-child)').click(function(e) {
+    $(this).siblings('.nav-dropdown').toggle();
+    // Close one dropdown when selecting another
+    $('.nav-dropdown').not($(this).siblings()).hide();
+    e.stopPropagation();
   });
-
-  $('.q4').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').removeClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
+  // Clicking away from dropdown will remove the dropdown class
+  $('html').click(function() {
+    $('.nav-dropdown').hide();
   });
-
-  $('.q5').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').removeClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
+  // Toggle open and close nav styles on click
+  $('#nav-toggle').click(function() {
+    $('nav ul').slideToggle();
   });
-
-  $('.q6').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').removeClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
+  // Hamburger to X toggle
+  $('#nav-toggle').on('click', function() {
+    this.classList.toggle('active');
   });
-
-  $('.q7').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').removeClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-
-  $('.q8').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').removeClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden'); 
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-
-  $('.q9').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').removeClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-
-  $('.q10').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').removeClass('hidden');
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-
-  $('.q11').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').removeClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-
-  $('.q12').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').addClass('hidden');
-    $('.a12').removeClass('hidden');
-    $('.a13').addClass('hidden');
-  });
-    $('.q13').on('click', function() {
-    $('.a1').addClass('hidden');
-    $('.a2').addClass('hidden');
-    $('.a3').addClass('hidden');
-    $('.a4').addClass('hidden');
-    $('.a5').addClass('hidden');
-    $('.a6').addClass('hidden');
-    $('.a7').addClass('hidden');
-    $('.a8').addClass('hidden');
-    $('.a9').addClass('hidden');
-    $('.a10').addClass('hidden');
-    $('.a11').addClass('hidden');
-    $('.a12').addClass('hidden');
-    $('.a13').removeClass('hidden');
-  });
-
-
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active');
-    });
 
 });
