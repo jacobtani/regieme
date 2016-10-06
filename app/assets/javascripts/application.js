@@ -15,9 +15,10 @@
 //= require jquery_ujs
 //= require flash_messages
 //= require owl.carousel
-//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+//= require bootstrap.js
+
 $(document).ready(function() {
 
   $(".question").click(function (e) {

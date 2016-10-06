@@ -1,14 +1,14 @@
 a:link {
-  color: $white;
+  color: $black;
 }
 a:visited {
-  color: $white;
+  color: $black;
 }
 a:hover {
-  color: $white;
+  color: $black;
 }
 a:active {
-  color: $white;
+  color: $black;
 }
 
 .generic-button {
@@ -42,4 +42,5 @@ a:active {
  width: 15.0rem;
  height: 3.0rem;
  font-size: 1.2rem;
+ float: left;
 }
