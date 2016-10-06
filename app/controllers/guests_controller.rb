@@ -1,9 +1,9 @@
 class GuestsController < ApplicationController
-  before_action :authenticate_user!, except: [:send_enquiry]
+  before_action :authenticate_user!
   before_action :set_guest, only: [:edit, :update, :show, :destroy]
-  
+
   def index
-    @guests = Guest.all
+    @guests = Guest.order(:id)
   end
 
   def new
@@ -24,7 +24,7 @@ class GuestsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     respond_to do |format|
       if @guest.update_attributes guest_params

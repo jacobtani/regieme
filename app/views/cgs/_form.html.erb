@@ -3,13 +3,13 @@
   <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
     <%= f.alert_message "Please fix the errors below." %>
     <%= f.text_field :guest_names, placeholder: "Enter your names", class: "form-control required", control_col: "col-sm-8", autofocus: true, label: "Guest Names" %>
-    <%= f.number_field :contribution_amount, placeholder: 
+    <%= f.number_field :contribution_amount, placeholder:
     "Enter Contribution Amount", label: 'Contribution Amount', control_col: "col-sm-8" %>
     <div class="level-header">
       <%= button_tag(type: "submit", class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
         <i class="fa fa-save"></i> Save
-      <% end %>      
-      <%= link_to fa_icon("undo", text: "Cancel"), gift_registry_path, class: "btn generic-button command-button hvr-sweep-to-right" %>
+      <% end %>
+      <%= link_to fa_icon("undo", text: "Cancel"), gift_registry_path %>
     </div>
   <% end %>
 </div>

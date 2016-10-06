@@ -7,16 +7,18 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new message_params
+    binding.pry
     if @message.valid?
+      binding.pry
       AdminMailer.send_enquiry(@guest, @message).deliver_now
-      flash[:success] = "Message has been successfully sent to Iain & Tania"
+      flash[:notice] = "Message sent! Thank you for contacting us."
       redirect_to contact_us_path
     else
       render "new"
     end
   end
 
-  private 
+  private
 
   def find_guest
    @guest_full_name = params[:message][:full_name].split
