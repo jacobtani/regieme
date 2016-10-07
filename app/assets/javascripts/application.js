@@ -13,11 +13,14 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require foundation
 //= require flash_messages
 //= require owl.carousel
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.js
+
+$(function(){ $(document).foundation(); });
 
 $(document).ready(function() {
 
