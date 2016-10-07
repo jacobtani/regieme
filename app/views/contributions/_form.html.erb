@@ -1,6 +1,6 @@
 <div class='container'>
-  <% @cg = Cg.new %>
-  <%= bootstrap_form_for(@cg, layout: :horizontal)  do |f| %>
+  <% @contribution = Contribution.new %>
+  <%= bootstrap_form_for(@contribution, layout: :horizontal)  do |f| %>
     <%= f.alert_message "Please fix the errors below." %>
     <%= f.text_field :guest_names, placeholder: "Enter your names", class: "form-control required", control_col: "col-sm-8", autofocus: true, label: "Guest Names" %>
     <%= f.number_field :contribution_amount, placeholder:
