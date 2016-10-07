@@ -11,6 +11,7 @@
  * file per style scope.
  *= require bootstrap-theme.css
  *= require bootstrap.scss
+ *= require foundation.css
  *= require owl.carousel
  *= require owl.theme
  */
@@ -31,6 +32,21 @@ body {
   font-family: 'Avenir', serif;
   font-size: 16px;
   color: $black;
+  padding-top:50px;
+}
+
+.dropdown-title {
+  color: $white;
+}
+
+.tidy-img {
+  padding-bottom: 30px;
+}
+
+.columns      {
+  background:#f6f6f6;
+  color:#FFF;
+  padding:20px;
 }
 
 .flash{

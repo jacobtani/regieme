@@ -1,16 +1,13 @@
 <div class = "container">
-  <div class="row">
-    <h2>Wedding Party</h2>
-    <div class="hr"></div>
+  <h2>Wedding Party</h2>
+  <div class="hr"></div>
+  <div class="row text-center">
     <% @wedding_party.each do |b| %>
-      <div class="col-lg-3 col-lg-1">
-        <div class="people-item">
-          <% @photo = b["photo"] %>
-          <%#= image_tag(@photo, class: "img-responsive") %>
-          <div class="description">
-            <h3><%=b["name"]%></h3>
-          </div>
-        </div>
+      <div class="large-3 columns">
+        <% @photo = b["photo"] %>
+        <img class='img-responsive tidy-img' src='/images/<%=@photo%>'>
+        <h4><%= b["name"] %></h4>
+        <h5><%= b["title"] %></h5>
       </div>
     <% end%>
   </div>

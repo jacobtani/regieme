@@ -1,0 +1,26 @@
+<div class = "container">
+  <h2>Bridesmaids and Groomsmen</h2>
+  <div class="hr"></div>
+  <% @bridesmaids_groomsmen.each do |b| %>
+    <div class="row text-center">
+      <div class="columns large-4">
+        <% @photo_1 = b["photo_1"] %>
+        <img class='img-responsive tidy-img' src='/images/<%=@photo_1%>'>
+        <h4><%= b["name_1"] %></h4>
+        <h5><%= b["title_1"] %></h5>
+      </div>
+      <div class="columns large-4">
+        <% @photo_2 = b["photo_2"] %>
+        <img class='img-responsive tidy-img' src='/images/<%=@photo_2%>'>
+        <h4><%= b["name_2"]%></h4>
+        <h5><%= b["title_2"] %></h5>
+      </div>
+      <div class="columns large-4">
+        <% @photo_3 = b["photo_3"] %>
+        <img class='img-responsive tidy-img' src='/images/<%=@photo_3%>'>
+        <h4><%= b["name_3"] %></h4>
+        <h5><%= b["title_3"] %></h5>
+      </div>
+    </div>
+  <% end%>
+</div>

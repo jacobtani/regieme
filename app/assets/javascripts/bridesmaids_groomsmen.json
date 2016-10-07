@@ -1,0 +1,46 @@
+[
+  {
+          "name_1": "Anita Jacob",
+          "photo_1": "anita.jpg",
+          "title_1": "Maid of Honour",
+          "name_2": "Genevieve Walker",
+          "photo_2": "genevieve.jpg",
+          "title_2": "Bridesmaid",
+          "name_3": "Ida Chirayath",
+          "photo_3": "ida.jpg",
+          "title_3": "Bridesmaid"
+  },
+  {
+          "name_1": "Kelsey Morrison",
+          "photo_1": "kelsey.jpg",
+          "title_1": "Bridesmaid",
+          "name_2": "Risha Bhagat",
+          "photo_2": "risha.jpg",
+          "title_2": "Bridesmaid",
+          "name_3": "Sarah Yeo",
+          "photo_3": "sarah.jpg",
+          "title_3": "Bridesmaid"
+  },
+  {
+          "name_1": "Alex Purcell",
+          "photo_1": "alex.jpg",
+          "title_1": "Groomsman",
+          "name_2": "Connor Scott",
+          "photo_2": "connor.jpg",
+          "title_2": "Groomsman",
+          "name_3": "Eddie Stevens",
+          "photo_3": "eddie.jpg",
+          "title_3": "Groomsman"
+  },
+  {
+          "name_1": "Farshid Shokoohi",
+          "photo_1": "farshid.jpg",
+          "title_1": "Groomsman",
+          "name_2": "Fraser Berry",
+          "photo_2": "fraser.jpg",
+          "title_2": "Best Man",
+          "name_3": "Matt van der Velden",
+          "photo_3": "matt.jpg",
+          "title_3": "Groomsman"
+}
+]
