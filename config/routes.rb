@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, only: [:sessions]
   resources :guests
   resources :categories
-  resources :cgs
+  resources :contributions
   resources :messages
 
   resources :rsvps
