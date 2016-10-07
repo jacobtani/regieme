@@ -6,10 +6,10 @@
     <%= f.number_field :contribution_amount, placeholder:
     "Enter Contribution Amount", label: 'Contribution Amount', control_col: "col-sm-8" %>
     <div class="level-header">
-      <%= button_tag(type: "submit", class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
-        <i class="fa fa-save"></i> Save
+      <%= button_tag(type: "submit", class: "hollow button", id: "save-contribution-link", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+        <i class="glyphicon glyphicon-floppy-saved"></i> Save
       <% end %>
-      <%= link_to fa_icon("undo", text: "Cancel"), gift_registry_path %>
+      <%= link_to "Cancel", gift_registry_path %>
     </div>
   <% end %>
 </div>

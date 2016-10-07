@@ -4,7 +4,7 @@ class RsvpsController < ApplicationController
   before_action :find_guest, only: [:create]
 
   def index
-    @rsvps = Rsvp.all
+    @rsvps = Rsvp.order(:id)
   end
 
   def new

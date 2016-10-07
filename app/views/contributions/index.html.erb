@@ -10,7 +10,7 @@
 			<tr>
 				<td> <%= contribution.guest_names %> </td>
 				<td> <%= number_to_currency contribution.contribution_amount %> </td>
-				<td><%= link_to fa_icon("trash", text: "Delete"), contribution_path(contribution), method: :delete, class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-cg-link" %></td>
+				<td><%= link_to "Delete", contribution_path(contribution), method: :delete, class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-cg-link" %></td>
 			</tr>
 		<%end%>
 	</table>
