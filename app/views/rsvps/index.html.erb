@@ -1,33 +1,33 @@
-<div class = "container level-header rsvp-page">
-  <h2> Rsvps </h2>
+<div class="container level-header rsvp-page">
+  <h2>Rsvps</h2>
   <% @rsvps = locals[:guests] if @rsvps.nil? %>
-  <div class= "pull-right">
-    <%= link_to "Add RSVP", new_rsvp_path, class: "btn generic-button command-button hvr-sweep-to-right", id: "new-rsvp-link" if current_user && user_signed_in? %>
+  <div class="pull-right">
+    <%= link_to "Add RSVP", new_rsvp_path, class: "hollow button", id: "new-rsvp-link" if current_user && user_signed_in? %>
   </div>
-  <table class = "table table-striped">
+  <table class="table table-striped">
     <thead>
-      <th> Guest </th>
-      <th> Email </th>
-      <th> Attending </th>
-      <th> Mains Preference </th>
-      <th> Dessert Preference </th>
-      <th> Dietary Requirements </th>
+      <th>Guest</th>
+      <th>Email</th>
+      <th>Attending</th>
+      <th>Mains Preference</th>
+      <th>Dessert Preference</th>
+      <th>Dietary Requirements</th>
       <% if current_user %>
-        <th> Administration </th>
+        <th>Administration</th>
       <% end %>
     </thead>
     <% @rsvps.each do |rsvp| %>
       <tr>
-        <td> <%= Guest.find(rsvp.guest_id).full_name %> </td>
-        <td> "<%= rsvp.email %>" </td>
-        <td> <%= rsvp.attending %> </td>
-        <td> <%= rsvp.main_meal_preference %> </td>
-        <td> <%= rsvp.dessert_preference %> </td>
-        <td> <%= rsvp.dietary_requirements %> </td>
+        <td><%= Guest.find(rsvp.guest_id).full_name %></td>
+        <td><%= rsvp.email %></td>
+        <td><%= rsvp.attending %></td>
+        <td><%= rsvp.main_meal_preference %></td>
+        <td><%= rsvp.dessert_preference %></td>
+        <td><%= rsvp.dietary_requirements %></td>
         <% if current_user && user_signed_in? %>
-          <td><%= link_to "Edit", edit_rsvp_path(id: rsvp.id), class: "btn generic-button command-button hvr-sweep-to-right", id: "edit-rsvp-link" %>
+          <td><%= link_to "Edit", edit_rsvp_path(id: rsvp.id), class: "hollow button", id: "edit-rsvp-link" %>
           <%= link_to "Delete", rsvp_path(rsvp), method: :delete,
-                class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-rsvp-link" %></td>
+                class: "hollow button", id: "delete-rsvp-link" %></td>
         <%end%>
       </tr>
     <%end%>

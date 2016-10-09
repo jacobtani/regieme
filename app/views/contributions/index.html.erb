@@ -1,16 +1,16 @@
-<div class = "container level-header cg-page">
-	<h2> Contributions </h2>
-	<table class = "table table-striped">
+<div class="container level-header cg-page">
+	<h2>Contributions</h2>
+	<table class="table table-striped">
 		<thead>
-			<th> Guest </th>
-			<th> Contribution Amount </th>
-			<th> Administration </th>
+			<th>Guest</th>
+			<th>Contribution Amount</th>
+			<th>Administration</th>
 		</thead>
 		<% @contributions.each do |contribution| %>
 			<tr>
-				<td> <%= contribution.guest_names %> </td>
-				<td> <%= number_to_currency contribution.contribution_amount %> </td>
-				<td><%= link_to "Delete", contribution_path(contribution), method: :delete, class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-cg-link" %></td>
+				<td><%= contribution.guest_names %></td>
+				<td><%= number_to_currency contribution.contribution_amount %></td>
+				<td><%= link_to "Delete", contribution_path(contribution), method: :delete, class: "hollow button" %></td>
 			</tr>
 		<%end%>
 	</table>

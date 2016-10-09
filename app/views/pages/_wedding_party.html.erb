@@ -1,11 +1,11 @@
-<div class = "container">
+<div class="container">
   <h2>Wedding Party</h2>
   <div class="hr"></div>
   <div class="row text-center">
     <% @wedding_party.each do |b| %>
       <div class="large-3 columns">
-        <% @photo = b["photo"] %>
-        <img class='img-responsive tidy-img' src='/images/<%=@photo%>'>
+        <% @photo=b["photo"] %>
+        <img class="img-responsive tidy-img" src="/images/<%=@photo%>">
         <h4><%= b["name"] %></h4>
         <h5><%= b["title"] %></h5>
       </div>

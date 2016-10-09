@@ -1,4 +1,4 @@
-<div class="container form-scrollable">
+<div class="form-scrollable">
   <%= bootstrap_form_for(@rsvp, layout: :horizontal, label_errors: false, inline_errors: false)  do |f| %>
     <% if @rsvp.errors.messages.present? %>
       <div class="alert alert-warning" role="alert">
@@ -25,10 +25,8 @@
       <% end %>
       <%= f.text_field :dietary_requirements, placeholder: "Enter any special dietary requirements", class: "form-control", label: "Dietary Requirements" %>
     </div>
-    <div class="level-header">
-      <%= button_tag(type: "submit", class: "hollow button contribute-button", id: "rsvp-submit-link", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting..."}) do %>
-        <i class="fa fa-save"></i> Submit
-      <% end %>
-    </div>
+    <%= button_tag(type: "submit", class: "hollow button contribute-button", id: "rsvp-submit-link", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting..."}) do %>
+      <i class="fa fa-save"></i>Submit
+    <% end %>
   <% end %>
 </div>

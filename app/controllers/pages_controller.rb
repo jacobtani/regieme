@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
 
   def the_details
+    @the_details = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/the_details.json")))
+  end
+
+  def accomodation
+    @accomodation = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/accomodation.json")))
   end
 
   def our_story
@@ -34,5 +39,4 @@ class PagesController < ApplicationController
       format.js
     end
   end
-
 end

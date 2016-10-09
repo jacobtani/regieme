@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
+//= require flipclock.js
 //= require flash_messages
 //= require owl.carousel
 //= require turbolinks

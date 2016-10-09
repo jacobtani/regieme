@@ -5,11 +5,9 @@
     <%= f.text_field :address, placeholder: "Enter address", class: "form-control required" %>
     <%= f.text_field :email, placeholder: "Enter email", class: "form-control required" %>
     <%= f.select :age_category, ["adult", "child", "toddler" ], :prompt => "Select Dessert Preference", class: "form-control", label: "Dessert Preference" %>
-    <div class="level-header">
-      <%= button_tag(type: "submit", class: "btn generic-button command-button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
-        <i class="glyphicon glyphicon-floppy-saved"></i> Save
-      <% end %>
-      <%= link_to "Cancel", guests_path %>
-    </div>
+    <%= button_tag(type: "submit", class: "hollow button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
+      <i class="glyphicon glyphicon-floppy-saved"></i> Save
+    <% end %>
+    <%= link_to "Cancel", guests_path, class: "cancel-button" %>
   <% end %>
 </div>

@@ -14,6 +14,7 @@
  *= require foundation.css
  *= require owl.carousel
  *= require owl.theme
+ *= require flipclock.css
  */
 @import "variables";
 @import "navbar";
@@ -49,7 +50,6 @@ body {
 }
 
 .flash{
-  background-color: rgba(0, 75, 109, 0.17);
   font-family: 'Avenir', serif;
   font-size: 18px;
   color: $pink;
@@ -63,11 +63,9 @@ body {
     color: #564444;
   }
   &.warning-alert{
-    background-color: lighten($pink, 5%);
     color: #008000;
   }
   &.success-alert{
-    background-color: lighten($green, 5%);
     color: $white;
   }
 
@@ -218,7 +216,7 @@ time {
 }
 
 .para-text {
-  color: $white;
+  color: $pink;
 }
 
 .countdown-clock {

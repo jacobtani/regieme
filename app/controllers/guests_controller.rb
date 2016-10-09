@@ -7,7 +7,7 @@ class GuestsController < ApplicationController
   end
 
   def new
-    @guest  = Guest.new
+    @guest = Guest.new
   end
 
   def create

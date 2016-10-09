@@ -1,0 +1,20 @@
+[
+  {
+          "name": "Ceremony",
+          "time": "2.30pm - 3.30pm",
+          "location": "Sts Peter and Paul's Church",
+          "address_line_1": "60 Knights Road",
+          "address_line_2": "Lower Hutt",
+          "address_line_3": "Wellington",
+          "address_line_4": "New Zealand"
+  },
+  {
+          "name": "Reception",
+          "time": "6.00pm - 12.00am",
+          "location": "Boulcott Farm Heritage Golf Club",
+          "address_line_1": "30 Military Road",
+          "address_line_2": "Lower Hutt",
+          "address_line_3": "Wellington",
+          "address_line_4": "New Zealand"
+  }
+]

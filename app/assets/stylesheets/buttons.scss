@@ -39,11 +39,29 @@ a:active {
 }
 
 #cross-gift-link, #send-message-link, #rsvp-submit-link, #save-contribution-link {
- width: 15.0rem;
- height: 3.0rem;
- font-size: 1.2rem;
- float: left;
  border-radius: 2px;
  border-color: $pink;
  color: $pink;
+}
+
+.options {
+    margin-bottom: 40px;
+}
+
+.cancel-button {
+  margin-top: 20px;
+  bottom: 0px;
+  line-height: 4em;
+}
+
+.contribute-button {
+  margin-left: -15px;
+}
+
+#rsvp-submit-link {
+  margin-left: 15px;
+}
+
+#send-message-link {
+  margin-left: 50px;
 }
