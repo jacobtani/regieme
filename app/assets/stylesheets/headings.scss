@@ -1,32 +1,3 @@
-.gift-categories {
-  font-family: "Avenir", sans-serif ;
-  font-size: 2.5rem;
-  color: $pink;
-  letter-spacing: -.1rem;
-  line-height: 1.25;
-  border-bottom: 1px solid #ccc;
-  margin-top: 3rem;
-  text-transform: uppercase;
-}
-
-.modal-heading-style {
-  font-family: "Avenir", sans-serif;
-  color: $pink;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.caption-style{
-  color: $green;
-  font-size: 16px;
-  font-family: "Avenir", sans-serif;
-  text-transform: uppercase;
-}
-
-.rsvp-date {
-  text-align: center;
-  font-style: italics;  
-}
 h2 {
   color: $pink;
   font-size: 50px;
@@ -35,17 +6,20 @@ h2 {
   text-align: center;
 }
 
-.subheading {
-  font-family: "Avenir", sans-serif;
-  font-size: 30px;
+h3 {
+  font-size: 50px;
   color: $pink;
 }
 
-.our-story{
-  font-size: 2.688em;
-  font-weight: bold;
+
+h4 {
+  font-size: 25px;
   color: $pink;
-  text-transform: uppercase;
+}
+
+h5 {
+  color: $pink;
+  font-style: italic;
 }
 
 .hr {
@@ -57,11 +31,23 @@ h2 {
   background-image: url("../images/divider.png");
 }
 
-h3 {
-  font-size: 50px;
+.modal-heading-style {
+  font-family: "Avenir", sans-serif;
   color: $pink;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
+.rsvp-date {
+  text-align: center;
+  font-style: italics;
+}
+
+.subheading {
+  font-family: "Avenir", sans-serif;
+  font-size: 30px;
+  color: $pink;
+}
 
 .fine-details {
   font-weight: italic;
@@ -70,15 +56,6 @@ h3 {
   color: $pink;
 }
 
-h4 {
-  font-size: 25px;
-  color: $pink;
-}
-
-h5 {
-  color: $pink;
-  font-style: italic;
-}
 
 .bridesmaids-groomsmen {
   padding-top: 30px;

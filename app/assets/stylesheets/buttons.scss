@@ -1,16 +1,17 @@
-a:link {
-  color: $black;
+nav {
+  a:link {
+    color: $white;
+  }
+  a:visited {
+    color: $white;
+  }
+  a:hover {
+    color: $white;
+  }
+  a:active {
+    color: $white;
+  }
 }
-a:visited {
-  color: $black;
-}
-a:hover {
-  color: $black;
-}
-a:active {
-  color: $black;
-}
-
 .generic-button {
   float: right;
   margin-left: 1rem;
@@ -38,16 +39,6 @@ a:active {
   width: 14.5rem;
 }
 
-#cross-gift-link, #send-message-link, #rsvp-submit-link, #save-contribution-link {
- border-radius: 2px;
- border-color: $pink;
- color: $pink;
-}
-
-.options {
-    margin-bottom: 40px;
-}
-
 .cancel-button {
   margin-top: 20px;
   bottom: 0px;
@@ -60,4 +51,10 @@ a:active {
 
 #send-message-link, #save-contribution-link, #rsvp-submit-link {
   margin-left: 50px;
+}
+
+#cross-gift-link, #send-message-link, #rsvp-submit-link, #save-contribution-link {
+ border-radius: 2px;
+ border-color: $pink;
+ color: $pink;
 }
