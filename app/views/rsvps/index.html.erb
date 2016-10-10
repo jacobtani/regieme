@@ -18,7 +18,7 @@
     </thead>
     <% @rsvps.each do |rsvp| %>
       <tr>
-        <td><%= Guest.find(rsvp.guest_id).full_name %></td>
+        <td><%= Guest.find(rsvp.guest).full_name %></td>
         <td><%= rsvp.email %></td>
         <td><%= rsvp.attending %></td>
         <td><%= rsvp.main_meal_preference %></td>

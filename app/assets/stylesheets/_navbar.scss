@@ -16,7 +16,22 @@
   color: $white;
 }
 
-// Navigation 
+nav {
+  a:link {
+    color: $white;
+  }
+  a:visited {
+    color: $white;
+  }
+  a:hover {
+    color: $white;
+  }
+  a:active {
+    color: $white;
+  }
+}
+
+// Navigation
 nav {
   text-align: center;
   text-transform: uppercase;

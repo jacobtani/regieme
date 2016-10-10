@@ -8,6 +8,6 @@
     <%= button_tag(type: "submit", class: "hollow button", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
       <i class="glyphicon glyphicon-floppy-saved"></i> Save
     <% end %>
-    <%= link_to "Cancel", guests_path, class: "cancel-button" %>
+    <%= link_to "Cancel", guests_path, id: "cancel-button" %>
   <% end %>
 </div>

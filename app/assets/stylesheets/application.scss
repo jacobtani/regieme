@@ -11,7 +11,7 @@
  * file per style scope.
  *= require bootstrap-theme.css
  *= require bootstrap.scss
- *= require foundation.css
+ *= require foundation.min.css
  *= require owl.carousel
  *= require owl.theme
  *= require flipclock.css
@@ -24,10 +24,8 @@
 @import "timeline";
 @import "forms";
 @import "owl";
-
-.body-style{
-  padding-top: 70px;
-}
+@import "text";
+@import "images";
 
 body {
   font-family: 'Avenir', serif;
@@ -52,17 +50,13 @@ span {
   height: 50px;
 }
 
+.body-style{
+  padding-top: 70px;
+}
+
 div[style] {
   width: 200 !important;
   height: 300px;
-}
-
-.dropdown-title {
-  color: $white;
-}
-
-.tidy-img {
-  padding-bottom: 10px;
 }
 
 .columns      {
@@ -97,18 +91,6 @@ div[style] {
   margin-right: -15px;
 }
 
-.us-image{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  overflow: auto;
-}
-
 .modal {
   text-align: center;
 }
@@ -117,28 +99,12 @@ div[style] {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-}
-
-.cross-off-gift-modal {
   background-color: $white
-}
-
-.para-text {
-  color: $pink;
 }
 
 .countdown-clock {
   width: 70%;
   margin: 0 auto;
-}
-
-.question {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.each-q {
-  padding-bottom: 14px;
 }
 
 *,
@@ -161,11 +127,4 @@ div[style] {
     content: " ";
     height: 100%;
   }
-}
-
-.caption {
-  text-transform: uppercase;
-  text-align: center;
-  color: $pink;
-  font-weight: bold;
 }

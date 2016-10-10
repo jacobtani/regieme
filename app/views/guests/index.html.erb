@@ -2,7 +2,7 @@
   <h2>Guest List</h2>
   <% @guests = locals[:guests] if @guests.nil? %>
   <div class="pull-right">
-    <%= link_to "Add Guest", new_guest_path, class: "btn generic-button command-button hvr-sweep-to-right", id: "new-guest-link" if current_user && user_signed_in? %>
+    <%= link_to "Add Guest", new_guest_path, class: "hollow button", id: "new-guest-link" if current_user && user_signed_in? %>
   </div>
   <table class="table table-striped">
     <thead>
@@ -23,9 +23,9 @@
         <td><%= guest.address %></td>
         <td><%= guest.email %></td>
         <% if current_user && user_signed_in? %>
-          <td><%= link_to "Edit", edit_guest_path(id: guest.id), class: "btn generic-button command-button hvr-sweep-to-right", id: "edit-guest-link" %>
+          <td><%= link_to "Edit", edit_guest_path(id: guest.id), class: "hollow button", id: "edit-guest-link" %>
           <%= link_to "Delete", guest_path(guest), method: :delete,
-                class: "btn generic-button command-button hvr-sweep-to-right", id: "delete-guest-link" %></td>
+                class: "hollow button", id: "delete-guest-link" %></td>
         <%end%>
       </tr>
     <%end%>
