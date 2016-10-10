@@ -65,25 +65,16 @@ div[style] {
   padding:20px;
 }
 
-.flash{
+.flash {
   font-family: 'Avenir', serif;
   font-size: 18px;
+  background-color: $grey;
   color: $pink;
   border-radius: 1px;
   text-align: center;
   padding-bottom: 5px;
   padding-top: 5px;
   margin-top: 5px;
-  &.danger-alert{
-    background-color: rgba(177, 0, 0, 0.13);
-    color: #564444;
-  }
-  &.warning-alert{
-    color: #008000;
-  }
-  &.success-alert{
-    color: $white;
-  }
 }
 
 .row {
