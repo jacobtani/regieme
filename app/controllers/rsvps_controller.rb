@@ -54,7 +54,7 @@ class RsvpsController < ApplicationController
 
   def find_guest
     @guest_full_name = params[:rsvp][:full_name].split
-    @guest=Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
+    @guest = Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
     return not_found! unless @guest
   end
 

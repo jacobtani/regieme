@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new message_params
     if @message.valid?
-      AdminMailer.send_enquiry(@guest, @message).deliver_now
+      AdminMailer.send_enquiry(guest: @guest, message: @message).deliver_now
       flash[:notice] = "Message sent! Thank you for contacting us."
       redirect_to contact_us_path
     else
