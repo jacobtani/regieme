@@ -6,7 +6,7 @@ class UserMailerTest < ActionMailer::TestCase
     let(:rsvp) { rsvps(:rsvp_one) }
 
   def test_rsvp_confirmation
-    email = UserMailer.rsvp_confirmation(rsvp, guest).deliver_now
+    email = UserMailer.rsvp_confirmation(rsvp: rsvp, guest: guest).deliver_now
     assert_not ActionMailer::Base.deliveries.empty?
     assert_equal ['tjterminator.dev@gmail.com'], email.from
     assert_equal [guest.email], email.to

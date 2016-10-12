@@ -9,17 +9,17 @@ class ContributionsControllerTest < ActionController::TestCase
     describe "actions by a non logged in user" do
 
       it "allows contribution to be created when not logged in" do
-        post :create, contribution: { guest_names: 'Mr Smith', contribution_amount: 0 }
+        post :create, contribution: { guest_names: 'Mr Smith', contribution_amount: 20 }
         assert_response 302
         assert_redirected_to gift_registry_path
-        @controller.instance_variable_get('@contribution').contribution_amount.must_equal 0
+        @controller.instance_variable_get('@contribution').contribution_amount.must_equal 20
         @controller.instance_variable_get('@contribution').guest_names.must_equal 'Mr Smith'
       end
 
       it "does not allows contribution to be created when invalid data and not logged in" do
-        post :create, contribution: { guest_names: nil }
+        post :create, contribution: { guest_names: nil, contribution_amount: 220 }
         assert_response 302
-        @controller.instance_variable_get('@cg').guest_names.must_equal nil
+        @controller.instance_variable_get('@contribution').guest_names.must_equal ""
       end
 
       it "redirect user when trying to delete a contribution" do
