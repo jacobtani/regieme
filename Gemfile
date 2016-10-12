@@ -38,4 +38,5 @@ group :test do
   gem 'minitest-spec-rails'
   gem 'minitest-rails-capybara'
   gem 'mocha'
+  gem 'rails-controller-testing'
 end

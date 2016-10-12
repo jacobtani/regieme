@@ -12,5 +12,4 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal [guest.email], email.to
     assert_equal 'Thank you for RSVPing to Iain and Tanias Wedding', email.subject
   end
-
- end
+end

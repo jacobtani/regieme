@@ -9,9 +9,9 @@ class PagesControllerTest < ActionController::TestCase
       it "renders the details page" do
         get :the_details
         assert_response 200
-        assert_select "h2", "The Wedding"
+        assert_select "h2", "The Wedding Day Plan"
       end
- 
+
       it "renders the welcome page" do
         get :welcome
         assert_response 200
@@ -31,9 +31,8 @@ class PagesControllerTest < ActionController::TestCase
       it "renders the people page" do
         get :people
         assert_response 200
-        assert_select "h2", "People Involved"
-        assert_select "h2", "Groomsmen"
-        assert_select "h2", "Bridesmaids"
+        assert_select "h2", "Bride, Groom and Parents"
+        assert_select "h2", "Bridesmaids and Groomsmen"
         assert_select "h2", "Wedding Party"
       end
 
@@ -48,9 +47,6 @@ class PagesControllerTest < ActionController::TestCase
         assert_response 200
         assert_select "h2", "Faq"
       end
-
     end
-
   end
-
 end
