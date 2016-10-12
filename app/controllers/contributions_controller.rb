@@ -14,7 +14,7 @@ class ContributionsController < ApplicationController
     @contribution = Contribution.new contribution_params
     respond_to do |format|
       if @contribution.save
-        AdminMailer.gift_crossed(@contribution).deliver_now
+        AdminMailer.gift_crossed(contribution: @contribution).deliver_now
         flash.now[:success] = "Thank you for your generosity in contributing towards our honeymoon."
         format.html { redirect_to gift_registry_path }
       else

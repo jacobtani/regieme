@@ -1,16 +1,3 @@
-# == Schema Information
-#
-# Table name: rsvps
-#
-#  id                   :integer          not null, primary key
-#  attending            :string           not null
-#  main_meal_preference :string
-#  dessert_preference   :string
-#  dietary_requirements :text
-#  guest_id             :integer          not null
-#  email                :string           not null
-#
-
 class Rsvp < ActiveRecord::Base
   belongs_to :guest
   validates :attending, :email, presence: true
@@ -18,6 +5,5 @@ class Rsvp < ActiveRecord::Base
   validates_presence_of :main_meal_preference, :if => 'attending == "Yes"', :message => "You need to select a main meal preference from the dropdown"
   validates_presence_of :dessert_preference, :if => 'attending == "Yes"', :message => "You need to select a dessert preference from the dropdown"
   validates_uniqueness_of :guest_id, message: "You have already RSVPed to the wedding. If you need to alter this please message us on our Contact Us page"
-
   attr_accessor :full_name
 end

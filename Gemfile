@@ -27,7 +27,6 @@ group :production do
 end
 
 group :development do
-  gem 'annotate' # run 'annotate -p before' to annotate your models
   gem 'byebug'
   gem 'brakeman', :require => false
   gem 'web-console'
