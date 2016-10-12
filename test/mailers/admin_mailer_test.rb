@@ -24,4 +24,4 @@ class AdminMailerTest < ActionMailer::TestCase
     assert_equal ['tjterminator.dev@gmail.com'], email.to
     assert_equal "RSVP from #{guest.full_name}", email.subject
   end
- end
+end
