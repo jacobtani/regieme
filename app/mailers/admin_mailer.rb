@@ -15,6 +15,6 @@ class AdminMailer < ApplicationMailer
 
   def gift_crossed(contribution:)
     @contribution = contribution
-    mail(from: contribution.guest_names, to: "Iain and Tania <tjterminator.dev@gmail.com>", subject: "Gift contributed by #{contribution.guest_names}")
+    mail(from: contribution.guest_names, to: "Iain and Tania <tjterminator.dev@gmail.com>", subject: "Contribution to Honeymoon by #{contribution.guest_names}")
   end
 end

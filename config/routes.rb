@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, only: [:sessions]
   resources :guests
-  resources :categories
   resources :contributions
-  resources :messages
+  resources :messages, only: [:create]
 
   resources :rsvps
   controller :pages do
