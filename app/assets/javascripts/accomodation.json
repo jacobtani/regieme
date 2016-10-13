@@ -2,19 +2,19 @@
   {
           "name": "Angus Inn",
           "photo": "angus-inn.jpg",
-          "url": "",
+          "url": "http://www.angusinn.co.nz/",
           "address": "Cnr Cornwall St & Waterloo Road, Lower Hutt"
   },
   {
           "name": "Boulcott Lodge",
           "photo": "boulcott-lodge.jpg",
-          "url": "http://www.boulcottlodge.co.nz/accommodation.html",
+          "url": "http://www.boulcottlodge.co.nz",
           "address": "615 High Street, Lower Hutt"
   },
   {
           "name": "Green Gables",
           "photo": "green-gables.jpg",
-          "url": "http://greengablesmotel.co.nz/rooms",
+          "url": "http://greengablesmotel.co.nz",
           "address": "560 High Street, Lower Hutt"
   }
 ]
