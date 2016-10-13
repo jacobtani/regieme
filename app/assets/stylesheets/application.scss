@@ -29,6 +29,8 @@
 @import "grid";
 @import "media";
 @import "modals";
+@import "flash";
+@import "countdown-clock";
 
 div[style] {
   width: 200 !important;
@@ -46,23 +48,6 @@ body {
 
 .body-style{
   padding-top: 70px;
-}
-
-.flash {
-  font-family: 'Avenir', serif;
-  font-size: 18px;
-  background-color: $grey;
-  color: $pink;
-  border-radius: 1px;
-  text-align: center;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  margin-top: 5px;
-}
-
-.countdown-clock {
-  width: 70%;
-  margin: 0 auto;
 }
 
 *,

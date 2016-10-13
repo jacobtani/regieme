@@ -7,7 +7,7 @@ h2 {
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 35px;
   color: $pink;
 }
 
@@ -18,8 +18,13 @@ h4 {
 }
 
 h5 {
+  font-size: 15px;
   color: $pink;
   font-style: italic;
+}
+
+h6 {
+  font-size: 10px;
 }
 
 .hr {
