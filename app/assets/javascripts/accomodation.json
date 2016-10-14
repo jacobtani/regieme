@@ -3,18 +3,21 @@
           "name": "Angus Inn",
           "photo": "angus-inn.jpg",
           "url": "http://www.angusinn.co.nz/",
-          "address": "Cornwall St, Lower Hutt"
+          "address": "Cornwall St, Lower Hutt",
+          "phone_number": " +64 4 560 1100"
   },
   {
           "name": "Boulcott Lodge",
           "photo": "boulcott-lodge.jpg",
           "url": "http://www.boulcottlodge.co.nz",
-          "address": "615 High Street, Lower Hutt"
+          "address": "615 High Street, Lower Hutt",
+          "phone_number": "+64 4 586 1558"
   },
   {
           "name": "Green Gables",
           "photo": "green-gables.jpg",
           "url": "http://greengablesmotel.co.nz",
-          "address": "560 High Street, Lower Hutt"
+          "address": "560 High Street, Lower Hutt",
+          "phone_number": " +64 4 569 3596"
   }
 ]
