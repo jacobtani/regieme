@@ -14,7 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
-//= require flipclock.js
 //= require flash_messages
 //= require owl.carousel
 //= require turbolinks
@@ -35,7 +34,7 @@ $(document).ready(function() {
    });
 
   $('#owl-demo').owlCarousel({
-       autoPlay: 3000,
+       autoPlay: 30000000000000000,
        items : 4,
       itemsDesktop : [1199,3],
       itemsDesktopSmall : [979,3]
@@ -54,15 +53,7 @@ $(document).ready(function() {
         }
     });
 
-//Months is zero-based, so April being the fourth month uses 3.
-var date = new Date(2017, 1, 25);
-var now = new Date();
-var diff = (date.getTime()/1000) - (now.getTime()/1000);
-var clock = $('.your-clock').FlipClock(diff, {
- clockFace: 'DailyCounter',
- countdown: true
-});
-
+//timeline JS
 var items = document.querySelectorAll('.timeline li');
 
 function isElementInViewport(el) {

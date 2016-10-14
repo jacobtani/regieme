@@ -14,7 +14,6 @@
  *= require foundation.min.css
  *= require owl.carousel
  *= require owl.theme
- *= require flipclock.css
  */
 @import "variables";
 @import "navbar";
@@ -30,7 +29,6 @@
 @import "media";
 @import "modals";
 @import "flash";
-@import "countdown-clock";
 
 div[style] {
   width: 200 !important;
