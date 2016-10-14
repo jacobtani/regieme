@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new message_params
     if @message.valid?
-      AdminMailer.send_enquiry(guest: @guest, message: @message).deliver_now
+      SendEnquiryEmail.perform!(guest: @guest, message: @message)
       flash[:notice] = "Message sent! Thank you for contacting us."
       redirect_to contact_us_path
     else
@@ -20,8 +20,9 @@ class MessagesController < ApplicationController
 
   def find_guest
    @guest_full_name = params[:message][:full_name].split
-   @guest=Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
+   @guest = Guest.where("first_name = ? AND surname = ?", @guest_full_name[0], @guest_full_name[1]).first
    return not_found! unless @guest
+
    if @guest.email == "NULL"
       @guest.update(email: params[:message][:email])
    end

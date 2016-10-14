@@ -136,9 +136,8 @@
 											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Thank you for RSVPing for Iain and Tania's wedding. Your RSVP has been noted for catering purposes. If any of the details printed here are incorrect, please let us know ASAP:</p><br/><br/>
 											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Please ensure the following details are correct:
 											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Attending: <%= @rsvp.attending %></p>
-poinin
 											<% if @rsvp.attending.downcase == 'yes'%>
-												<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Mains Preference: <%=@rsvp.main_meal_preference %></p>>
+												<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Mains Preference: <%=@rsvp.main_meal_preference %></p>
 												<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Dessert Preference: <%=@rsvp.dessert_preference %></p>
 												<% if @rsvp.dietary_requirements != """" %>
 													<p>Dietary Requirements: <%= @rsvp.dietary_requirements %></p>

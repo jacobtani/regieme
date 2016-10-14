@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap_form'
 gem 'owlcarousel-rails'
+gem 'use_case_pattern'
 
 group :development, :test, :staging do
   gem 'better_errors'
