@@ -1,7 +1,7 @@
 [
   {
           "question": "How do I get to the venues?",
-          "answer": "The easiest way to get to the venues is via car. The best public transport option is through catching a bus to Westfield Queensgate and then catching another bus in the Hutt Hospital direction. It is a very short walk from Boulcott Hospital. The details can be found on 'The Wedding' page.",
+          "answer": "The easiest way to get to the venues is via car. The best public transport option is through catching a bus to Queensgate and then another one to Hutt Hospital. It is a very short walk from Boulcott Hospital. The details can be found on 'Wedding Festivities' page.",
           "q_class":"q1",
           "a_class": "a1"
   },
@@ -56,7 +56,7 @@
   },
   {
           "question": "What gifts would you like?",
-          "answer": "Please see our Gifts Page it should list all the gifts we would like. There are instructions listed on how to utilise our registry. Your generosity is much appreciated.",
+          "answer": "We would like to get contributions towards our honeymoon. Please see our Gift Registry page for more details. Your generosity is much appreciated.",
           "q_class":"q10",
           "a_class": "a10"
   },
@@ -74,7 +74,7 @@
   },
   {
           "question": "I have a question not answered here; how do I contact you?",
-          "answer": "Please send us a message using the Contact page.",
+          "answer": "Please send us a message using the Contact Us page.",
           "q_class":"q13",
           "a_class": "a13"
   }

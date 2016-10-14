@@ -1,7 +1,7 @@
 ### Regieme
-`Regieme` is our wedding website. It contains details for RSVP and wedding register as well as static info.
+`Regieme` is our wedding website. It allows guests to view information about the wedding as well as RSVP and record gift contributions.
 
-### Setup 
+### Setup
 
 * Install all required gems: ```bundle install```
 
