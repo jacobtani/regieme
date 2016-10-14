@@ -1,10 +1,17 @@
 .modal {
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+
 }
 
 .cross-off-gift-modal {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-  background-color: $white
+  background-color: $white;
+  margin : 0 auto;
 }
