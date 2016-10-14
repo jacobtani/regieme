@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :rsvps
   controller :pages do
-    get :the_details
+    get :wedding_festivities
     get :welcome
     get :our_story
     get :accomodation

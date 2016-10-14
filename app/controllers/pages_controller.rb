@@ -30,7 +30,7 @@ class PagesController < ApplicationController
     @wedding_party = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/wedding_party.json")))
   end
 
-  def the_details
+  def wedding_festivities
     @the_details = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/the_details.json")))
   end
 
