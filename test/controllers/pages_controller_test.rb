@@ -6,10 +6,10 @@ class PagesControllerTest < ActionController::TestCase
 
     describe "actions by a non logged in user" do
 
-      it "renders the details page" do
-        get :the_details
+      it "renders the wedding festivities page" do
+        get :wedding festivities
         assert_response 200
-        assert_select "h2", "The Wedding Day Plan"
+        assert_select "h2", "Wedding Festivities"
       end
 
       it "renders the welcome page" do
