@@ -16,80 +16,13 @@
 //= require foundation
 //= require flash_messages
 //= require owl.carousel
+//= require dropdown
+//= require timeline
+//= require owl-carousel
+//= require faq
+//= require rsvp
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.js
 
 $(function(){ $(document).foundation(); });
-
-$(document).ready(function() {
-
-  $(".question").click(function (e) {
-       e.preventDefault();
-       var content_id = $(this).attr("class");
-       $(".answer").addClass("hidden");
-       var numb = content_id.match(/\d/g).join("");
-       var total = ".a" + numb;
-       $(total).removeClass("hidden");
-   });
-
-  $('#owl-demo').owlCarousel({
-       autoPlay: 3000,
-       items : 4,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3]
-   });
-
-    $('#rsvp_attending').change(function(){
-        if($('#rsvp_attending').val() == 'Yes'){
-          $('.optional-elements').removeClass('hidden');
-        }
-        else if($('#rsvp_attending').val() == 'No'){
-          $('.optional-elements').addClass('hidden');
-        }
-    });
-
-//timeline JS
-var items = document.querySelectorAll('.timeline li');
-
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function callbackFunc() {
-  for (var i = 0; i < items.length; i++) {
-    if (isElementInViewport(items[i])) {
-      items[i].classList.add('in-view');
-    }
-  }
-}
-
-window.addEventListener('load', callbackFunc);
-window.addEventListener('scroll', callbackFunc);
-
-$('.our-story-button').on('click', callbackFunc ());
-
-var dropdown = $('#main-navbar li.dropdown');
-
-$('a[data-toggle="dropdown"]').click(function(){
-  dropdown.addClass('active');
-  $('.dropdown-element').addClass('open');
-
-});
-
-  // Toggle open and close nav styles on click
-  $('#nav-toggle').click(function() {
-    $('nav ul').slideToggle();
-  });
-  // Hamburger to X toggle
-  $('#nav-toggle').on('click', function() {
-    this.classList.toggle('active');
-  });
-
-});
