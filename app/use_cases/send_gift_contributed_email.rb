@@ -16,6 +16,6 @@ class SendGiftContributedEmail
   attr_reader :contribution
 
   def send_admin_email
-    AdminMailer.gift_crossed(contribution: contribution).deliver_now
+    AdminMailer.gift_contributed(contribution: contribution).deliver_now
   end
 end

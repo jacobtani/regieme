@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get :contact_us
     get :faq
     get :gift_registry
-    get :cross_off_gift, as: :cross_off_gift
+    get :contribute_gift, as: :contribute_gift
   end
 
   get "/401", :to => "errors#missing_authentication"

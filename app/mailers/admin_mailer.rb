@@ -13,7 +13,7 @@ class AdminMailer < ApplicationMailer
     mail(from: @rsvp.email, subject: "RSVP from #{guest.full_name}")
   end
 
-  def gift_crossed(contribution:)
+  def gift_contributed(contribution:)
     @contribution = contribution
     mail(from: contribution.guest_names, subject: "Contribution to Honeymoon by #{contribution.guest_names}")
   end

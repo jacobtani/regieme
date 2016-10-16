@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def contact_us
   end
 
-  def cross_off_gift
+  def contribute_gift
     respond_to do |format|
       format.html
       format.js
