@@ -1,193 +1,20 @@
-// Outer navigation wrapper
-.navigation {
-  height: $nav-height;
+.navbar {
   background: $pink;
+  font-family: Avenir;
   color: $white;
-}
-
-.navbar-default .navbar-brand {
-  color: $white;
-}
-
-// Container with no padding for navbar
-.nav-container {
-  max-width: $content-width;
-  margin: 0 auto;
-  color: $white;
-}
-
-nav {
-  a:link {
-    color: $white;
-  }
-  a:visited {
-    color: $white;
-  }
-  a:hover {
-    color: $white;
-  }
-  a:active {
-    color: $white;
-  }
-}
-
-// Navigation
-nav {
   text-align: center;
   text-transform: uppercase;
-
-  ul {
-    list-style: none;
-    font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    color: $white;
-    li {
-      float: left;
-      position: relative;
-      color: $white;
-      a,
-      a:visited {
-        display: block;
-        padding: 0 20px;
-        line-height: $nav-height;
-        background: $pink;
-        color: $white;
-        text-decoration: none;
-        &:not(:only-child):after {
-          padding-left: 4px;
-          content: ' ▾';
-        }
-      } // Dropdown list
-      ul li {
-        min-width: 190px;
-        a {
-          padding: 15px;
-          line-height: 20px;
-        }
-      }
-    }
-  }
-}
-
-// Dropdown list binds to JS toggle event
-.nav-dropdown {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Mobile navigation */
-
-// Binds to JS Toggle
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: $pink;
-  height: $nav-height;
-  width: $nav-height;
-}
-@media only screen and (max-width: $breakpoint) {
-  // Hamburger nav visible on mobile only
-  .nav-mobile {
-    display: block;
-  }
-  nav {
-   width: 100%;
-    padding: $nav-height 0 15px;
-    color: $white;
-    ul {
-      display: none;
-      color: $white;
-      li {
-        float: none;
-        color: $white;
-        a {
-          padding: 15px;
-          line-height: 20px;
-        }
-        ul li a {
-          padding-left: 30px;
-        }
-      }
-    }
-  }
-  .nav-dropdown {
-    position: static;
-  }
-}
-@media screen and (min-width: $breakpoint) {
-  .nav-list {
-    display: block !important;
-    width: 100%;
-    padding: 0;
-    border-radius: 0px;
-    color: $white;
-  }
-}
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-  span,
-  span:before,
-  span:after {
-    cursor: pointer;
-    height: 5px;
-    width: 35px;
-    background: $white;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  span:before {
-    top: -10px;
-  }
-  span:after {
-    bottom: -10px;
-  }
-  &.active span {
-    background-color: transparent;
-    &:before,
-    &:after {
-      top: 0;
-    }
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
-  }
-}
-
-.navbar {
-  border-radius: 0px !important;
-  background-color: $pink !important;
-  font-size: 16px;
-  color: $white;
   font-weight: bold;
-  font-family: "futura-pt",sans-serif;
-  margin-bottom: 10px;
-  border-bottom: 0px;
-  .container-fluid {
-    padding-left: 11%;
-  }
 }
 
-.navbar .nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
   color: $white;
-  font-family: ‘Raleway,HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  padding: 9px 15px;
-  font-size: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+  background-image: none !important;
 }

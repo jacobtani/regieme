@@ -75,18 +75,14 @@ window.addEventListener('scroll', callbackFunc);
 
 $('.our-story-button').on('click', callbackFunc ());
 
+var dropdown = $('#main-navbar li.dropdown');
 
-  // If a link has a dropdown, add sub menu toggle.
-  $('nav ul li a:not(:only-child)').click(function(e) {
-    $(this).siblings('.nav-dropdown').toggle();
-    // Close one dropdown when selecting another
-    $('.nav-dropdown').not($(this).siblings()).hide();
-    e.stopPropagation();
-  });
-  // Clicking away from dropdown will remove the dropdown class
-  $('html').click(function() {
-    $('.nav-dropdown').hide();
-  });
+$('a[data-toggle="dropdown"]').click(function(){
+  dropdown.addClass('active');
+  $('.dropdown-element').addClass('open');
+
+});
+
   // Toggle open and close nav styles on click
   $('#nav-toggle').click(function() {
     $('nav ul').slideToggle();
