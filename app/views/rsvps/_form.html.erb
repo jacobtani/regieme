@@ -1,12 +1,14 @@
 <div class="container">
   <%= bootstrap_form_for(@rsvp, layout: :horizontal, label_errors: false, inline_errors: false)  do |f| %>
-    <% if @rsvp.errors.messages.present? %>
+    <% if @rsvp.errors.any? %>
       <div class="alert alert-warning" role="alert">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         <span class="sr-only">Error:</span>
-        <%= @rsvp.errors.full_messages.first %>
-      </div>
-    <% end %>
+          <% @rsvp.errors.full_messages.each do |error|%>
+            <%= error %>
+           <% end %>
+       </div>
+    <% end%>
     <%= f.text_field :full_name, placeholder: "Enter full name", class: "form-control required", autofocus: true, label: "Full Name" %>
     <%= f.text_field :email, placeholder: "Enter email", class: "form-control required", label: "Email" %>
     <%= f.select :attending, [ "Yes", "No" ], :prompt => "Are you attending?", class: "form-control required" %>
