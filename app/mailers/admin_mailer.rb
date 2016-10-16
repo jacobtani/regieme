@@ -10,7 +10,6 @@ class AdminMailer < ApplicationMailer
   def rsvp_confirmation(rsvp:, guest:)
     @rsvp = rsvp
     @guest = guest
-    binding.pry
     mail(to: "Iain and Tania <tjterminator.dev@gmail.com>", from: @rsvp.email, subject: "RSVP from #{guest.full_name}")
   end
 

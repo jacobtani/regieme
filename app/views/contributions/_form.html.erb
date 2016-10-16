@@ -1,12 +1,10 @@
-<div class='container'>
+<div class="container">
   <% @contribution = Contribution.new %>
   <%= bootstrap_form_for(@contribution, layout: :horizontal)  do |f| %>
     <%= f.alert_message "Please fix the errors below." %>
     <%= f.text_field :guest_names, placeholder: "Enter your names", class: "form-control required", control_col: "col-sm-8", autofocus: true, label: "Guest Names" %>
     <%= f.number_field :contribution_amount, placeholder: "Enter Contribution Amount", label: 'Contribution Amount', control_col: "col-sm-8" %>
-    <%= button_tag(type: "submit", class: "hollow button", id: "save-contribution-link", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}) do %>
-      <i class="glyphicon glyphicon-floppy-saved"></i> Save
-    <% end %>
+    <%= f.submit "Save", class: "hollow button", id: "save-contribution-link" %>
     <%= link_to "Cancel", gift_registry_path, id: "cancel-button" %>
   <% end %>
 </div>

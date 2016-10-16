@@ -1,13 +1,13 @@
 [
   {
           "question": "How do I get to the venues?",
-          "answer": "The easiest way to get to the venues is via car. The best public transport option is through catching a bus to Queensgate and then another one to Hutt Hospital. It is a very short walk from Boulcott Hospital. The details can be found on 'Wedding Festivities' page.",
+          "answer": "The easiest way to get to the venues is via car. The best public transport option is through catching a bus to Queensgate and then another one to Hutt Hospital. It is a very short walk from Boulcott Hospital. The details can be found on the 'Wedding Festivities' page.",
           "q_class":"q1",
           "a_class": "a1"
   },
   {
           "question": "What time should I arrive at the ceremony and reception?",
-          "answer": "Please arrive by 2.15pm for the ceremony to ensure we start on time at 2.30pm. For the reception, please arrive between 5.30pm and 6pm before the bridal party arrive.",
+          "answer": "Please arrive by 2.15pm for the ceremony to ensure we start on time at 2.30pm. For the reception, please arrive anytime between 5.30pm and 6.15pm before the bridal party arrive at 6.30pm.",
           "q_class":"q2",
           "a_class": "a2"
 
@@ -19,8 +19,8 @@
           "a_class":"a3"
   },
   {
-          "question": "How long will the ceremony take?",
-          "answer": "The ceremony will be a traditional Catholic wedding with some traditions from Kerala included. It should take no more than one hour.",
+          "question": "What kind of ceremony will it be and how long will the ceremony take?",
+          "answer": "The ceremony will be a traditional Catholic wedding with some Kerala, India traditions included. It should take no more than one hour.",
           "q_class":"q4",
           "a_class": "a4"
   },
