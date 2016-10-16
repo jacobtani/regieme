@@ -6,7 +6,7 @@
         <div class="item">
           <% @photo = d["photo"] %>
           <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-          <span class="caption"><%= d["name"] %></span>
+          <span id="main-people-name"><%= d["name"] %></span>
         </div>
       <% end %>
     </div>

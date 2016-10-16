@@ -34,15 +34,11 @@ $(document).ready(function() {
    });
 
   $('#owl-demo').owlCarousel({
-       autoPlay: 30000000000000000,
+       autoPlay: 3000,
        items : 4,
       itemsDesktop : [1199,3],
       itemsDesktopSmall : [979,3]
    });
-
-  $('.cross-off-gift-button').on('click', function () {
-    $('#modal-window').removeClass('hidden');
-  });
 
     $('#rsvp_attending').change(function(){
         if($('#rsvp_attending').val() == 'Yes'){
@@ -78,6 +74,7 @@ window.addEventListener('load', callbackFunc);
 window.addEventListener('scroll', callbackFunc);
 
 $('.our-story-button').on('click', callbackFunc ());
+
 
   // If a link has a dropdown, add sub menu toggle.
   $('nav ul li a:not(:only-child)').click(function(e) {

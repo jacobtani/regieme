@@ -5,8 +5,8 @@
     <% @accomodation.each do |a| %>
       <div class="columns large-4">
         <% @photo = a["photo"] %>
-        <img class="img-responsive tidy-img" src="/images/<%=@photo%>">
-        <h4 class="accomodation-heading"><%= link_to "#{a["name"]}", "#{a["url"]}"%></h4>
+        <%= image_tag(@photo, class: "img-responsive tidy-img") %>
+        <h4 id="accomodation-heading"><%= link_to "#{a["name"]}", "#{a["url"]}"%></h4>
         <h5><%= a["address"] %></h5>
         <h5><%= a["phone_number"] %></h5>
       </div>

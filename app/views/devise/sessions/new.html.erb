@@ -4,8 +4,6 @@
   <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.email_field :email, autofocus: true %>
     <%= f.password_field :password, autocomplete: "off" %>
-    <%= button_tag(type: "submit", class: "hollow button", id: "login-link", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Logging in..."}) do %>
-      <i class="fa fa-save"></i>Login
-    <% end %>
+    <%= f.submit "Login", class: "hollow button", id: "login-link" %>
   <% end %>
 </div>

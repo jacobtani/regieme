@@ -5,7 +5,7 @@
     <% @wedding_party.each do |b| %>
       <div class="large-3 columns">
         <% @photo=b["photo"] %>
-        <img class="img-responsive tidy-img" src="/images/<%=@photo%>">
+        <%= image_tag(@photo, class: "img-responsive tidy-img") %>
         <h4><%= b["name"] %></h4>
         <h5><%= b["title"] %></h5>
       </div>
