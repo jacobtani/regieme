@@ -8,12 +8,12 @@ class AdminMailerTest < ActionMailer::TestCase
   def test_send_enquiry
     message = Message.new
     message.email= guest.email
-    message.message_subject = 'QUESTION ABOUT THE WEDDING'
-    message.content = 'I am vegan'
+    message.message_subject = "QUESTION ABOUT THE WEDDING"
+    message.content = "I am vegan"
     email = AdminMailer.send_enquiry(guest: guest, message: message).deliver_now
     assert_not ActionMailer::Base.deliveries.empty?
-    assert_equal ['gen@gmail.com'], email.from
-    assert_equal ['iwandtj.rsvp@gmail.com'], email.to
+    assert_equal ["gen@gmail.com"], email.from
+    assert_equal ["iwandtj.rsvp@gmail.com"], email.to
     assert_equal 'QUESTION ABOUT THE WEDDING', email.subject
   end
 
@@ -21,7 +21,7 @@ class AdminMailerTest < ActionMailer::TestCase
     email = AdminMailer.rsvp_confirmation(rsvp: rsvp, guest: guest).deliver_now
     assert_not ActionMailer::Base.deliveries.empty?
     assert_equal [guest.email], email.from
-    assert_equal ['iwandtj.rsvp@gmail.com'], email.to
+    assert_equal ["iwandtj.rsvp@gmail.com"], email.to
     assert_equal "RSVP from #{guest.full_name}", email.subject
   end
 end

@@ -1,20 +1,7 @@
-# == Schema Information
-#
-# Table name: rsvps
-#
-#  id                   :integer          not null, primary key
-#  attending            :string           not null
-#  main_meal_preference :string
-#  dessert_preference   :string
-#  dietary_requirements :text
-#  guest_id             :integer          not null
-#  email                :string           not null
-#
-
 rsvp_one:
-  guest: gw
-  attending: 'yes'
-  email: 'gen@gmail.com'
-  main_meal_preference: 'Steak'
-  dessert_preference: 'Creme brulee'
-  dietary_requirements: 'i dont like carrots'
+  guest: "gw"
+  attending: "yes"
+  email: "gen@gmail.com"
+  main_meal_preference: "Steak"
+  dessert_preference: "Creme brulee"
+  dietary_requirements: "i dont like carrots"

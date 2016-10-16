@@ -3,7 +3,6 @@ require 'test_helper'
 class PagesControllerTest < ActionController::TestCase
 
   describe "Pages Controller Tests" do
-
     describe "actions by a non logged in user" do
 
       it "renders the wedding festivities page" do
