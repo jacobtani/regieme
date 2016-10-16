@@ -1,5 +1,5 @@
 class AdminMailer < ApplicationMailer
-  default :to => "Iain and Tania <tjterminator.dev@gmail.com>"
+  default :to => "Iain and Tania <iwandtj.rsvp@gmail.com>"
 
   def send_enquiry(guest:, message:)
     @guest = guest
@@ -10,7 +10,7 @@ class AdminMailer < ApplicationMailer
   def rsvp_confirmation(rsvp:, guest:)
     @rsvp = rsvp
     @guest = guest
-    mail(to: "Iain and Tania <tjterminator.dev@gmail.com>", from: @rsvp.email, subject: "RSVP from #{guest.full_name}")
+    mail(from: @rsvp.email, subject: "RSVP from #{guest.full_name}")
   end
 
   def gift_crossed(contribution:)
