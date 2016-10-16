@@ -1,11 +1,11 @@
-<div class="container level-header">
+<div class="container">
   <% if params[:controller] == "messages" %>
     <h2>Your name was not recognised in the guest list</h2>
     <p>Please try resending the message using your full name</p>
-    <%= link_to "Resend Message", contact_us_path, class: "hollow button" %>
+    <%= link_to "Resend Message", contact_us_path, class: "hollow button", id: "resend-message-link" %>
   <% else %>
     <h2>Page cannot be found</h2>
     <p>Looks like you went to the wrong page.</p>
-    <%= link_to "Home", root_path, class: "hollow button" %>
+    <%= link_to "Home", root_path, class: "hollow button", id: "home-link" %>
   <% end %>
 </div>

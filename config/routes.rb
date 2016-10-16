@@ -17,9 +17,9 @@ Rails.application.routes.draw do
     get :cross_off_gift, as: :cross_off_gift
   end
 
-  match "/401", :to => "errors#missing_authentication", :via => :all
-  match "/404", :to => "errors#not_found", :via => :all
-  match "/500", :to => "errors#internal_server_error", :via => :all
+  get "/401", :to => "errors#missing_authentication"
+  get "/404", :to => "errors#not_found"
+  get "/500", :to => "errors#internal_server_error"
   get "/messages/send_enquiry" => "messages#send_enquiry", as: :send_enquiry
   get "errors/not_found"
   get "errors/internal_server_error"
