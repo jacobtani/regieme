@@ -22,6 +22,7 @@ class PagesController < ApplicationController
   end
 
   def our_story
+    @our_story_events = JSON.parse((File.read("#{Rails.root}/app/assets/javascripts/our_story.json")))
   end
 
   def people
