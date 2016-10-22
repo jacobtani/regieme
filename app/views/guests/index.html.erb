@@ -9,7 +9,6 @@
       <th>First Name</th>
       <th>Surname</th>
       <th>Age Category</th>
-      <th>Address</th>
       <th>Email</th>
       <% if current_user %>
         <th>Administration</th>
@@ -20,7 +19,6 @@
         <td><%= guest.first_name %></td>
         <td><%= guest.surname %></td>
         <td><%= guest.age_category %></td>
-        <td><%= guest.address %></td>
         <td><%= guest.email %></td>
         <% if current_user && user_signed_in? %>
           <td><%= link_to "Edit", edit_guest_path(id: guest.id), class: "hollow button", id: "edit-guest-link" %>

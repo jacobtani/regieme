@@ -8,9 +8,8 @@ class GuestsControllerTest < ActionController::TestCase
     let(:user) { users(:admin) }
 
     describe "actions by a non logged in user" do
-
       it "doesn't allow guest to be created when not logged in" do
-        post :create, guest: { first_name: "Louis", surname: "TheMan", address: "1 Cake Rd, Newtown", email: "louis@gmail.com", age_category:
+        post :create, guest: { first_name: "Louis", surname: "TheMan", email: "louis@gmail.com", age_category:
           "adult" }
         assert_response 302
         assert_redirected_to new_user_session_path
@@ -32,37 +31,35 @@ class GuestsControllerTest < ActionController::TestCase
         assert_redirected_to new_user_session_path
       end
 
-     it "should not display all guests if not logged in" do
+      it "should not display all guests if not logged in" do
         get :index
         assert_response 302
         assert_redirected_to new_user_session_path
         assert_nil assigns(:guests)
-     end
-   end
+      end
+    end
 
-   describe "actions by logged in user" do
+    describe "actions by logged in user" do
 
      before do
        sign_in user
      end
 
      it "logged on user can add new guest" do
-       post :create, guest: { first_name: "Louis", surname: "TheMan", address: "1 Kfry Rd, Newtown", email: "louis@gmail.com", age_category: "adult" }
+       post :create, guest: { first_name: "Louis", surname: "TheMan", email: "louis@gmail.com", age_category: "adult" }
        assert flash[:success].must_equal "Guest was created successfully."
        assert_response 302
        assert_redirected_to guests_path
        @controller.instance_variable_get('@guest').first_name.must_equal "Louis"
        @controller.instance_variable_get('@guest').surname.must_equal "TheMan"
-       @controller.instance_variable_get('@guest').address.must_equal "1 Kfry Rd, Newtown"
        @controller.instance_variable_get('@guest').email.must_equal "louis@gmail.com"
      end
 
      it "logged on user can't add new guest with required fields missing" do
-       post :create, guest: { first_name: "Louis", address: "1 Kfry Rd, Newtown", email: "louis@gmail.com", age_category: "adult" }
+       post :create, guest: { first_name: "Louis", email: "louis@gmail.com", age_category: "adult" }
        assert_response 200
        assert_template :new
        @controller.instance_variable_get('@guest').first_name.must_equal "Louis"
-       @controller.instance_variable_get('@guest').address.must_equal "1 Kfry Rd, Newtown"
        @controller.instance_variable_get('@guest').email.must_equal "louis@gmail.com"
      end
 
@@ -94,9 +91,6 @@ class GuestsControllerTest < ActionController::TestCase
        assert_select "h2", "Guest List"
        assert_not_nil assigns(:guests)
      end
-
    end
-
  end
-
 end

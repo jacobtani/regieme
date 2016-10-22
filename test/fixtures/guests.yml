@@ -1,13 +1,11 @@
 aj:
   first_name: "Anita"
   surname: "Troll"
-  address: "81 Cold St, Dunedin"
   email: "anita@gmail.com"
   age_category: "adult"
 
 gw:
   first_name: "Gen"
   surname: "Cool"
-  address: "100 George St, Dunedin"
   email: "gen@gmail.com"
   age_category: "adult"
