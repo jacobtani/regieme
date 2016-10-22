@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Rsvps</h2>
+  <hr>
   <% @rsvps = locals[:guests] if @rsvps.nil? %>
   <div class="pull-right">
     <%= link_to "Add RSVP", new_rsvp_path, class: "hollow button", id: "new-rsvp-link" if current_user && user_signed_in? %>

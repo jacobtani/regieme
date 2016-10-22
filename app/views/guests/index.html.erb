@@ -1,5 +1,6 @@
 <div class="container">
   <h2>Guest List</h2>
+  <hr>
   <% @guests = locals[:guests] if @guests.nil? %>
   <div class="pull-right">
     <%= link_to "Add Guest", new_guest_path, class: "hollow button", id: "new-guest-link" if current_user && user_signed_in? %>
