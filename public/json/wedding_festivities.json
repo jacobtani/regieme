@@ -1,0 +1,22 @@
+[
+  {
+          "name": "Ceremony",
+          "time": "2.30pm - 3.30pm",
+          "location": "Sts Peter and Paul's Church",
+          "address_line_1": "60 Knights Road",
+          "address_line_2": "Lower Hutt",
+          "address_line_3": "Wellington",
+          "address_line_4": "New Zealand",
+          "url": "https://www.google.co.nz/maps/place/Catholic+Parish+of+St+Peter+and+Paul/@-41.2113714,174.9048733,17z/data=!4m13!1m7!3m6!1s0x6d38aa5708e876a1:0xd36c2514129e2f0c!2s60+Knights+Rd,+Lower+Hutt+5010!3b1!8m2!3d-41.2113714!4d174.907062!3m4!1s0x6d38aa5708e876a1:0x6ab11ad6c3af4f64!8m2!3d-41.2113815!4d174.9070699"
+  },
+  {
+          "name": "Reception",
+          "time": "6.30pm - 12.00am",
+          "location": "Boulcott Farm Heritage Golf Club",
+          "address_line_1": "33 Military Road",
+          "address_line_2": "Lower Hutt",
+          "address_line_3": "Wellington",
+          "address_line_4": "New Zealand",
+          "url": "https://www.google.co.nz/maps/place/Boulcott's+Farm+Heritage+Golf+Club/@-41.2000801,174.9249904,17z/data=!3m1!4b1!4m5!3m4!1s0x6d38aa8fccda3df9:0xc136add982db6a1c!8m2!3d-41.2000801!4d174.9271791"
+  }
+]
