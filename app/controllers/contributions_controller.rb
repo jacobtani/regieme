@@ -36,6 +36,6 @@ class ContributionsController < ApplicationController
   end
 
   def set_contribution
-    @contribution = Contribution.find params[:id] rescue nil
+    @contribution = Contribution.find params[:id]
   end
 end

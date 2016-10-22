@@ -20,62 +20,56 @@
   },
   {
           "question": "What kind of ceremony will it be and how long will the ceremony take?",
-          "answer": "The ceremony will be a traditional Catholic wedding with some Kerala, India traditions included. It should take no more than one hour.",
+          "answer": "The ceremony will be a traditional Catholic wedding with some traditions from Kerala, India included. It should take no more than one hour.",
           "q_class":"q4",
           "a_class": "a4"
   },
   {
-          "question": "Does your wedding have a theme?",
-          "answer": "Yes - pink and silver",
+          "question": "What is the dress code for the function?",
+          "answer": "Evening wear. This means shirts and pants for guys and cocktail dresses/saris for girls.",
           "q_class":"q5",
           "a_class": "a5"
   },
   {
-          "question": "What is the dress code for the function?",
-          "answer": "Evening wear. This means shirts and pants for guys and cocktail dresses/saris for girls.",
+          "question": "Are there any colours we should avoid wearing?",
+          "answer": "Please avoid wearing white, ivory, cream and pink so that you do not clash with the bridal party.",
           "q_class":"q6",
           "a_class": "a6"
   },
   {
-          "question": "Are there any colours we should avoid wearing?",
-          "answer": "Please avoid wearing white, ivory, black, grey and baby pink so that you do not clash with the bridal party.",
+          "question": "When do I have to RSVP for the wedding?",
+          "answer": "Please RSVP by Friday 20 January so that we can give numbers and preferred meal options to the caterers. Ensure to note down any dietary requirements you may have.",
           "q_class":"q7",
           "a_class": "a7"
   },
   {
-          "question": "When do I have to RSVP for the wedding?",
-          "answer": "Please RSVP by Friday 20 January so that we can give numbers and preferred meal options to the caterers. Ensure to note down any dietary requirements you may have.",
+          "question": "Am I allowed to post photos from your wedding on social media?",
+          "answer": "Please refrain from posting pictures on social media until we have.",
           "q_class":"q8",
           "a_class": "a8"
   },
   {
-          "question": "Am I allowed to post photos from your wedding on social media?",
-          "answer": "No - please refrain from posting pictures on social media until we have.",
+          "question": "What gifts would you like?",
+          "answer": "We would love to get contributions towards our honeymoon. Please see our Gift Registry page for more details. Your generosity is much appreciated.",
           "q_class":"q9",
           "a_class": "a9"
   },
   {
-          "question": "What gifts would you like?",
-          "answer": "We would like to get contributions towards our honeymoon. Please see our Gift Registry page for more details. Your generosity is much appreciated.",
+          "question": "Will last names be changing after the wedding?",
+          "answer": "Yes",
           "q_class":"q10",
           "a_class": "a10"
   },
   {
-          "question": "Will last names be changing after the wedding?",
-          "answer": "Yes",
+          "question": "When and where are you going to for your honeymoon?",
+          "answer": "We are going to Rarotonga for our honeymoon from 27 February - 8 March.",
           "q_class":"q11",
           "a_class": "a11"
   },
   {
-          "question": "When and where are you going to for your honeymoon?",
-          "answer": "We are going to Rarotonga for our honeymoon from 27 February - 8 March.",
-          "q_class":"q12",
-          "a_class": "a12"
-  },
-  {
           "question": "I have a question not answered here; how do I contact you?",
           "answer": "Please send us a message using the Contact Us page.",
-          "q_class":"q13",
-          "a_class": "a13"
+          "q_class":"q12",
+          "a_class": "a12"
   }
 ]
