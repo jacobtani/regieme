@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container accomodation">
   <h2>Accomodation</h2>
   <div class="hr"></div>
   <div class="row">
@@ -6,9 +6,11 @@
       <div class="columns large-4">
         <% @photo = a["photo"] %>
         <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-        <h4 id="accomodation-heading"><%= link_to "#{a["name"]}", "#{a["url"]}"%></h4>
-        <h5><%= a["address"] %></h5>
-        <h5><%= a["phone_number"] %></h5>
+        <dl>
+          <dt><%= link_to "#{a["name"]}", "#{a["url"]}"%></dt>
+          <dd><%= a["address"] %></dd>
+          <dd><%= a["phone_number"] %></dd>
+        </dl>
       </div>
     <% end %>
   </div>

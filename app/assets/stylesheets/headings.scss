@@ -11,7 +11,6 @@ h3 {
   color: $pink;
 }
 
-
 h4 {
   font-size: 25px;
   color: $pink;
@@ -34,46 +33,4 @@ h6 {
   margin-bottom: 30px;
   background-position: center;
   background-image: url("../images/divider.png");
-}
-
-.modal-heading-style {
-  font-family: "Avenir", sans-serif;
-  color: $pink;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-#rsvp-date {
-  text-align: center;
-  font-style: italics;
-}
-
-#festivities-subheading {
-  font-family: "Avenir", sans-serif;
-  font-size: 40px;
-  color: $pink;
-  padding-bottom: 10px;
-}
-
-#accomodation-heading {
-  text-transform: uppercase;
-}
-
-#homepage-wedding-details {
-  font-weight: italic;
-  text-align: center;
-  margin-top: 0px;
-  color: $pink;
-}
-
-#bridesmaids-groomsmen {
-  padding-top: 30px;
-}
-
-#dropdown-title {
-  color: $white;
-}
-
-#rsvp-date-heading {
-  text-align: center;
 }

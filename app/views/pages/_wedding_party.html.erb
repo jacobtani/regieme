@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container wedding-party">
   <h2>Wedding Party</h2>
   <div class="hr"></div>
   <div class="row text-center">
@@ -6,8 +6,8 @@
       <div class="large-3 columns">
         <% @photo=b["photo"] %>
         <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-        <h4><%= b["name"] %></h4>
-        <h5><%= b["title"] %></h5>
+        <h5><%= b["name"] %></h5>
+        <span><%= b["title"] %></span>
       </div>
     <% end%>
   </div>

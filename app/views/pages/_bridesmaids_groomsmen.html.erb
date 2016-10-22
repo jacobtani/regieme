@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container bridesmaids-groomsmen">
   <h2>Bridesmaids and Groomsmen</h2>
   <div class="hr"></div>
   <% @bridesmaids_groomsmen.each do |b| %>
@@ -6,20 +6,20 @@
       <div class="columns large-4">
         <% @photo_1 = b["photo_1"] %>
         <%= image_tag(@photo_1, class: "img-responsive tidy-img") %>
-        <h4><%= b["name_1"] %></h4>
-        <h5><%= b["title_1"] %></h5>
+        <h5><%= b["name_1"] %></h5>
+        <span><%= b["title_1"] %></span>
       </div>
       <div class="columns large-4">
         <% @photo_2 = b["photo_2"] %>
         <%= image_tag(@photo_2, class: "img-responsive tidy-img") %>
-        <h4><%= b["name_2"]%></h4>
-        <h5><%= b["title_2"] %></h5>
+        <h5><%= b["name_2"]%></h5>
+        <span><%= b["title_2"] %></span>
       </div>
       <div class="columns large-4">
         <% @photo_3 = b["photo_3"] %>
         <%= image_tag(@photo_3, class: "img-responsive tidy-img") %>
-        <h4><%= b["name_3"] %></h4>
-        <h5><%= b["title_3"] %></h5>
+        <h5><%= b["name_3"] %></h5>
+        <span><%= b["title_3"] %></span>
       </div>
     </div>
   <% end%>

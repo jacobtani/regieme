@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container main-people-page">
   <h2>Bride, Groom and Parents</h2>
   <div class="hr"></div>
     <div id="owl-demo" class="owl-carousel">
@@ -6,7 +6,7 @@
         <div class="item">
           <% @photo = d["photo"] %>
           <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-          <span id="main-people-name"><%= d["name"] %></span>
+          <span><%= d["name"] %></span>
         </div>
       <% end %>
     </div>

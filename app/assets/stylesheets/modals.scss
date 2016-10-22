@@ -5,7 +5,6 @@
   left: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
-
 }
 
 #contribute-gift-modal {
@@ -14,4 +13,11 @@
   vertical-align: middle;
   background-color: $white;
   margin : 0 auto;
+}
+
+#modal-heading-style {
+  font-family: "Avenir", sans-serif;
+  color: $pink;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

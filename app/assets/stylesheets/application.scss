@@ -23,12 +23,12 @@
 @import "timeline";
 @import "forms";
 @import "owl";
-@import "text";
 @import "images";
 @import "grid";
 @import "media";
 @import "modals";
 @import "flash";
+@import "pages";
 
 div[style] {
   width: 200 !important;
@@ -48,10 +48,6 @@ body {
   padding-top: 70px;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#bridesmaids-groomsmen {
+  padding-top: 30px;
 }
