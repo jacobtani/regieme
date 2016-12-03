@@ -13,8 +13,6 @@
       <ul class="nav navbar-nav">
         <% if current_user %>
           <li class=<%= "active" if current_page?(rsvps_path) %>><%= link_to "Rsvp", rsvps_path %></li>
-          <li class=<%= "active" if current_page?(guests_path) %>><%= link_to "Guests", guests_path %></li>
-          <li class=<%= "active" if current_page?(contributions_path) %>><%= link_to "Contributions", contributions_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
         <% else %>
           <li class=<%= "active" if current_page?(welcome_path) %>><%= link_to "Home", welcome_path %></li>
@@ -23,12 +21,12 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Details<b class="caret"></b></a>
             <ul class="dropdown-menu">
+              <li><%= link_to "Info", info_path, class: "dropdown-link" %></li>
               <li><%= link_to "Accomodation", accomodation_path, class: "dropdown-link" %></li>
               <li><%= link_to "Contact Us", contact_us_path, class: "dropdown-link" %></li>
               <li><%= link_to "FAQ", faq_path, class: "dropdown-link" %></li>
               <li><%= link_to "Our Story", our_story_path, class: "dropdown-link" %></li>
               <li><%= link_to "People", people_path, class: "dropdown-link" %></li>
-              <li><%= link_to "Wedding Festivities", wedding_festivities_path, class: "dropdown-link" %></li>
             </ul>
           </li>
         <% end %>

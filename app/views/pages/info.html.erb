@@ -1,12 +1,12 @@
 <div class="container festivities">
-  <h2>Wedding Festivities</h2>
+  <h2>Info</h2>
   <hr>
   <div class="row">
-    <% @wedding_festivities.each do |d| %>
+    <% @info.each do |d| %>
       <div class="columns large-6">
         <h3><%= link_to "#{d["name"]}", d["url"]%></h3>
         <dl>
-          <dt>TIME</dt><dd><%= d["time"] %></dd><br>
+          <dt>TIME</dt><dd><time><%= d["time"] %></time></dd><br>
           <dt>LOCATION</h4><h5><%= d["location"] %></dt>
           <dd><%= d["address_line_1"]%></dd>
           <dd><%= d["address_line_2"]%></dd>

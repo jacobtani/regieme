@@ -7,7 +7,7 @@
   </div>
   <table class="table table-striped">
     <thead>
-      <th>Guest</th>
+      <th>Guest Name</th>
       <th>Email</th>
       <th>Attending</th>
       <th>Mains Preference</th>
@@ -19,7 +19,7 @@
     </thead>
     <% @rsvps.each do |rsvp| %>
       <tr>
-        <td><%= Guest.find(rsvp.guest).full_name %></td>
+        <td><%= rsvp.guest_name %></td>
         <td><%= rsvp.email %></td>
         <td><%= rsvp.attending %></td>
         <td><%= rsvp.main_meal_preference %></td>

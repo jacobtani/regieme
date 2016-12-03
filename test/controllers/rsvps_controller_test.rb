@@ -3,18 +3,17 @@ require 'test_helper'
 class RsvpsControllerTest < ActionController::TestCase
 
   describe "Rsvps Controller Tests" do
-    let(:anita) { guests(:aj) }
     let(:rsvp) { rsvps(:rsvp_one) }
     let(:user) { users(:admin) }
 
     describe "actions by a non logged in user" do
 
       it "allows rsvp to be created when not logged in" do
-        post :create, rsvp: { full_name: "Anita Troll", attending: "Yes", email: "anita@gmail.com", main_meal_preference: "Steak", dessert_preference: "Creme brulee" }
+        post :create, rsvp: { guest_name: "Anita Troll", attending: "Yes", email: "anita@gmail.com", main_meal_preference: "Steak", dessert_preference: "Creme brulee" }
         assert_response 200
         assert_template :new
         assert_select "h2", "Rsvp"
-        @controller.instance_variable_get('@guest').full_name.must_equal "Anita Troll"
+        @controller.instance_variable_get('@rsvp').guest_name.must_equal "Anita Troll"
         @controller.instance_variable_get('@rsvp').email.must_equal "anita@gmail.com"
         @controller.instance_variable_get('@rsvp').attending.must_equal "Yes"
         @controller.instance_variable_get('@rsvp').main_meal_preference.must_equal "Steak"
@@ -22,7 +21,7 @@ class RsvpsControllerTest < ActionController::TestCase
       end
 
       it "doesnt allow rsvp to be created when required fields missing when not logged in" do
-        post :create, rsvp: { full_name: "Anita Troll", attending: "Yes" }
+        post :create, rsvp: { guest_name: "Anita Troll", attending: "Yes" }
         assert_template :new
         assert_response 200
       end

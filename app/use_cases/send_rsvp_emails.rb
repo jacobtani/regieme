@@ -1,11 +1,10 @@
 class SendRsvpEmails
   include UseCasePattern
 
-  validates :rsvp, :guest, presence: true
+  validates :rsvp, presence: true
 
-  def initialize(rsvp:, guest:)
+  def initialize(rsvp:)
     @rsvp = rsvp
-    @guest = guest
   end
 
   def perform
@@ -15,13 +14,13 @@ class SendRsvpEmails
 
   private
 
-  attr_reader :rsvp, :guest
+  attr_reader :rsvp
 
   def send_user_email
-    UserMailer.rsvp_confirmation(rsvp: rsvp, guest: guest).deliver_now
+    UserMailer.rsvp_confirmation(rsvp: rsvp).deliver_now
   end
 
   def send_admin_email
-    AdminMailer.rsvp_confirmation(rsvp: rsvp, guest: guest).deliver_now
+    AdminMailer.rsvp_confirmation(rsvp: rsvp).deliver_now
   end
 end

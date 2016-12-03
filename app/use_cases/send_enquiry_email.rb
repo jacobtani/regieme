@@ -1,10 +1,9 @@
 class SendEnquiryEmail
   include UseCasePattern
 
-  validates :guest, :message, presence: true
+  validates :message, presence: true
 
-  def initialize(guest:, message:)
-    @guest = guest
+  def initialize(message:)
     @message = message
   end
 
@@ -14,9 +13,9 @@ class SendEnquiryEmail
 
   private
 
-  attr_reader :guest, :message
+  attr_reader :message
 
   def send_admin_email
-    AdminMailer.send_enquiry(guest: guest, message: message).deliver_now
+    AdminMailer.send_enquiry(message: message).deliver_now
   end
 end
