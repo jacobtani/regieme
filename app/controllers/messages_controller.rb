@@ -7,12 +7,13 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new message_params
     respond_to do |format|
+      binding.pry
       if @message.valid?
-        SendEnquiryEmail.perform!(guest: @guest, message: @message)
+        SendEnquiryEmail.perform!(message: @message)
         flash[:notice] = "Message sent! Thank you for contacting us."
         format.html { redirect_to contact_us_path }
       else
-        flash[:error] = "Unfortunately your name could not be found in the guest list."
+        flash[:error] = "Unfortunately the message isn't valid"
         format.html { redirect_to contact_us_path }
       end
     end
