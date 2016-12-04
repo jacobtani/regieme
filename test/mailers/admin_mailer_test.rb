@@ -6,7 +6,7 @@ class AdminMailerTest < ActionMailer::TestCase
 
   def test_send_enquiry
     message = Message.new
-    message.email= message.email
+    message.email= "gen@gmail.com"
     message.message_subject = "QUESTION ABOUT THE WEDDING"
     message.content = "I am vegan"
     email = AdminMailer.send_enquiry(message: message).deliver_now
