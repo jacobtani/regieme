@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, only: [:sessions]
-  resources :guests
-  resources :contributions
   resources :messages, only: [:create]
 
   resources :rsvps
   controller :pages do
-    get :wedding_festivities
+    get :info
     get :welcome
     get :our_story
     get :accomodation
@@ -14,7 +12,6 @@ Rails.application.routes.draw do
     get :contact_us
     get :faq
     get :gift_registry
-    get :contribute_gift, as: :contribute_gift
   end
 
   get "/401", :to => "errors#missing_authentication"

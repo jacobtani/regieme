@@ -1,27 +1,24 @@
-.festivities {
+.homepage {
+  h3 { text-align: center; }
+  p { padding-top: 10px; }
+}
+
+.info {
   dd, dt { color: $pink; }
-  h3 { text-transform: uppercase; text-decoration: underline;}
+  h3 { text-transform: uppercase; text-align: left; padding-bottom: 10px; }
 }
 
 .accomodation {
   dt a { text-transform: uppercase;}
 }
 
-.new-rsvp {
+.new-rsvp-page {
   h5 { text-align: center; font-style: italics; }
+  h4 { text-align: center; }
 }
 
-.accomodation, .festivities {
+.accomodation-page, .info-page {
   dd { color: $pink; }
-}
-
-.homepage {
-  h4 {
-    font-weight: italic;
-    text-align: center;
-    margin-top: 0px;
-    color: $pink;
-  }
 }
 
 .main-people-page {
@@ -35,6 +32,14 @@
   }
 }
 
+.bridesmaids-groomsmen, .wedding-party {
+  h5 { text-transform: uppercase; font-weight: bold; font-style: normal; }
+  span { color: $pink }
+}
+
+.wedding-party {
+  h2 { padding-top: 40px; }
+}
 .faq-page {
   dt { font-size: 18px; }
   dd { padding-top: 20px; }
@@ -48,9 +53,4 @@
     font-weight: bold;
     font-size: 18px;
   }
-}
-
-.bridesmaids-groomsmen, .wedding-party {
-  h5 { text-transform: uppercase; font-weight: bold; font-style: normal; }
-  span { color: $pink }
 }

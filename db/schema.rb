@@ -10,31 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021222317) do
+ActiveRecord::Schema.define(version: 20161203215319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contributions", force: :cascade do |t|
-    t.string  "guest_names"
-    t.decimal "contribution_amount"
-  end
-
-  create_table "guests", force: :cascade do |t|
-    t.string "first_name"
-    t.string "surname"
-    t.string "email"
-    t.string "age_category"
-  end
-
   create_table "rsvps", force: :cascade do |t|
-    t.string  "attending",            null: false
-    t.string  "main_meal_preference"
-    t.string  "dessert_preference"
-    t.text    "dietary_requirements"
-    t.integer "guest_id",             null: false
-    t.string  "email",                null: false
-    t.index ["guest_id"], name: "index_rsvps_on_guest_id", using: :btree
+    t.string "attending",            null: false
+    t.string "main_meal_preference"
+    t.string "dessert_preference"
+    t.text   "dietary_requirements"
+    t.string "email",                null: false
+    t.string "guest_name"
   end
 
   create_table "users", force: :cascade do |t|

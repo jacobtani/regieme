@@ -5,7 +5,7 @@ class Message
 
   attr_accessor :content, :message_subject, :full_name, :email
 
-  validates :message_subject, presence: true
+  validates :message_subject, :email, presence: true
   validates :full_name, format: { with: /[a-zA-Z]/}
   validates_length_of :content, :maximum => 500
 

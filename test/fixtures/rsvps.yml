@@ -1,5 +1,5 @@
 rsvp_one:
-  guest: "gw"
+  guest_name: "Gen User"
   attending: "yes"
   email: "gen@gmail.com"
   main_meal_preference: "Steak"

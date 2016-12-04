@@ -9,8 +9,8 @@
            <% end %>
        </div>
     <% end%>
-    <%= f.text_field :full_name, placeholder: "Enter full name", class: "form-control required", autofocus: true, label: "Full Name" %>
-    <%= f.text_field :email, placeholder: "Enter email", class: "form-control required", label: "Email" %>
+    <%= f.text_field :guest_name, placeholder: "Enter full name", class: "form-control required", autofocus: true, label: "Full Name" %>
+    <%= f.text_field :email, placeholder: "Enter contact email address", class: "form-control required", label: "Contact Email Address" %>
     <%= f.select :attending, [ "Yes", "No" ], :prompt => "Are you attending?", class: "form-control required" %>
     <div class="optional-elements">
       <%= f.form_group :main_meal_preference, label: { text: "Main Preference" } do %>

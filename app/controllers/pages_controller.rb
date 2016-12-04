@@ -7,13 +7,6 @@ class PagesController < ApplicationController
   def contact_us
   end
 
-  def contribute_gift
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
-
   def faq
     @faqs = JSON.parse((File.read("#{Rails.root}/public/json/faq.json")))
   end
@@ -31,8 +24,8 @@ class PagesController < ApplicationController
     @wedding_party = JSON.parse((File.read("#{Rails.root}/public/json/wedding_party.json")))
   end
 
-  def wedding_festivities
-    @wedding_festivities = JSON.parse((File.read("#{Rails.root}/public/json/wedding_festivities.json")))
+  def info
+    @info = JSON.parse((File.read("#{Rails.root}/public/json/info.json")))
   end
 
   def welcome

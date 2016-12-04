@@ -1,0 +1,23 @@
+<div class="container info">
+  <% if @info.nil? %>
+    <% @info = JSON.parse((File.read("#{Rails.root}/public/json/info.json"))) %>
+  <% else %>
+    <h2>Info</h2>
+    <hr>
+  <% end %>
+  <div class="row">
+    <% @info.each do |d| %>
+      <div class="columns large-6">
+        <h3><%= d["name"] %></h3>
+        <dl>
+          <dt>TIME</dt><dd><time><%= d["time"] %></time></dd><br>
+          <dt>LOCATION</h4><h5><%= link_to "#{d["location"]}", d["url"] %></dt>
+          <dd><%= d["address_line_1"]%></dd>
+          <dd><%= d["address_line_2"]%></dd>
+          <dd><%= d["address_line_3"]%></dd>
+          <dd><%= d["address_line_4"]%></dd>
+        </dl>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,8 +1,8 @@
 Dear Iain and Tania,
 
-A new RSVP has been created: 
+A new RSVP has been created:
 
-Guest Name: <%= @guest.full_name %>
+Guest Name: <%= @rsvp.guest_name %>
 Attending: <%= @rsvp.attending %>
 <% if @rsvp.attending == 'Yes'%>
 Mains Preference: <%=@rsvp.main_meal_preference %>
@@ -11,4 +11,3 @@ Dessert Preference: <%=@rsvp.dessert_preference %>
 Dietary Requirements: <%= @rsvp.dietary_requirements %>
 <% end %>
 <% end%>
-
