@@ -3,12 +3,12 @@
   p { padding-top: 10px; }
 }
 
-.info {
+.info-page {
   dd, dt { color: $pink; }
   h3 { text-transform: uppercase; text-align: left; padding-bottom: 10px; }
 }
 
-.accomodation {
+.accomodation-page {
   dt a { text-transform: uppercase;}
 }
 
@@ -40,6 +40,7 @@
 .wedding-party {
   h2 { padding-top: 40px; }
 }
+
 .faq-page {
   dt { font-size: 18px; }
   dd { padding-top: 20px; }

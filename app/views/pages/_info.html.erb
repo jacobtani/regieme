@@ -1,4 +1,4 @@
-<div class="container info">
+<div class="container info-page">
   <% if @info.nil? %>
     <% @info = JSON.parse((File.read("#{Rails.root}/public/json/info.json"))) %>
   <% else %>
