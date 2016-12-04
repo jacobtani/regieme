@@ -6,6 +6,17 @@ h2 {
   text-align: center;
 }
 
+h2::after {
+  display: block;
+  height: 40px;
+  content: '';
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  background-position: center;
+  background-image: url("../images/divider.png");
+  border-top: 0px;
+}
+
 h3 {
   font-size: 35px;
   color: $pink;
@@ -24,14 +35,4 @@ h5 {
 
 h6 {
   font-size: 10px;
-}
-
-hr {
-  display: block;
-  height: 40px;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  background-position: center;
-  background-image: url("../images/divider.png");
-  border-top: 0px;
 }

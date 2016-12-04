@@ -1,6 +1,5 @@
 <div class="container faq-page">
   <h2>Faq</h2>
-  <hr>
   <% @faqs.each do |faq| %>
     <dl>
       <dt aria-label="question" class="question <%= faq["q_class"]%>"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <%= faq["question"] %></dt>

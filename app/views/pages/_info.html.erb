@@ -3,7 +3,6 @@
     <% @info = JSON.parse((File.read("#{Rails.root}/public/json/info.json"))) %>
   <% else %>
     <h2>Info</h2>
-    <hr>
   <% end %>
   <div class="row">
     <% @info.each do |d| %>
