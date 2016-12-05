@@ -1,5 +1,5 @@
 class AdminMailer < ApplicationMailer
-  default :to => "Iain and Tania <iwandtj.rsvp@gmail.com>"
+  default :to => "Iain and Tania <iainandtj.rsvp@gmail.com>"
 
   def send_enquiry(message:)
     @message = message

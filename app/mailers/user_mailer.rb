@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default :from => "Iain and Tania <iwandtj.rsvp@gmail.com>"
+  default :from => "Iain and Tania <iainandtj.rsvp@gmail.com>"
 
   def rsvp_confirmation(rsvp:)
     @rsvp = rsvp
