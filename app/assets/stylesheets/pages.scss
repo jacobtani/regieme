@@ -8,13 +8,13 @@
 }
 
 .homepage {
-  h3 { text-align: center; padding-bottom: 10px; }
+  h3 { text-align: center; padding-bottom: 10px;   font-size: 35px; color: $pink; }
   .wedding-date { font-size: 35px; text-align: center; color: $pink; }
   .info-page {
     background-color: $grey;
     padding-left: 10px;
     margin-top: 5px;
-
+    padding-bottom: 15px;
   }
 }
 
@@ -22,7 +22,12 @@
   dd, dt { color: $pink; }
   p {   font-size: 25px; color: $pink; text-transform: uppercase; text-align: left; padding-bottom: 10px; }
   .info-time { padding-bottom: 8px; }
-  .events-list-wrapper { background-color: $grey; padding-top: 10px; margin-left: 40px; }
+  div { text-align: center; }
+  dd > p { text-align: center; }
+  padding-left: 10px;
+  margin-top: 5px;
+  padding-bottom: 15px;
+
 }
 
 .accomodation-page {
@@ -31,7 +36,7 @@
 
 .new-rsvp-page {
   h5 { text-align: center; font-style: italics; }
-  h4 { text-align: center; padding-bottom: 10px; }
+  p { text-align: center; padding-bottom: 10px;   font-size: 25px; color: $pink; }
 }
 
 .accomodation-page, .info-page {
