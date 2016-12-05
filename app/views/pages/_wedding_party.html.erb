@@ -1,4 +1,4 @@
-<div class="container wedding-party-page">
+<div class="wedding-party-page container">
   <h2>Wedding Party</h2>
   <div class="row text-center">
     <% @wedding_party.each do |b| %>
@@ -7,7 +7,7 @@
         <% @photo=b["photo"] %>
         <dd><%= image_tag(@photo, class: "img-responsive tidy-img") %></dd>
         <dt>Person's Name</dt>
-        <dd><h5><%= b["name"] %></h5></dd>
+        <dd><p><%= b["name"] %></p></dd>
         <dt>Person's Role</dt>
         <dd><span><%= b["title"] %></span></dd>
       </dl>
