@@ -1,22 +1,23 @@
 <%-
   content_for :page_title, 'Our Story'
 -%>
-
-<div class="our-story-page container">
-  <h2>Our Story</h2>
-  <section class="timeline">
-    <ul>
-      <% @our_story_events.each do |event| %>
-        <li>
-          <dl>
-            <dt>Event Date</dt>
-            <% @date = event["date"] %>
-            <dd><time datetime="<%= Date.parse(@date).strftime('%F') %>"><%= Date.parse(@date).strftime("%-d %B %Y") %></time></dd>
-            <dt>Event Details</dt>
-            <dd><%= event["description"] %></dd>
-          </dl>
-        </li>
-      <% end %>
-    </ul>
-  </section>
-</div>
+<% content_for :page_content do %>
+  <div class="our-story-page container">
+    <h2>Our Story</h2>
+    <section class="timeline">
+      <ul>
+        <% @our_story_events.each do |event| %>
+          <li>
+            <dl>
+              <dt>Event Date</dt>
+              <% @date = event["date"] %>
+              <dd><time datetime="<%= Date.parse(@date).strftime('%F') %>"><%= Date.parse(@date).strftime("%-d %B %Y") %></time></dd>
+              <dt>Event Details</dt>
+              <dd><%= event["description"] %></dd>
+            </dl>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+<% end %>
