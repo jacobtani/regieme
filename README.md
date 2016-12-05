@@ -1,5 +1,5 @@
 ### Regieme
-`Regieme` is our wedding website. It allows guests to view information about the wedding as well as RSVP and record gift contributions.
+`Regieme` is our wedding website. It allows guests to view information about the wedding and RSVP for catering purposes.
 
 ### Setup
 
@@ -12,11 +12,6 @@
 * Run all migrations: ```rake db:migrate```
 
 * Seed the database: ```rake db:seed```
-
-* Import the guest list in csv format using the following command to heroku (sample csv file contained):
-```
- psql `heroku config:get DATABASE_URL -a iwandtj`?ssl=true -c "\copy guests FROM '/home/tania/all-guests.csv' WITH CSV;"
- ```
 
 * Run application server: ```rails s```
 
