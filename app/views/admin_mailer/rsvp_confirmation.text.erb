@@ -1,10 +1,10 @@
 Dear Iain and Tania,
 
-A new RSVP has been created:
+Someone has RSVPed for your wedding. The details are as follows:
 
 Guest Name: <%= @rsvp.guest_name %>
 Attending: <%= @rsvp.attending %>
-<% if @rsvp.attending == 'Yes'%>
+<% if @rsvp.attending == "Yes" %>
 Mains Preference: <%=@rsvp.main_meal_preference %>
 Dessert Preference: <%=@rsvp.dessert_preference %>
 <% if @rsvp.dietary_requirements != """" %>
