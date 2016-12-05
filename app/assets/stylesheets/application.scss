@@ -49,3 +49,31 @@ body {
 #bridesmaids-groomsmen {
   padding-top: 30px;
 }
+
+.banner {
+  margin-left: 42px;
+  margin-right: 50px;
+}
+
+@media all and (max-width: 700px) {
+  .banner {
+    margin-left: 2px;
+    margin-right: 10px;
+  }
+.timeline ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.timeline ul li {
+  margin-left: 0px;
+}
+.timeline ul li:nth-child(odd) dl {
+  left: 0px;
+}
+.timeline ul li:nth-child(even) dl {
+  left: 0px;
+}
+margin-left: 30px;
+margin-right: 50px;
+font-size: 50%;
+}

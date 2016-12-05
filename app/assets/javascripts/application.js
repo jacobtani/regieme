@@ -21,7 +21,6 @@
 //= require owl-carousel
 //= require faq
 //= require rsvp
-//= require turbolinks
 //= require_tree .
 //= require bootstrap.js
 
