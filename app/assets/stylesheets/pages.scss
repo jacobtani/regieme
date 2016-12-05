@@ -12,6 +12,9 @@
   .wedding-date { font-size: 35px; text-align: center; color: $pink; }
   .info-page {
     background-color: $grey;
+    padding-left: 10px;
+    margin-top: 5px;
+
   }
 }
 
@@ -19,7 +22,7 @@
   dd, dt { color: $pink; }
   p {   font-size: 25px; color: $pink; text-transform: uppercase; text-align: left; padding-bottom: 10px; }
   .info-time { padding-bottom: 8px; }
-  .events-list-wrapper { background-color: $grey; padding-top: 10px; }
+  .events-list-wrapper { background-color: $grey; padding-top: 10px; margin-left: 40px; }
 }
 
 .accomodation-page {
