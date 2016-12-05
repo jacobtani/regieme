@@ -16,7 +16,7 @@ class RsvpsController < ApplicationController
       if @rsvp.save
         SendRsvpEmails.perform!(rsvp: @rsvp)
         format.html { render :new }
-        flash.now[:success] = "Thank you for RSVPing #{@rsvp.guest_name}! Please RSVP for other members of your party individually if you haven't already done so."
+        flash.now[:success] = "Thank you for RSVPing #{@rsvp.guest_name}! Please RSVP for other members of your party/group individually if you haven't already done so."
       else
         format.html { render :new }
       end

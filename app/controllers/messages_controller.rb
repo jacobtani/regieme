@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
         flash[:notice] = "Message sent! Thank you for contacting us."
         format.html { redirect_to contact_us_path }
       else
-        flash[:error] = "Unfortunately the message isn't valid"
+        flash[:error] = "Unfortunately the message was unable to be sent please try again"
         format.html { redirect_to contact_us_path }
       end
     end
