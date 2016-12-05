@@ -4,10 +4,13 @@
     <ul>
       <% @our_story_events.each do |event| %>
         <li>
-          <div>
-            <time><%= event["date"] %></time>
-            <p id="story-event-text"><%= event["description"] %></p>
-          </div>
+          <dl>
+            <dt>Event Date</dt>
+            <% @date = event["date"] %>
+            <dd><time datetime="<%= Date.parse(@date).strftime('%F') %>"><%= Date.parse(@date).strftime("%-d %B %Y") %></time></dd>
+            <dt>Event Details</dt>
+            <dd><%= event["description"] %></dd>
+          </dl>
         </li>
       <% end %>
     </ul>

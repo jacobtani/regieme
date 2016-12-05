@@ -13,7 +13,7 @@
     <%= f.text_field :email, placeholder: "Enter contact email address", class: "form-control required", label: "Contact Email Address" %>
     <%= f.select :attending, [ "Yes", "No" ], :prompt => "Are you attending?", class: "form-control required" %>
     <div class="optional-elements">
-      <%= f.form_group :main_meal_preference, label: { text: "Main Preference" } do %>
+      <%= f.form_group :main_meal_preference, label: { text: "Mains Preference" } do %>
         <%= f.radio_button :main_meal_preference, "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes", label: "Chicken Roulade with Spinach, Pistachio Nuts, Orange, wrapped in Bacon served on Potato Gratin with Steamed Bean Bundles and Balsamic Vine Tomatoes", checked: true %>
         <%= f.radio_button :main_meal_preference, "Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade", label: "Grilled Mediterranean Vegetable Stacks with Haloumi and Olive Tapenade (V/Gf)" %>
         <%= f.radio_button :main_meal_preference, "Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw", label: "Margherita Pizza with Hand Cut Fries and Crunchy Coleslaw (Kids aged 5 -12 only)" %>

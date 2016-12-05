@@ -1,6 +1,15 @@
+@mixin a11y {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
 .homepage {
-  h3 { text-align: center; }
-  p { padding-top: 10px; }
+  h3 { text-align: center; padding-bottom: 10px; }
+
 }
 
 .info-page {
@@ -50,23 +59,16 @@
 }
 
 .our-story-page {
-  p {
-    color: $pink;
-  }
   time {
     font-weight: bold;
     font-size: 18px;
   }
 }
 
-.faq-page, .accomodation-page, .main-people-page, .wedding-party-page, .bridesmaids-groomsmen-page {
-  @mixin a11y {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-  }
+.faq-page, .accomodation-page, .main-people-page, .wedding-party-page, .bridesmaids-groomsmen-page, .our-story-page {
   dt { @include a11y(); }
+}
+
+.hidden-label {
+  @include a11y();
 }

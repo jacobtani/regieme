@@ -2,17 +2,16 @@
   <h2>Accomodation</h2>
   <div class="row">
     <% @accomodation.each do |a| %>
-      <div class="columns large-4">
+      <dl class="columns large-4">
         <% @photo = a["photo"] %>
-        <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-        <dl>
-          <dt>Accomodation Name</dt>
-          <dd><%= link_to "#{a["name"]}", "#{a["url"]}"%></dd>
-          <dt>Accomodation Address</dt>
-          <dd><%= a["address"] %></dd>
-          <dd><%= a["phone_number"] %></dd>
-        </dl>
-      </div>
+        <dt>Accomodation Photo</dt>
+        <dd><%= image_tag(@photo, class: "img-responsive tidy-img") %></dd>
+        <dt>Accomodation Name</dt>
+        <dd><%= link_to "#{(a["name"]).upcase}", "#{a["url"]}"%></dd>
+        <dt>Accomodation Address</dt>
+        <dd><%= a["address"] %></dd>
+        <dd><%= a["phone_number"] %></dd>
+      </dl>
     <% end %>
   </div>
 </div>

@@ -4,20 +4,19 @@
   <% else %>
     <h2>Info</h2>
   <% end %>
-  <div class="row">
-    <% @info.each do |d| %>
-      <div class="columns large-6">
-        <h3><%= d["name"] %></h3>
-        <dl>
-          <dt>TIME</dt>
-          <dd class="info-time"><time><%= d["time"] %></time></dd>
-          <dt>LOCATION</h4><h5><%= link_to "#{d["location"]}", d["url"] %></dt>
-          <dd><%= d["address_line_1"]%></dd>
-          <dd><%= d["address_line_2"]%></dd>
-          <dd><%= d["address_line_3"]%></dd>
-          <dd><%= d["address_line_4"]%></dd>
-        </dl>
-      </div>
-    <% end %>
-  </div>
+  <% @info.each do |d| %>
+    <dl class="columns small-5">
+      <dt class="hidden-label">Event Name</dt>
+      <dd><h4><%= d["name"].upcase %></h4></dd>
+      <dt>TIME</dt>
+      <dd class="info-time"><%= d["time"] %></dd>
+      <dt>LOCATION</dt>
+      <dd><%= link_to "#{d["location"]}", d["url"] %></dd>
+      <dt class="hidden-label">Address Lines</dt>
+      <dd><%= d["address_line_1"]%></dd>
+      <dd><%= d["address_line_2"]%></dd>
+      <dd><%= d["address_line_3"]%></dd>
+      <dd><%= d["address_line_4"]%></dd>
+    </dl>
+  <% end %>
 </div>
