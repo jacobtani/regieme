@@ -7,7 +7,6 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new message_params
     respond_to do |format|
-      binding.pry
       if @message.valid?
         SendEnquiryEmail.perform!(message: @message)
         flash[:notice] = "Message sent! Thank you for contacting us."
