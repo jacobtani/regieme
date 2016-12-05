@@ -1,8 +1,13 @@
-<div class="container">
-  <h2>Login</h2>
-  <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= f.email_field :email, autofocus: true %>
-    <%= f.password_field :password, autocomplete: "off" %>
-    <%= f.submit "Login", class: "hollow button", id: "login-link" %>
-  <% end %>
-</div>
+<%-
+  content_for :page_title, 'Admin Login'
+-%>
+<% content_for :page_content do %>
+  <div class="container">
+    <h2>Login</h2>
+    <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.email_field :email, autofocus: true %>
+      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.submit "Login", class: "hollow button", id: "login-link" %>
+    <% end %>
+  </div>
+<% end %>

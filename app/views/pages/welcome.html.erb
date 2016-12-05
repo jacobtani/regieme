@@ -1,8 +1,13 @@
-<div class="container homepage">
-  <h3>IAIN WALKER & TANIA JACOB</h3>
-  <h3>25 FEBRUARY 2017</h3>
-  <%= render "pages/info" %>
-  <p>
-    <%= image_tag("us.jpg", alt: "us", class:"img-responsive") %>
-  </p>
-</div>
+<%-
+  content_for :page_title, 'Home'
+-%>
+<% content_for :page_content do %>
+  <div class="homepage container">
+    <h3>IAIN WALKER & TANIA JACOB</h3>
+    <p class="wedding-date">25 FEBRUARY 2017</p>
+    <%= render "pages/info" %>
+    <p>
+      <%= image_tag("us.jpg", alt: "us", class:"img-responsive") %>
+    </p>
+  </div>
+<% end %>

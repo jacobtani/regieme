@@ -1,4 +1,4 @@
-<div class="container bridesmaids-groomsmen-page">
+<div class="bridesmaids-groomsmen-page container">
   <h2>Bridesmaids and Groomsmen</h2>
   <% @bridesmaids_groomsmen.each do |b| %>
     <div class="row text-center">
@@ -7,7 +7,7 @@
         <dt>Person's Photo</dt>
         <dd><%= image_tag(@photo_1, class: "img-responsive tidy-img") %></dd>
         <dt>Person's Name</dt>
-        <dd><h5><%= b["name_1"] %></h5></dd>
+        <dd><p><%= b["name_1"] %></p></dd>
         <dt>Person's Title</dt>
         <dd><span><%= b["title_1"] %></span></dd>
       </dl>
@@ -16,7 +16,7 @@
         <dt>Person's Photo</dt>
         <dd><%= image_tag(@photo_2, class: "img-responsive tidy-img") %></dd>
         <dt>Person's Name</dt>
-        <dd><h5><%= b["name_2"]%></h5></dd>
+        <dd><p><%= b["name_2"]%></p></dd>
         <dt>Person's Title</dt>
         <dd><span><%= b["title_2"] %></span></dd>
       </dl>
@@ -25,7 +25,7 @@
         <dt>Person's Photo</dt>
         <dd><%= image_tag(@photo_3, class: "img-responsive tidy-img") %></dd>
         <dt>Person's Name</dt>
-        <dd><h5><%= b["name_3"] %></h5></dd>
+        <dd><p><%= b["name_3"] %></p></dd>
         <dt>Person's Title</dt>
         <dd><span><%= b["title_3"] %></span></dd>
       </dl>

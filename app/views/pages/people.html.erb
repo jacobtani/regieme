@@ -1,11 +1,16 @@
-<div class="container">
-  <div id="main-people">
-    <%= render "pages/main_people" %>
+<%-
+  content_for :page_title, 'People'
+-%>
+<% content_for :page_content do %>
+  <div class="container">
+    <div id="main-people">
+      <%= render "pages/main_people" %>
+    </div>
+    <div id="wedding-party">
+      <%= render "pages/wedding_party" %>
+    </div>
+    <div id="bridesmaids-groomsmen">
+      <%= render "pages/bridesmaids_groomsmen" %>
+    </div>
   </div>
-  <div id="wedding-party">
-    <%= render "pages/wedding_party" %>
-  </div>
-  <div id="bridesmaids-groomsmen">
-    <%= render "pages/bridesmaids_groomsmen" %>
-  </div>
-</div>
+<% end %>

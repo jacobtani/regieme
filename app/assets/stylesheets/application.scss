@@ -49,3 +49,14 @@ body {
 #bridesmaids-groomsmen {
   padding-top: 30px;
 }
+
+.banner {
+  margin-left: 42px;
+  margin-right: 50px;
+}
+
+@media all and (max-width: 700px) and (min-width: 320px) {
+  margin-left: 30px;
+  margin-right: 50px;
+  font-size: 50%;
+}

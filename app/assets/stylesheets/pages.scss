@@ -9,13 +9,17 @@
 
 .homepage {
   h3 { text-align: center; padding-bottom: 10px; }
-
+  .wedding-date { font-size: 35px; text-align: center; color: $pink; }
+  .info-page {
+    background-color: $grey;
+  }
 }
 
 .info-page {
   dd, dt { color: $pink; }
-  h3 { text-transform: uppercase; text-align: left; padding-bottom: 10px; }
+  p {   font-size: 25px; color: $pink; text-transform: uppercase; text-align: left; padding-bottom: 10px; }
   .info-time { padding-bottom: 8px; }
+  .events-list-wrapper { background-color: $grey; padding-top: 10px; }
 }
 
 .accomodation-page {
@@ -49,6 +53,10 @@
 
 .wedding-party-page {
   h2 { padding-top: 40px; }
+}
+
+.wedding-party-page, .main-people-page, .bridesmaids-groomsmen-page {
+  p { font-size: 15px; color: $pink; text-transform: uppercase; font-weight: bold;}
 }
 
 .faq-page {

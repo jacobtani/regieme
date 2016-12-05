@@ -1,18 +1,22 @@
-<div class="container accomodation-page">
-  <h2>Accomodation</h2>
-  <div class="row">
-    <% @accomodation.each do |a| %>
-      <dl class="columns large-4">
-        <% @photo = a["photo"] %>
-        <dt>Accomodation Photo</dt>
-        <dd><%= image_tag(@photo, class: "img-responsive tidy-img") %></dd>
-        <dt>Accomodation Name</dt>
-        <dd><%= link_to "#{(a["name"]).upcase}", "#{a["url"]}"%></dd>
-        <dt>Accomodation Address</dt>
-        <dd><%= a["address"] %></dd>
-        <dt>Accomodation Contact Number</dt>
-        <dd><%= a["phone_number"] %></dd>
-      </dl>
-    <% end %>
+<% content_for :page_title, 'Accomodation' %>
+
+<% content_for :page_content do %>
+  <div class="accomodation-page container">
+    <h2>Accomodation</h2>
+    <div class="row">
+      <% @accomodation.each do |a| %>
+        <dl class="columns large-4">
+          <% @photo = a["photo"] %>
+          <dt>Accomodation Photo</dt>
+          <dd><%= image_tag(@photo, class: "img-responsive tidy-img") %></dd>
+          <dt>Accomodation Name</dt>
+          <dd><%= link_to "#{(a["name"]).upcase}", "#{a["url"]}"%></dd>
+          <dt>Accomodation Address</dt>
+          <dd><%= a["address"] %></dd>
+          <dt>Accomodation Contact Number</dt>
+          <dd><%= a["phone_number"] %></dd>
+        </dl>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
