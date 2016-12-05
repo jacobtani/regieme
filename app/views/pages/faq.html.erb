@@ -2,7 +2,9 @@
   <h2>Faq</h2>
   <% @faqs.each do |faq| %>
     <dl>
-      <dt aria-label="question" class="question <%= faq["q_class"]%>"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <%= faq["question"] %></dt>
+      <dt>Question</dt>
+      <dd aria-label="question" class="question <%= faq["q_class"]%>"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= faq["question"] %></dd>
+      <dt>Answer</dt>
       <dd aria-label="answer" class="answer hidden <%= faq["a_class"]%>"> <%= faq["answer"] %></dd>
     </dl>
   <% end %>

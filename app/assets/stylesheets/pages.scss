@@ -6,6 +6,7 @@
 .info-page {
   dd, dt { color: $pink; }
   h3 { text-transform: uppercase; text-align: left; padding-bottom: 10px; }
+  .info-time { padding-bottom: 8px; }
 }
 
 .accomodation-page {
@@ -32,18 +33,20 @@
   }
 }
 
-.bridesmaids-groomsmen, .wedding-party {
+.bridesmaids-groomsmen-page, .wedding-party-page {
   h5 { text-transform: uppercase; font-weight: bold; font-style: normal; }
   span { color: $pink }
 }
 
-.wedding-party {
+.wedding-party-page {
   h2 { padding-top: 40px; }
 }
 
 .faq-page {
-  dt { font-size: 18px; }
   dd { padding-top: 20px; }
+  .question {
+    font-weight: bold;
+  }
 }
 
 .our-story-page {
@@ -54,4 +57,16 @@
     font-weight: bold;
     font-size: 18px;
   }
+}
+
+.faq-page, .accomodation-page, .main-people-page, .wedding-party-page, .bridesmaids-groomsmen-page {
+  @mixin a11y {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+  dt { @include a11y(); }
 }

@@ -1,13 +1,16 @@
-<div class="container wedding-party">
+<div class="container wedding-party-page">
   <h2>Wedding Party</h2>
   <div class="row text-center">
     <% @wedding_party.each do |b| %>
-      <div class="large-3 columns">
+      <dl class="large-3 columns">
+        <dt>Person's Photo</dt>
         <% @photo=b["photo"] %>
-        <%= image_tag(@photo, class: "img-responsive tidy-img") %>
-        <h5><%= b["name"] %></h5>
-        <span><%= b["title"] %></span>
-      </div>
+        <dd><%= image_tag(@photo, class: "img-responsive tidy-img") %></dd>
+        <dt>Person's Name</dt>
+        <dd><h5><%= b["name"] %></h5></dd>
+        <dt>Person's Role</dt>
+        <dd><span><%= b["title"] %></span></dd>
+      </dl>
     <% end%>
   </div>
 </div>

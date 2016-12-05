@@ -1,25 +1,34 @@
-<div class="container bridesmaids-groomsmen">
+<div class="container bridesmaids-groomsmen-page">
   <h2>Bridesmaids and Groomsmen</h2>
   <% @bridesmaids_groomsmen.each do |b| %>
     <div class="row text-center">
-      <div class="columns large-4">
+      <dl class="columns large-4">
         <% @photo_1 = b["photo_1"] %>
-        <%= image_tag(@photo_1, class: "img-responsive tidy-img") %>
-        <h5><%= b["name_1"] %></h5>
-        <span><%= b["title_1"] %></span>
-      </div>
-      <div class="columns large-4">
+        <dt>Person's Photo</dt>
+        <dd><%= image_tag(@photo_1, class: "img-responsive tidy-img") %></dd>
+        <dt>Person's Name</dt>
+        <dd><h5><%= b["name_1"] %></h5></dd>
+        <dt>Person's Title</dt>
+        <dd><span><%= b["title_1"] %></span></dd>
+      </dl>
+      <dl class="columns large-4">
         <% @photo_2 = b["photo_2"] %>
-        <%= image_tag(@photo_2, class: "img-responsive tidy-img") %>
-        <h5><%= b["name_2"]%></h5>
-        <span><%= b["title_2"] %></span>
-      </div>
-      <div class="columns large-4">
+        <dt>Person's Photo</dt>
+        <dd><%= image_tag(@photo_2, class: "img-responsive tidy-img") %></dd>
+        <dt>Person's Name</dt>
+        <dd><h5><%= b["name_2"]%></h5></dd>
+        <dt>Person's Title</dt>
+        <dd><span><%= b["title_2"] %></span></dd>
+      </dl>
+      <dl class="columns large-4">
         <% @photo_3 = b["photo_3"] %>
-        <%= image_tag(@photo_3, class: "img-responsive tidy-img") %>
-        <h5><%= b["name_3"] %></h5>
-        <span><%= b["title_3"] %></span>
-      </div>
+        <dt>Person's Photo</dt>
+        <dd><%= image_tag(@photo_3, class: "img-responsive tidy-img") %></dd>
+        <dt>Person's Name</dt>
+        <dd><h5><%= b["name_3"] %></h5></dd>
+        <dt>Person's Title</dt>
+        <dd><span><%= b["title_3"] %></span></dd>
+      </dl>
     </div>
   <% end%>
 </div>
