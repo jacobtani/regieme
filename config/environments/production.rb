@@ -25,7 +25,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: ENV['MAIL_ADDRESS'],
     port: 587,
     domain: "iwandtj.herokuapp.com",
     user_name: ENV['MAIL_USERNAME'],
