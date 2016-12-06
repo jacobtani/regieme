@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap_form'
 gem 'owlcarousel-rails'
 gem 'use_case_pattern'
+gem 'sendinblue'
 
 group :development, :test, :staging do
   gem 'better_errors'
