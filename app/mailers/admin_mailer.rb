@@ -329,7 +329,7 @@ class AdminMailer < ApplicationMailer
     									<tr class="one-col">
     										<td class="inner" style="padding-top:33px;padding-bottom:33px;padding-right:30px;padding-left:30px;">
     											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Dear ' + rsvp.guest_name + ',</p><br/>
-    											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Thank you for RSVPing for Iain and Tanias wedding. Your RSVP has been noted for catering purposes. If any of the details printed here are incorrect, please let us know ASAP (tanzjacob@gmail.com):</p><br/>
+    											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;">Thank you for RSVPing for Iain and Tanias wedding. Your RSVP has been noted for catering purposes. If any of the details printed here are incorrect, please let us know ASAP (iainandtj.rsvp@gmail.com):</p><br/>
     											<p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;"><b>Attending:</b> ' + rsvp.attending + '</p>
                           <p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;"><b>Mains Preference:</b> ' + "#{rsvp.main_meal_preference.present? ? rsvp.main_meal_preference : "N/A"}" + '</p>
                           <p style="margin-top:0;margin-right:0;margin-left:0;margin-bottom:12px;"><b>Dessert Preference:</b> ' + "#{rsvp.dessert_preference.present? ? rsvp.dessert_preference : "N/A"}" + '</p>

@@ -11,7 +11,7 @@ class UserMailer < ApplicationMailer
       "replyto" => ["iainandtj.rsvp@gmail.com","Iain and Tania"],
       "subject" => "Thank you for RSVPing to Iain and Tanias Wedding",
       "text" => ['Dear ' + rsvp.guest_name + ',
-      Thank you for RSVPing for Iain and Tanias wedding. Your RSVP has been noted for catering purposes. If any of the details printed here are incorrect, please let us know ASAP (tanzjacob@gmail.com):
+      Thank you for RSVPing for Iain and Tanias wedding. Your RSVP has been noted for catering purposes. If any of the details printed here are incorrect, please let us know ASAP (iainandtj.rsvp@gmail.com):
       Attending: ' + rsvp.attending + '
       Mains Preference: ' + "#{rsvp.main_meal_preference.present? ? rsvp.main_meal_preference : "N/A"}" + '
       Dessert Preference: ' + "#{rsvp.dessert_preference.present? ? rsvp.dessert_preference : "N/A"}" + '
