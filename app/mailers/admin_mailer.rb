@@ -6,8 +6,8 @@ class AdminMailer < ApplicationMailer
   def send_enquiry(message:)
     m = Sendinblue::Mailin.new("https://api.sendinblue.com/v2.0","j59q6fvFDU0h3t2V",5)
     data = { "to" => {"iainandtj.rsvp@gmail.com"=>"Iain and Tania"},
-    "from" => [message.email, message.email],
-    "replyto" => ["iainandtj.rsvp@gmail.com","Iain and Tania"],
+    "from" => [message.email, message.full_name],
+    "replyto" => [message.email,message.full_name],
     "subject" => message.message_subject,
     "text" => "Dear Iain and Tania,
 
@@ -179,7 +179,7 @@ class AdminMailer < ApplicationMailer
     m = Sendinblue::Mailin.new("https://api.sendinblue.com/v2.0","j59q6fvFDU0h3t2V",5)
     data = { "to" => {"iainandtj.rsvp@gmail.com" => "Iain and Tania"},
     "from" => [rsvp.email , rsvp.guest_name],
-    "replyto" => ["iainandtj.rsvp@gmail.com","Iain and Tania"],
+    "replyto" => [rsvp.email,rsvp.guest_name],
     "subject" => "A New RSVP to Wedding",
     "text" => 'Dear Iain and Tania,
 
