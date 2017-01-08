@@ -15,8 +15,8 @@ class RsvpsController < ApplicationController
     respond_to do |format|
       if @rsvp.save
         SendRsvpEmails.perform!(rsvp: @rsvp)
-        format.html { redirect_to root_path }
-        flash.now[:success] = "Thank you for RSVPing #{@rsvp.guest_name}! Please RSVP for other members of your party/group individually if you haven't already done so."
+        flash[:success] = "Thank you for RSVPing #{@rsvp.guest_name}! Please RSVP for other members of your party/group individually if you haven't already done so."
+        format.html { redirect_to :action => 'new' }
       else
         format.html { render :new }
       end
